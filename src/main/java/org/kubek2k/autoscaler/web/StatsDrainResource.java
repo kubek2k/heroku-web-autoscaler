@@ -118,11 +118,16 @@ public class StatsDrainResource {
                 map.put(m.group(1), m.group(5));
             }
         }
+        final Integer service = Integer.parseInt(stripMs(map.get("service")));
+        final String path = map.get("path");
+        if (service > 5000) {
+            LOGGER.info("Service time pretty long {} for path {}", service, path);
+        }
         return new RouterStats(map.get("host"),
                 map.get("method"),
-                map.get("path"),
+                path,
                 Integer.parseInt(stripMs(map.get("connect"))),
-                Integer.parseInt(stripMs(map.get("service"))),
+                service,
                 Integer.parseInt(map.get("status")));
     }
 
