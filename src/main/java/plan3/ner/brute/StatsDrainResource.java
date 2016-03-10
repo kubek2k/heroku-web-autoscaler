@@ -2,8 +2,10 @@ package plan3.ner.brute;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.HeaderParam;
@@ -29,7 +31,13 @@ public class StatsDrainResource {
                              @HeaderParam("Logplex-MsgCount") final int messageCount,
                              @Context final UriInfo uriInfo,
                              final String logs) {
-        LOGGER.info("Got some logs {}", parseMessages(logs, messageCount));
+        final List<RouterEntry> routerEntries = parseMessages(logs, messageCount)
+                .stream()
+                .map(StatsDrainResource::parseEntry)
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .collect(Collectors.toList());
+        LOGGER.info("Got some logs {}", routerEntries);
     }
 
     public static List<String> parseMessages(final String blob, final int number) {
@@ -52,14 +60,48 @@ public class StatsDrainResource {
         return result;
     }
 
+    private static final Pattern ENTRY_PATTERN = Pattern.compile("^<\\d+>\\d+ (\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}\\+\\d{2}:\\d{2}) host heroku ([^ ]+) (.*)$");
+
+    public static Optional<RouterEntry> parseEntry(final String message) {
+        final Matcher m = ENTRY_PATTERN.matcher(message);
+        if (m.matches()) {
+            final String timestampString = m.group(1);
+            final String type = m.group(2);
+            final String entryMessage = m.group(3);
+            if ("router".equals(type)) {
+
+                return Optional.of(new RouterEntry(timestampString, entryMessage));
+            }
+            LOGGER.debug("Non router messeage = {} entry, omitting", message);
+            return Optional.empty();
+        } else {
+            LOGGER.warn("Get a non-compliant message {}", message);
+            return Optional.empty();
+        }
+    }
+
+    private static class RouterEntry {
+        private final String timestamp;
+
+        private final String message;
+
+        public RouterEntry(final String timestamp, final String message) {
+            this.timestamp = timestamp;
+            this.message = message;
+        }
+
+        @Override
+        public String toString() {
+            return "RouterEntry{" +
+                    "timestamp=" + this.timestamp +
+                    ", message='" + this.message + '\'' +
+                    '}';
+        }
+    }
+
     public static void main(final String[] args) {
-        final String s1 = "255 <158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425\n";
-        System.out.println(s1.length());
-        final String s = s1 +
-                "253 <158>1 2016-03-10T10:25:13.310633+00:00 host heroku router - at=info method=POST path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=74274205-0a39-4545-b548-7f208a67ee97 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=31ms status=200 bytes=254";
-        System.out.println(parseMessages(s, 2));
-        System.out.println(parseMessages(
-                "304 <45>1 2016-03-10T10:02:41.761316+00:00 host heroku web.1 - source=web.1 dyno=heroku.24944085.59356af4-7746-45e4-b753-69fe0c1faf28 sample#memory_total=278.12MB sample#memory_rss=277.97MB sample#memory_cache=0.15MB sample#memory_swap=0.00MB sample#memory_pgpgin=84816pages sample#memory_pgpgout=47344pages\n" +
-                "304 <45>1 2016-03-10T10:02:41.761316+00:00 host heroku web.1 - source=web.1 dyno=heroku.24944085.59356af4-7746-45e4-b753-69fe0c1faf28 sample#memory_total=278.12MB sample#memory_rss=277.97MB sample#memory_cache=0.15MB sample#memory_swap=0.00MB sample#memory_pgpgin=84816pages sample#memory_pgpgout=47344pages", 2));
+        final String s1 = "<158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425";
+
+        System.out.println(parseEntry(s1));
     }
 }
