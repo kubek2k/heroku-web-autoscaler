@@ -58,7 +58,7 @@ public class StatsDrainResource {
                 .map(Optional::get)
                 .collect(Collectors.toList());
         if(!routerEntries.isEmpty()) {
-            LOGGER.info("Got some logs to process {}", routerEntries);
+            LOGGER.info("Got some logs to process frame id = {} no of logs = {}", frameId, routerEntries.size());
             this.statsQueue.enqueue(JsonUtil.asJson(new RouterEntries(frameId, routerEntries, appName)));
         }
     }
@@ -97,7 +97,7 @@ public class StatsDrainResource {
                 final Instant timestamp = toInstant(m.group(1));
                 return Optional.of(new RouterEntry(timestamp, parseRouterStats(entryMessage)));
             }
-            LOGGER.info("Non router message = {} entry, omitting", message);
+            LOGGER.debug("Non router message = {} entry, omitting", message);
             return Optional.empty();
         }
         else {
@@ -108,7 +108,6 @@ public class StatsDrainResource {
 
     private static final Pattern ROUTER_ENTRY_PATTERN = Pattern.compile(
             "^- (sock=[^ ]+)? at=[^ ]+ (code=[^ ]+)? (desc=\"[^\"]+\")? method=([A-Z]+) path=\"([^\"]+)\" host=([^ ]+) request_id=[^ ]+ fwd=\"[^\"]+\" dyno=[^ ]+ connect=(\\d+)ms service=(\\d+)ms status=(\\d+) bytes=.*$");
-//    "- sock=client at=warning code=H27 desc=\"Client Request Interrupted\" method=GET path=\"/articles/subscribe/yK7E?Authorization=Plan3JWT_eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0b3ZlLmxpZnZlbmRhaGxAc2NoaWJzdGVkLnNlIiwicm9sZSI6ImVkaXRvciIsImV4cCI6MTQ1NzYxNzM2NiwibmV3c3Jvb20iOiJzdmRzZSJ9.LzheCp1zUsBL0UKbNm-MzLcjL8YKZSdL1cYwQ4t6Z75A37yDmug_ru5DEpShe1YWATcBL2ph63OQSOvJ1X0au3TM_MJol36qV1j2ioGfIbcwZBypmTAD4EAUmMsFDrIJjHaEnTIGKGg7ZK7QzhLYHfi6Gn6Tzom82ElXrQgVZ9c\" host=article.api.plan3.se request_id=e8249bc6-f96c-411c-b0d4-8a1afa05bbd6 fwd=\"83.255.58.47\" dyno=web.5 connect=3ms service=26673ms status=499 bytes="
 
     private static final Pattern SSV_PATTERN = Pattern.compile(" ");
 
