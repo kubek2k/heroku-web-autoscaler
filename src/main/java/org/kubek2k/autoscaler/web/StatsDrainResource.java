@@ -8,7 +8,9 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -105,25 +107,33 @@ public class StatsDrainResource {
     }
 
     private static final Pattern ROUTER_ENTRY_PATTERN = Pattern.compile(
-            "^- at=[^ ]+ method=([A-Z]+) path=\"([^\"]+)\" host=([^ ]+) request_id=[^ ]+ fwd=\"[^\"]+\" dyno=[^ ]+ connect=(\\d+)ms service=(\\d+)ms status=(\\d+) bytes=.*$");
+            "^- (sock=[^ ]+)? at=[^ ]+ (code=[^ ]+)? (desc=\"[^\"]+\")? method=([A-Z]+) path=\"([^\"]+)\" host=([^ ]+) request_id=[^ ]+ fwd=\"[^\"]+\" dyno=[^ ]+ connect=(\\d+)ms service=(\\d+)ms status=(\\d+) bytes=.*$");
+//    "- sock=client at=warning code=H27 desc=\"Client Request Interrupted\" method=GET path=\"/articles/subscribe/yK7E?Authorization=Plan3JWT_eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0b3ZlLmxpZnZlbmRhaGxAc2NoaWJzdGVkLnNlIiwicm9sZSI6ImVkaXRvciIsImV4cCI6MTQ1NzYxNzM2NiwibmV3c3Jvb20iOiJzdmRzZSJ9.LzheCp1zUsBL0UKbNm-MzLcjL8YKZSdL1cYwQ4t6Z75A37yDmug_ru5DEpShe1YWATcBL2ph63OQSOvJ1X0au3TM_MJol36qV1j2ioGfIbcwZBypmTAD4EAUmMsFDrIJjHaEnTIGKGg7ZK7QzhLYHfi6Gn6Tzom82ElXrQgVZ9c\" host=article.api.plan3.se request_id=e8249bc6-f96c-411c-b0d4-8a1afa05bbd6 fwd=\"83.255.58.47\" dyno=web.5 connect=3ms service=26673ms status=499 bytes="
+
+    private static final Pattern SSV_PATTERN = Pattern.compile(" ");
+
+    private static final Pattern AN_ENTRY_PATTERN = Pattern.compile("([^ ]+)=((\"([^\"]+)\")|([^ ]+))");
 
     public static RouterStats parseRouterStats(final String message) {
-        final Matcher m = ROUTER_ENTRY_PATTERN.matcher(message);
-        if(m.matches()) {
-            final String method = m.group(1);
-            final String path = m.group(2);
-            final String host = m.group(3);
-            final String connectS = m.group(4);
-            final String serviceS = m.group(5);
-            final String statusS = m.group(6);
-            return new RouterStats(host,
-                    method,
-                    path,
-                    Integer.parseInt(statusS),
-                    Integer.parseInt(connectS),
-                    Integer.parseInt(serviceS));
+        final Matcher m = AN_ENTRY_PATTERN.matcher(message.substring(2));
+        final Map<String, String> map = new HashMap<>();
+        while (m.find()) {
+            if (m.group(4) != null) {
+                map.put(m.group(1), m.group(4));
+            } else {
+                map.put(m.group(1), m.group(5));
+            }
         }
-        throw new IllegalArgumentException("Illegal router entry passed. Message = " + message);
+        return new RouterStats(map.get("host"),
+                map.get("method"),
+                map.get("path"),
+                Integer.parseInt(stripMs(map.get("connect"))),
+                Integer.parseInt(stripMs(map.get("service"))),
+                Integer.parseInt(map.get("status")));
+    }
+
+    private static String stripMs(final String s) {
+        return s.substring(0, s.length() - 2);
     }
 
     private static Instant toInstant(final String timestampString) {
@@ -134,6 +144,8 @@ public class StatsDrainResource {
 
     public static void main(final String[] args) {
         final String s1 = "<158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425";
+        final String s2 = "- sock=client at=warning code=H27 desc=\"Client Request Interrupted\" method=GET path=\"/articles/subscribe/yK7E?Authorization=Plan3JWT_eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0b3ZlLmxpZnZlbmRhaGxAc2NoaWJzdGVkLnNlIiwicm9sZSI6ImVkaXRvciIsImV4cCI6MTQ1NzYxNzM2NiwibmV3c3Jvb20iOiJzdmRzZSJ9.LzheCp1zUsBL0UKbNm-MzLcjL8YKZSdL1cYwQ4t6Z75A37yDmug_ru5DEpShe1YWATcBL2ph63OQSOvJ1X0au3TM_MJol36qV1j2ioGfIbcwZBypmTAD4EAUmMsFDrIJjHaEnTIGKGg7ZK7QzhLYHfi6Gn6Tzom82ElXrQgVZ9c\" host=article.api.plan3.se request_id=e8249bc6-f96c-411c-b0d4-8a1afa05bbd6 fwd=\"83.255.58.47\" dyno=web.5 connect=3ms service=26673ms status=499 bytes=";
+        parseRouterStats(s2);
         System.out.println(JsonUtil.asJson(parseEntry(s1)));
     }
 }
