@@ -82,23 +82,23 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.3.1</version>
-                <executions>
-                    <execution>
-                        <id>enforce</id>
-                        <configuration>
-                            <rules>
-                                <DependencyConvergence />
-                            </rules>
-                        </configuration>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<artifactId>maven-enforcer-plugin</artifactId>-->
+                <!--<version>1.3.1</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>enforce</id>-->
+                        <!--<configuration>-->
+                            <!--<rules>-->
+                                <!--<DependencyConvergence />-->
+                            <!--</rules>-->
+                        <!--</configuration>-->
+                        <!--<goals>-->
+                            <!--<goal>enforce</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
         </plugins>
     </build>
     <repositories>
