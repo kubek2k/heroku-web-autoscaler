@@ -1,4 +1,4 @@
-package plan3.ner.brute;
+package org.kubek2k.autoscaler.web;
 
 import plan3.msg.queue.Queue;
 import plan3.restin.jackson.JsonUtil;

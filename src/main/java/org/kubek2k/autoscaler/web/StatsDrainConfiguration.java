@@ -1,4 +1,4 @@
-package plan3.ner.brute;
+package org.kubek2k.autoscaler.web;
 
 import static java.util.Arrays.asList;
 
