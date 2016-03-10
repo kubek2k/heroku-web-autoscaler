@@ -37,7 +37,9 @@ public class StatsDrainResource {
                 .filter(Optional::isPresent)
                 .map(Optional::get)
                 .collect(Collectors.toList());
-        LOGGER.info("Got some logs {}", routerEntries);
+        if (!routerEntries.isEmpty()) {
+            LOGGER.info("Got some logs {}", routerEntries);
+        }
     }
 
     public static List<String> parseMessages(final String blob, final int number) {
