@@ -123,7 +123,7 @@ public class StatsDrainResource {
                     Integer.parseInt(connectS),
                     Integer.parseInt(serviceS));
         }
-        throw new IllegalArgumentException("Illegal router entry passed");
+        throw new IllegalArgumentException("Illegal router entry passed. Message = " + message);
     }
 
     private static Instant toInstant(final String timestampString) {
