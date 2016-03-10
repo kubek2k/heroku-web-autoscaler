@@ -11,8 +11,8 @@ public class RouterEntry {
     private final RouterStats message;
 
     @JsonCreator
-    public RouterEntry(@JsonProperty("timestamp") Instant timestamp,
-                       @JsonProperty("message") RouterStats message) {
+    public RouterEntry(@JsonProperty("timestamp") final Instant timestamp,
+                       @JsonProperty("message") final RouterStats message) {
         this.timestamp = timestamp;
         this.message = message;
     }

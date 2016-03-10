@@ -22,6 +22,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 
+import org.kubek2k.autoscaler.model.RouterEntries;
 import org.kubek2k.autoscaler.model.RouterEntry;
 import org.kubek2k.autoscaler.model.RouterStats;
 import org.slf4j.Logger;
@@ -44,6 +45,7 @@ public class StatsDrainResource {
     @Consumes("application/logplex-1")
     public void consumeBatch(@QueryParam("app") final String appName,
                              @HeaderParam("Logplex-MsgCount") final int messageCount,
+                             @HeaderParam("Logplex-Frame-Id") final String frameId,
                              @Context final UriInfo uriInfo,
                              final String logs) {
         final List<RouterEntry> routerEntries = parseMessages(logs, messageCount)
@@ -53,10 +55,8 @@ public class StatsDrainResource {
                 .map(Optional::get)
                 .collect(Collectors.toList());
         if(!routerEntries.isEmpty()) {
-            LOGGER.info("Got some logs {}", routerEntries);
-            routerEntries.forEach(entry -> {
-                this.statsQueue.enqueue(JsonUtil.asJson(entry));
-            });
+            LOGGER.info("Got some logs to process {}", routerEntries);
+            this.statsQueue.enqueue(JsonUtil.asJson(new RouterEntries(frameId, routerEntries)));
         }
     }
 
@@ -67,11 +67,11 @@ public class StatsDrainResource {
             final String next = blob.substring(currentIdx);
             final Matcher m = MSG_LEN_PAT.matcher(next);
             if(m.find()) {
-                final String len = m.group(1);
-                final int messageLen = Integer.parseInt(len);
-                final String message = blob.substring(currentIdx + len.length() + 1, currentIdx + messageLen);
+                final String lineLenS = m.group(1);
+                final int messageLen = Integer.parseInt(lineLenS);
+                final String message = blob.substring(currentIdx + lineLenS.length() + 1, currentIdx + messageLen);
                 result.add(message);
-                currentIdx += len.length() + messageLen + 1;
+                currentIdx += lineLenS.length() + messageLen + 1;
             }
             else {
                 throw new IllegalArgumentException("something wrong has happened. While whole message = " + blob +
