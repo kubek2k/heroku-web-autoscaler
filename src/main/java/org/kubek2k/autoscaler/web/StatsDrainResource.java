@@ -106,15 +106,10 @@ public class StatsDrainResource {
         }
     }
 
-    private static final Pattern ROUTER_ENTRY_PATTERN = Pattern.compile(
-            "^- (sock=[^ ]+)? at=[^ ]+ (code=[^ ]+)? (desc=\"[^\"]+\")? method=([A-Z]+) path=\"([^\"]+)\" host=([^ ]+) request_id=[^ ]+ fwd=\"[^\"]+\" dyno=[^ ]+ connect=(\\d+)ms service=(\\d+)ms status=(\\d+) bytes=.*$");
-
-    private static final Pattern SSV_PATTERN = Pattern.compile(" ");
-
-    private static final Pattern AN_ENTRY_PATTERN = Pattern.compile("([^ ]+)=((\"([^\"]+)\")|([^ ]+))");
+    private static final Pattern ROUTER_ENTRY_PATTERN = Pattern.compile("([^ ]+)=((\"([^\"]+)\")|([^ ]+))");
 
     public static RouterStats parseRouterStats(final String message) {
-        final Matcher m = AN_ENTRY_PATTERN.matcher(message.substring(2));
+        final Matcher m = ROUTER_ENTRY_PATTERN.matcher(message.substring(2));
         final Map<String, String> map = new HashMap<>();
         while (m.find()) {
             if (m.group(4) != null) {
