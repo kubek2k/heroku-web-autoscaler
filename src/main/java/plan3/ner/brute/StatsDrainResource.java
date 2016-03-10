@@ -43,7 +43,7 @@ public class StatsDrainResource {
                 final int messageLen = Integer.parseInt(len);
                 final String message = blob.substring(currentIdx + len.length() + 1, currentIdx + messageLen);
                 result.add(message);
-                currentIdx += len.length() + messageLen;
+                currentIdx += len.length() + messageLen + 1;
             } else {
                 throw new IllegalArgumentException("something wrong has happened. While whole message = " + blob +
                         " next part to parse = " + next + " index = " + currentIdx);
@@ -53,8 +53,13 @@ public class StatsDrainResource {
     }
 
     public static void main(final String[] args) {
-        System.out.println(parseMessages("300 <158>1 2016-03-10T10:18:48.436558+00:00 host heroku router - at=info method=GET path=\"/store/default-authors/bcea2578-e221-4ef2-9036-ba47a9c5556b\" host=article.api.plan3dev.se request_id=45ca3ab6-09e4-42f5-bbe5-3419ac3f4671 fwd=\"37.247.7.182\" dyno=web.1 connect=0ms service=20ms status=200 bytes=294", 1));
-        System.out.println(parseMessages("304 <45>1 2016-03-10T10:02:41.761316+00:00 host heroku web.1 - source=web.1 dyno=heroku.24944085.59356af4-7746-45e4-b753-69fe0c1faf28 sample#memory_total=278.12MB sample#memory_rss=277.97MB sample#memory_cache=0.15MB sample#memory_swap=0.00MB sample#memory_pgpgin=84816pages sample#memory_pgpgout=47344pages" +
+        final String s1 = "255 <158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425\n";
+        System.out.println(s1.length());
+        final String s = s1 +
+                "253 <158>1 2016-03-10T10:25:13.310633+00:00 host heroku router - at=info method=POST path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=74274205-0a39-4545-b548-7f208a67ee97 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=31ms status=200 bytes=254";
+        System.out.println(parseMessages(s, 2));
+        System.out.println(parseMessages(
+                "304 <45>1 2016-03-10T10:02:41.761316+00:00 host heroku web.1 - source=web.1 dyno=heroku.24944085.59356af4-7746-45e4-b753-69fe0c1faf28 sample#memory_total=278.12MB sample#memory_rss=277.97MB sample#memory_cache=0.15MB sample#memory_swap=0.00MB sample#memory_pgpgin=84816pages sample#memory_pgpgout=47344pages\n" +
                 "304 <45>1 2016-03-10T10:02:41.761316+00:00 host heroku web.1 - source=web.1 dyno=heroku.24944085.59356af4-7746-45e4-b753-69fe0c1faf28 sample#memory_total=278.12MB sample#memory_rss=277.97MB sample#memory_cache=0.15MB sample#memory_swap=0.00MB sample#memory_pgpgin=84816pages sample#memory_pgpgout=47344pages", 2));
     }
 }
