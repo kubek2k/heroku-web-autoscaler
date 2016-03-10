@@ -41,7 +41,7 @@ public class StatsDrainResource {
                 .filter(Optional::isPresent)
                 .map(Optional::get)
                 .collect(Collectors.toList());
-        if (!routerEntries.isEmpty()) {
+        if(!routerEntries.isEmpty()) {
             LOGGER.info("Got some logs {}", routerEntries);
         }
     }
@@ -49,16 +49,17 @@ public class StatsDrainResource {
     public static List<String> parseMessages(final String blob, final int number) {
         int currentIdx = 0;
         final List<String> result = new ArrayList<>(number);
-        while (currentIdx < blob.length()) {
+        while(currentIdx < blob.length()) {
             final String next = blob.substring(currentIdx);
             final Matcher m = MSG_LEN_PAT.matcher(next);
-            if (m.find()) {
+            if(m.find()) {
                 final String len = m.group(1);
                 final int messageLen = Integer.parseInt(len);
                 final String message = blob.substring(currentIdx + len.length() + 1, currentIdx + messageLen);
                 result.add(message);
                 currentIdx += len.length() + messageLen + 1;
-            } else {
+            }
+            else {
                 throw new IllegalArgumentException("something wrong has happened. While whole message = " + blob +
                         " next part to parse = " + next + " index = " + currentIdx);
             }
@@ -66,24 +67,48 @@ public class StatsDrainResource {
         return result;
     }
 
-    private static final Pattern ENTRY_PATTERN = Pattern.compile("^<\\d+>\\d+ (\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}\\+\\d{2}:\\d{2}) host ([^ ]+) ([^ ]+) (.*)$");
+    private static final Pattern ENTRY_PATTERN = Pattern.compile(
+            "^<\\d+>\\d+ (\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}\\+\\d{2}:\\d{2}) host ([^ ]+) ([^ ]+) (.*)$");
 
     public static Optional<RouterEntry> parseEntry(final String message) {
         final Matcher m = ENTRY_PATTERN.matcher(message);
-        if (m.matches()) {
+        if(m.matches()) {
             final String system = m.group(2);
             final String type = m.group(3);
             final String entryMessage = m.group(4);
-            if ("heroku".equals(system) && "router".equals(type)) {
+            if("heroku".equals(system) && "router".equals(type)) {
                 final Instant timestamp = toInstant(m.group(1));
-                return Optional.of(new RouterEntry(timestamp, entryMessage));
+                return Optional.of(new RouterEntry(timestamp, parseRouterStats(entryMessage)));
             }
             LOGGER.info("Non router message = {} entry, omitting", message);
             return Optional.empty();
-        } else {
+        }
+        else {
             LOGGER.warn("Get a non-compliant message {}", message);
             return Optional.empty();
         }
+    }
+
+    private static final Pattern ROUTER_ENTRY_PATTERN = Pattern.compile(
+            "^- at=[^ ]+ method=([A-Z]+) path=(\"[^\"]+\") host=([^ ]+) request_id=[^ ]+ fwd=\"[^\"]+\" dyno=[^ ]+ connect=(\\d+)ms service=(\\d+)ms status=(\\d+) bytes=.*$");
+
+    public static RouterStats parseRouterStats(final String message) {
+        final Matcher m = ROUTER_ENTRY_PATTERN.matcher(message);
+        if(m.matches()) {
+            final String method = m.group(1);
+            final String path = m.group(2);
+            final String host = m.group(3);
+            final String connectS = m.group(4);
+            final String serviceS = m.group(5);
+            final String statusS = m.group(6);
+            return new RouterStats(host,
+                    method,
+                    path,
+                    Integer.parseInt(statusS),
+                    Integer.parseInt(connectS),
+                    Integer.parseInt(serviceS));
+        }
+        throw new IllegalArgumentException("Illegal router entry passed");
     }
 
     private static Instant toInstant(final String timestampString) {
@@ -95,9 +120,9 @@ public class StatsDrainResource {
     private static class RouterEntry {
         private final Instant timestamp;
 
-        private final String message;
+        private final RouterStats message;
 
-        public RouterEntry(final Instant timestamp, final String message) {
+        public RouterEntry(final Instant timestamp, final RouterStats message) {
             this.timestamp = timestamp;
             this.message = message;
         }
@@ -106,17 +131,53 @@ public class StatsDrainResource {
         public String toString() {
             return "RouterEntry{" +
                     "timestamp=" + this.timestamp +
-                    ", message='" + this.message + '\'' +
+                    ", routerStats='" + this.message + '\'' +
+                    '}';
+        }
+    }
+
+    private static class RouterStats {
+        private final String host;
+        private final String method;
+        private final String path;
+        private final int statusCode;
+        private final int connectMs;
+        private final int serviceMs;
+
+        public RouterStats(final String host,
+                           final String method,
+                           final String path,
+                           final int statusCode,
+                           final int connectMs,
+                           final int serviceMs) {
+            this.host = host;
+            this.method = method;
+            this.path = path;
+            this.statusCode = statusCode;
+            this.connectMs = connectMs;
+            this.serviceMs = serviceMs;
+        }
+
+        @Override
+        public String toString() {
+            return "RouterStats{" +
+                    "host='" + this.host + '\'' +
+                    ", method='" + this.method + '\'' +
+                    ", path='" + this.path + '\'' +
+                    ", statusCode=" + this.statusCode +
+                    ", connectMs=" + this.connectMs +
+                    ", serviceMs=" + this.serviceMs +
                     '}';
         }
     }
 
     public static void main(final String[] args) {
-//        final String s1 = "<158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425";
-        final String s1 = "<190>1 2016-03-10T12:32:26.864447+00:00 host app web.1 - 5.226.119.97 - - [10/Mar/2016:12:32:26 +0000] \"POST /advise HTTP/1.1\" 200 2 \"https://cms-playground.plan3dev.se/workbench/o65B;newsroom=fvn\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36";
+        final String s1 = "<158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425";
+//        final String s1 = "<190>1 2016-03-10T12:32:26.864447+00:00 host app web.1 - 5.226.119.97 - - [10/Mar/2016:12:32:26 +0000] \"POST /advise HTTP/1.1\" 200 2 \"https://cms-playground.plan3dev.se/workbench/o65B;newsroom=fvn\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36";
 //        Instant.from(DateTimeFormatter.ISO_DATE_TIME.parse("2016-03-10T12:32:26.864447+00:00"));
-        final Instant instant = toInstant("2016-03-10T12:32:26.864447+00:00");
-
+//        final Instant instant = toInstant("2016-03-10T12:32:26.864447+00:00");
         System.out.println(parseEntry(s1));
+//        System.out.println(parseRouterStats(
+//                "- at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=156b85d2-392e-4f44-ae4b-532424ad9c74 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes="));
     }
 }
