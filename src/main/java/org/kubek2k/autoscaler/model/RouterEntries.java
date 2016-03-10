@@ -24,4 +24,12 @@ public class RouterEntries {
                 ", entries=" + this.entries +
                 '}';
     }
+
+    public String getFrameId() {
+        return this.frameId;
+    }
+
+    public List<RouterEntry> getEntries() {
+        return this.entries;
+    }
 }

@@ -26,6 +26,14 @@ public class RouterStats {
         this.serviceMs = serviceMs;
     }
 
+    public int getConnectMs() {
+        return this.connectMs;
+    }
+
+    public int getServiceMs() {
+        return this.serviceMs;
+    }
+
     @Override
     public String toString() {
         return "RouterStats{" +

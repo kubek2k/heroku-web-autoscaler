@@ -17,6 +17,14 @@ public class RouterEntry {
         this.message = message;
     }
 
+    public Instant getTimestamp() {
+        return this.timestamp;
+    }
+
+    public RouterStats getMessage() {
+        return this.message;
+    }
+
     @Override
     public String toString() {
         return "RouterEntry{" +
