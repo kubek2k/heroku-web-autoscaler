@@ -8,6 +8,7 @@ import plan3.pure.logging.LogConfigurer;
 import plan3.pure.redis.JedisUtil;
 import plan3.restin.dw.Plan3Bundle;
 
+import org.kubek2k.autoscaler.observer.StatsObserver;
 import org.kubek2k.autoscaler.statsconsumer.StatsConsumer;
 
 public class StatsDrainService extends Application<StatsDrainConfiguration> {
@@ -16,7 +17,9 @@ public class StatsDrainService extends Application<StatsDrainConfiguration> {
     public void initialize(final Bootstrap<StatsDrainConfiguration> bootstrap) {
         final Env env = new Env(System.getenv());
         bootstrap.addBundle(new Plan3Bundle(env));
-        bootstrap.addCommand(new StatsConsumer(new JedisUtil(env.required("REDIS_URL"))));
+        final JedisUtil jedis = new JedisUtil(env.required("REDIS_URL"));
+        bootstrap.addCommand(new StatsConsumer(jedis));
+        bootstrap.addCommand(new StatsObserver(jedis));
         LogConfigurer.configure(env.optional("LOGGING"));
     }
 
