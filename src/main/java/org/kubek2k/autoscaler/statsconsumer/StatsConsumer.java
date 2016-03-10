@@ -42,11 +42,11 @@ public class StatsConsumer extends ConfiguredCommand<StatsDrainConfiguration> {
                     entries.getEntries().forEach(e -> {
                         final Long count = jedis.incr(counterId(entries.getAppName(), e));
                         final String avgServiceTimeId = avgServiceTimeId(entries.getAppName(), e);
-                        final Float avgSoFar = Optional.ofNullable(jedis.get(avgServiceTimeId))
-                                .map(Float::parseFloat)
-                                .orElse(0.0f);
+                        final Double avgSoFar = Optional.ofNullable(jedis.get(avgServiceTimeId))
+                                .map(Double::parseDouble)
+                                .orElse(0.0d);
                         final int serviceTime = e.getMessage().getServiceMs() + e.getMessage().getConnectMs();
-                        final Float newAvg = (avgSoFar * (count - 1) + serviceTime) / count;
+                        final Double newAvg = (avgSoFar * (count - 1) + serviceTime) / count;
                         jedis.setex(avgServiceTimeId, USE_MARK_EXPIRATION, newAvg.toString());
                     });
                 }
