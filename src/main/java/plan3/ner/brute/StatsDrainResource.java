@@ -1,5 +1,7 @@
 package plan3.ner.brute;
 
+import plan3.restin.jackson.JsonUtil;
+
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -90,7 +92,7 @@ public class StatsDrainResource {
     }
 
     private static final Pattern ROUTER_ENTRY_PATTERN = Pattern.compile(
-            "^- at=[^ ]+ method=([A-Z]+) path=(\"[^\"]+\") host=([^ ]+) request_id=[^ ]+ fwd=\"[^\"]+\" dyno=[^ ]+ connect=(\\d+)ms service=(\\d+)ms status=(\\d+) bytes=.*$");
+            "^- at=[^ ]+ method=([A-Z]+) path=\"([^\"]+)\" host=([^ ]+) request_id=[^ ]+ fwd=\"[^\"]+\" dyno=[^ ]+ connect=(\\d+)ms service=(\\d+)ms status=(\\d+) bytes=.*$");
 
     public static RouterStats parseRouterStats(final String message) {
         final Matcher m = ROUTER_ENTRY_PATTERN.matcher(message);
@@ -173,11 +175,6 @@ public class StatsDrainResource {
 
     public static void main(final String[] args) {
         final String s1 = "<158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425";
-//        final String s1 = "<190>1 2016-03-10T12:32:26.864447+00:00 host app web.1 - 5.226.119.97 - - [10/Mar/2016:12:32:26 +0000] \"POST /advise HTTP/1.1\" 200 2 \"https://cms-playground.plan3dev.se/workbench/o65B;newsroom=fvn\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36";
-//        Instant.from(DateTimeFormatter.ISO_DATE_TIME.parse("2016-03-10T12:32:26.864447+00:00"));
-//        final Instant instant = toInstant("2016-03-10T12:32:26.864447+00:00");
-        System.out.println(parseEntry(s1));
-//        System.out.println(parseRouterStats(
-//                "- at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=156b85d2-392e-4f44-ae4b-532424ad9c74 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes="));
+        System.out.println(JsonUtil.asJson(parseEntry(s1)));
     }
 }

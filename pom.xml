@@ -25,6 +25,11 @@
             <version>75</version>
         </dependency>
         <dependency>
+            <groupId>plan3.msg</groupId>
+            <artifactId>msg-sqs</artifactId>
+            <version>13</version>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.13</version>
