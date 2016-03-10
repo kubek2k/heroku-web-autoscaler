@@ -51,7 +51,7 @@ public class StatsConsumer extends ConfiguredCommand<StatsDrainConfiguration> {
                     });
                 }
                 else {
-                    LOGGER.info("Entries alread in redis {}", entries);
+                    LOGGER.info("Entries already in redis {}", entries);
                 }
             }
             return true;
