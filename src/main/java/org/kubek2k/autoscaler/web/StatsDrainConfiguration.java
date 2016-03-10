@@ -40,7 +40,10 @@ public class StatsDrainConfiguration extends Configuration implements Plan3DwCon
     }
 
     public void registerResource(final Environment env) {
-        final Queue statsQueue = new SQSClient().queue(this.env.required("STATS_QUEUE_URL"));
-        env.jersey().register(new StatsDrainResource(statsQueue));
+        env.jersey().register(new StatsDrainResource(statsQueue()));
+    }
+
+    public Queue statsQueue() {
+        return new SQSClient().queue(this.env.required("STATS_QUEUE_URL"));
     }
 }

@@ -22,6 +22,8 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 
+import org.kubek2k.autoscaler.model.RouterEntry;
+import org.kubek2k.autoscaler.model.RouterStats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -127,60 +129,6 @@ public class StatsDrainResource {
         return LocalDateTime.from(DateTimeFormatter.ISO_DATE_TIME.parse(
                 timestampString)).toInstant(
                 ZoneOffset.UTC);
-    }
-
-    private static class RouterEntry {
-        private final Instant timestamp;
-
-        private final RouterStats message;
-
-        public RouterEntry(final Instant timestamp, final RouterStats message) {
-            this.timestamp = timestamp;
-            this.message = message;
-        }
-
-        @Override
-        public String toString() {
-            return "RouterEntry{" +
-                    "timestamp=" + this.timestamp +
-                    ", routerStats='" + this.message + '\'' +
-                    '}';
-        }
-    }
-
-    private static class RouterStats {
-        private final String host;
-        private final String method;
-        private final String path;
-        private final int statusCode;
-        private final int connectMs;
-        private final int serviceMs;
-
-        public RouterStats(final String host,
-                           final String method,
-                           final String path,
-                           final int statusCode,
-                           final int connectMs,
-                           final int serviceMs) {
-            this.host = host;
-            this.method = method;
-            this.path = path;
-            this.statusCode = statusCode;
-            this.connectMs = connectMs;
-            this.serviceMs = serviceMs;
-        }
-
-        @Override
-        public String toString() {
-            return "RouterStats{" +
-                    "host='" + this.host + '\'' +
-                    ", method='" + this.method + '\'' +
-                    ", path='" + this.path + '\'' +
-                    ", statusCode=" + this.statusCode +
-                    ", connectMs=" + this.connectMs +
-                    ", serviceMs=" + this.serviceMs +
-                    '}';
-        }
     }
 
     public static void main(final String[] args) {
