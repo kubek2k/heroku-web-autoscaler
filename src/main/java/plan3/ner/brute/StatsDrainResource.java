@@ -72,7 +72,7 @@ public class StatsDrainResource {
 
                 return Optional.of(new RouterEntry(timestampString, entryMessage));
             }
-            LOGGER.debug("Non router messeage = {} entry, omitting", message);
+            LOGGER.info("Non router message = {} entry, omitting", message);
             return Optional.empty();
         } else {
             LOGGER.warn("Get a non-compliant message {}", message);
