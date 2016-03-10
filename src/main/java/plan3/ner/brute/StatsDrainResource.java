@@ -60,16 +60,16 @@ public class StatsDrainResource {
         return result;
     }
 
-    private static final Pattern ENTRY_PATTERN = Pattern.compile("^<\\d+>\\d+ (\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}\\+\\d{2}:\\d{2}) host heroku ([^ ]+) (.*)$");
+    private static final Pattern ENTRY_PATTERN = Pattern.compile("^<\\d+>\\d+ (\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}\\+\\d{2}:\\d{2}) host ([^ ]+) ([^ ]+) (.*)$");
 
     public static Optional<RouterEntry> parseEntry(final String message) {
         final Matcher m = ENTRY_PATTERN.matcher(message);
         if (m.matches()) {
             final String timestampString = m.group(1);
-            final String type = m.group(2);
-            final String entryMessage = m.group(3);
-            if ("router".equals(type)) {
-
+            final String system = m.group(2);
+            final String type = m.group(3);
+            final String entryMessage = m.group(4);
+            if ("heroku".equals(system) && "router".equals(type)) {
                 return Optional.of(new RouterEntry(timestampString, entryMessage));
             }
             LOGGER.info("Non router message = {} entry, omitting", message);
@@ -100,7 +100,8 @@ public class StatsDrainResource {
     }
 
     public static void main(final String[] args) {
-        final String s1 = "<158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425";
+//        final String s1 = "<158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425";
+        final String s1 = "<190>1 2016-03-10T12:32:26.864447+00:00 host app web.1 - 5.226.119.97 - - [10/Mar/2016:12:32:26 +0000] \"POST /advise HTTP/1.1\" 200 2 \"https://cms-playground.plan3dev.se/workbench/o65B;newsroom=fvn\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36";
 
         System.out.println(parseEntry(s1));
     }
