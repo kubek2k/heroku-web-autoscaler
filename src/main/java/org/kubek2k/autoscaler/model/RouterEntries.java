@@ -13,7 +13,8 @@ public class RouterEntries {
 
     @JsonCreator
     public RouterEntries(@JsonProperty("frameId") final String frameId,
-                         @JsonProperty("entries") final List<RouterEntry> entries, final String appName) {
+                         @JsonProperty("entries") final List<RouterEntry> entries,
+                         @JsonProperty("appName") final String appName) {
         this.frameId = frameId;
         this.entries = entries;
         this.appName = appName;
