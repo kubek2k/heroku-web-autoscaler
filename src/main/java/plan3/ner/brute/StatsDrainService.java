@@ -4,6 +4,7 @@ import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import plan3.pure.config.Env;
+import plan3.pure.logging.LogConfigurer;
 import plan3.restin.dw.Plan3Bundle;
 
 public class StatsDrainService extends Application<StatsDrainConfiguration> {
@@ -12,6 +13,7 @@ public class StatsDrainService extends Application<StatsDrainConfiguration> {
     public void initialize(final Bootstrap<StatsDrainConfiguration> bootstrap) {
         final Env env = new Env(System.getenv());
         bootstrap.addBundle(new Plan3Bundle(env));
+        LogConfigurer.configure(env.optional("LOGGING"));
     }
 
     @Override

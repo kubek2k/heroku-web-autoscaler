@@ -20,6 +20,11 @@
             <version>43</version>
         </dependency>
         <dependency>
+            <groupId>plan3.pure</groupId>
+            <artifactId>pure-logging</artifactId>
+            <version>75</version>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.13</version>
