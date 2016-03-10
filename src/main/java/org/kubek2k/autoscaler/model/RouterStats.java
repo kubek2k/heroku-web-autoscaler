@@ -34,6 +34,10 @@ public class RouterStats {
         return this.serviceMs;
     }
 
+    public String getPath() {
+        return this.path;
+    }
+
     @Override
     public String toString() {
         return "RouterStats{" +

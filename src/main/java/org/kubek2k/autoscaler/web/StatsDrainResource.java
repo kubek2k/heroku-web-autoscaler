@@ -39,9 +39,11 @@ public class StatsDrainResource {
     private static final Pattern MSG_LEN_PAT = Pattern.compile("^(\\d+) ");
 
     private final Queue statsQueue;
+    private final List<String> disabledPaths;
 
-    public StatsDrainResource(final Queue statsQueue) {
+    public StatsDrainResource(final Queue statsQueue, final List<String> disabledPaths) {
         this.statsQueue = statsQueue;
+        this.disabledPaths = disabledPaths;
     }
 
     @POST
@@ -56,11 +58,19 @@ public class StatsDrainResource {
                 .map(StatsDrainResource::parseEntry)
                 .filter(Optional::isPresent)
                 .map(Optional::get)
+                .filter(this::notDisabledPath)
                 .collect(Collectors.toList());
         if(!routerEntries.isEmpty()) {
             LOGGER.info("Got some logs to process frame id = {} no of logs = {}", frameId, routerEntries.size());
             this.statsQueue.enqueue(JsonUtil.asJson(new RouterEntries(frameId, routerEntries, appName)));
         }
+    }
+
+    private boolean notDisabledPath(final RouterEntry routerEntry) {
+        return !this.disabledPaths.stream()
+                .filter(patternS -> routerEntry.getMessage().getPath().startsWith(patternS))
+                .findAny()
+                .isPresent();
     }
 
     public static List<String> parseMessages(final String blob, final int number) {
@@ -111,23 +121,19 @@ public class StatsDrainResource {
     public static RouterStats parseRouterStats(final String message) {
         final Matcher m = ROUTER_ENTRY_PATTERN.matcher(message.substring(2));
         final Map<String, String> map = new HashMap<>();
-        while (m.find()) {
-            if (m.group(4) != null) {
+        while(m.find()) {
+            if(m.group(4) != null) {
                 map.put(m.group(1), m.group(4));
-            } else {
+            }
+            else {
                 map.put(m.group(1), m.group(5));
             }
         }
-        final Integer service = Integer.parseInt(stripMs(map.get("service")));
-        final String path = map.get("path");
-        if (service > 5000) {
-            LOGGER.info("Service time pretty long {} for path {} message {}", service, path, message);
-        }
         return new RouterStats(map.get("host"),
                 map.get("method"),
-                path,
+                map.get("path"),
                 Integer.parseInt(stripMs(map.get("connect"))),
-                service,
+                Integer.parseInt(stripMs(map.get("service"))),
                 Integer.parseInt(map.get("status")));
     }
 
