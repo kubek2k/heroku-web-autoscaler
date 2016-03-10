@@ -1,5 +1,6 @@
 package plan3.ner.brute;
 
+import plan3.msg.queue.Queue;
 import plan3.restin.jackson.JsonUtil;
 
 import java.time.Instant;
@@ -31,6 +32,12 @@ public class StatsDrainResource {
 
     private static final Pattern MSG_LEN_PAT = Pattern.compile("^(\\d+) ");
 
+    private final Queue statsQueue;
+
+    public StatsDrainResource(final Queue statsQueue) {
+        this.statsQueue = statsQueue;
+    }
+
     @POST
     @Consumes("application/logplex-1")
     public void consumeBatch(@QueryParam("app") final String appName,
@@ -45,6 +52,9 @@ public class StatsDrainResource {
                 .collect(Collectors.toList());
         if(!routerEntries.isEmpty()) {
             LOGGER.info("Got some logs {}", routerEntries);
+            routerEntries.forEach(entry -> {
+                this.statsQueue.enqueue(JsonUtil.asJson(entry));
+            });
         }
     }
 

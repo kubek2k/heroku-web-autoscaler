@@ -4,6 +4,8 @@ import static java.util.Arrays.asList;
 
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Environment;
+import plan3.msg.queue.Queue;
+import plan3.msg.sqs.SQSClient;
 import plan3.pure.config.Env;
 import plan3.restin.dw.Plan3DwConfiguration;
 import plan3.restin.jersey.filters.ApiKeyFilter;
@@ -20,21 +22,25 @@ public class StatsDrainConfiguration extends Configuration implements Plan3DwCon
         this.serviceApiKey = this.env.required("API_KEY");
     }
 
+    @Override
     public Iterable<?> jerseyFilters() {
         return asList(new ForceHttpsFilter(this.env),
                 new IgnoredResourcesFilter(),
                 new ApiKeyFilter(this.serviceApiKey, "*"));
     }
 
+    @Override
     public Iterable<String> corsHttpVerbs() {
         return asList("PUT", "POST", "DELETE");
     }
 
+    @Override
     public boolean usesAuthentication() {
         return false;
     }
 
     public void registerResource(final Environment env) {
-        env.jersey().register(new StatsDrainResource());
+        final Queue statsQueue = new SQSClient().queue(this.env.required("STATS_QUEUE_URL"));
+        env.jersey().register(new StatsDrainResource(statsQueue));
     }
 }
