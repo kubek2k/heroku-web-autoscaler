@@ -40,8 +40,8 @@ public class StatsConsumer extends ConfiguredCommand<StatsDrainConfiguration> {
                 if(jedis.get(processedFrameId(entries)) == null) {
                     jedis.setex(processedFrameId(entries), USE_MARK_EXPIRATION, "true");
                     entries.getEntries().forEach(e -> {
-                        final Long count = jedis.incr(counterId(e));
-                        final String avgServiceTimeId = avgServiceTimeId(e);
+                        final Long count = jedis.incr(counterId(entries.getAppName(), e));
+                        final String avgServiceTimeId = avgServiceTimeId(entries.getAppName(), e);
                         final Float avgSoFar = Optional.ofNullable(jedis.get(avgServiceTimeId))
                                 .map(Float::parseFloat)
                                 .orElse(0.0f);
@@ -58,14 +58,14 @@ public class StatsConsumer extends ConfiguredCommand<StatsDrainConfiguration> {
         }).run();
     }
 
-    private String counterId(final RouterEntry e) {
+    private String counterId(final String appName, final RouterEntry e) {
         final long epochSecond = e.getTimestamp().getEpochSecond();
-        return "requests-cummulated-counter-" + (epochSecond / 10);
+        return appName + "-requests-cummulated-counter-" + (epochSecond / 10);
     }
 
-    private String avgServiceTimeId(final RouterEntry e) {
+    private String avgServiceTimeId(final String appName, final RouterEntry e) {
         final long epochSecond = e.getTimestamp().getEpochSecond();
-        return "average-service-time-" + (epochSecond / 10);
+        return appName + "-average-service-time-" + (epochSecond / 10);
     }
 
     private String processedFrameId(final RouterEntries entry) {

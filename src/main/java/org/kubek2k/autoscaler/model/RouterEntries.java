@@ -9,20 +9,14 @@ public class RouterEntries {
 
     private final String frameId;
     private final List<RouterEntry> entries;
+    private final String appName;
 
     @JsonCreator
     public RouterEntries(@JsonProperty("frameId") final String frameId,
-                         @JsonProperty("entries") final List<RouterEntry> entries) {
+                         @JsonProperty("entries") final List<RouterEntry> entries, final String appName) {
         this.frameId = frameId;
         this.entries = entries;
-    }
-
-    @Override
-    public String toString() {
-        return "RouterEntries{" +
-                "batchId='" + this.frameId + '\'' +
-                ", entries=" + this.entries +
-                '}';
+        this.appName = appName;
     }
 
     public String getFrameId() {
@@ -31,5 +25,9 @@ public class RouterEntries {
 
     public List<RouterEntry> getEntries() {
         return this.entries;
+    }
+
+    public String getAppName() {
+        return this.appName;
     }
 }

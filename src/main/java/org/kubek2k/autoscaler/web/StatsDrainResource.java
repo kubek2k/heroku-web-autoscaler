@@ -56,7 +56,7 @@ public class StatsDrainResource {
                 .collect(Collectors.toList());
         if(!routerEntries.isEmpty()) {
             LOGGER.info("Got some logs to process {}", routerEntries);
-            this.statsQueue.enqueue(JsonUtil.asJson(new RouterEntries(frameId, routerEntries)));
+            this.statsQueue.enqueue(JsonUtil.asJson(new RouterEntries(frameId, routerEntries, "plan3-tag-advisor-dev")));
         }
     }
 
