@@ -1,0 +1,10 @@
+server:
+  type: simple
+  applicationContextPath: /
+  adminContextPath: /admin
+logging:
+  level: INFO
+  loggers:
+    plan3: DEBUG
+    io.orchestrate: WARN
+    org.eclipse.jetty: WARN

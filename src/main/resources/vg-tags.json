@@ -1,0 +1,12506 @@
+[
+  {
+    "id": 13148,
+    "name": "#Helseheltene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9917,
+    "name": "#måsideg",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13216,
+    "name": "#vgdigitaleliv",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3830,
+    "name": "(Slettet)",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 509,
+    "name": "1. divisjon",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 667,
+    "name": "11. september - ett år etter",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9577,
+    "name": "1814 - 2014",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3122,
+    "name": "3GSM",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 304,
+    "name": "71 grader nord",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1667,
+    "name": "A-VM ishockey 2006",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 683,
+    "name": "Aalesund",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 342,
+    "name": "Abu Sayyaf-geriljaen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 563,
+    "name": "Afghanistan",
+    "type": {
+      "id": 12,
+      "name": "Land"
+    }
+  },
+  {
+    "id": 7097,
+    "name": "Afrikamesterskapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9797,
+    "name": "Agnes-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 974,
+    "name": "Aishwarya Rai",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 567,
+    "name": "Aking i OL 2002",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 1085,
+    "name": "Aking i OL 2006",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 407,
+    "name": "Aksjeskolen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 734,
+    "name": "Algerie",
+    "type": {
+      "id": 12,
+      "name": "Land"
+    }
+  },
+  {
+    "id": 442,
+    "name": "Alpin-VM 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 704,
+    "name": "Alpin-VM 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 942,
+    "name": "Alpin-VM 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3118,
+    "name": "Alpin-VM 2007",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 820,
+    "name": "Alpint",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 568,
+    "name": "Alpint i OL 2002",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 1086,
+    "name": "Alpint i OL 2006",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 405,
+    "name": "Alpintogulykken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 700,
+    "name": "Alta-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1102,
+    "name": "Alternativ medisin",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13165,
+    "name": "Amanda 2014",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3682,
+    "name": "Ambulanse-skandalen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 13280,
+    "name": "Andre verdenskrig",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 968,
+    "name": "Angelina Jolie",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 1681,
+    "name": "Angola i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 90,
+    "name": "Anja",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 312,
+    "name": "Anna Kournikova",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 986,
+    "name": "Anna Nicole Smith",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 787,
+    "name": "Anne-Kat.",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 9101,
+    "name": "Anne-Lise von der Fehr kommenterer",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3127,
+    "name": "Apenes-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13217,
+    "name": "Apple",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 226,
+    "name": "Aqua",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Arabia i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 236,
+    "name": "Arbeiderpartiet",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 781,
+    "name": "Arbeidsledigheten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 12878,
+    "name": "Arbeidsliv",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3782,
+    "name": "Arboga-tragedien",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 553,
+    "name": "Argentina",
+    "type": {
+      "id": 12,
+      "name": "Land"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Argentina i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 608,
+    "name": "Argentina i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1677,
+    "name": "Argentina i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 804,
+    "name": "Arne Næss jr.",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 766,
+    "name": "Arnold Schwarzenegger",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 48,
+    "name": "Arsenal",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 1061,
+    "name": "Aserbajdsjan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 933,
+    "name": "Ashlee Simpson",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 49,
+    "name": "Aston Villa",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 566,
+    "name": "Astrid Lindgren",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 745,
+    "name": "Astronomi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 686,
+    "name": "Asyl-avsløringen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 760,
+    "name": "Asyl-debatten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6317,
+    "name": "Attentatet i Arizona",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 775,
+    "name": "Attentatet mot Anna Lindh",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 447,
+    "name": "Aud Berggren møtte",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 555,
+    "name": "Australia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1689,
+    "name": "Australia i fotball-VM 2006",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 465,
+    "name": "Awara-forsvinningen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 727,
+    "name": "B-VM ishockey 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 824,
+    "name": "B-VM ishockey 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 384,
+    "name": "Baby-dødsfallet i Stavanger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 502,
+    "name": "Baby-kidnappingen i Haugesund",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 930,
+    "name": "Bach-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 897,
+    "name": "Badminton i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3753,
+    "name": "Badminton i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 109,
+    "name": "Bagasjerommet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6460,
+    "name": "Bahrain",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 681,
+    "name": "Bali-terror",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 593,
+    "name": "Bandidos-bomben i Drammen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 8137,
+    "name": "Bangladesh",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 245,
+    "name": "Bardufoss takras",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 7459,
+    "name": "Barn og familie",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 279,
+    "name": "Barnedrap i Sverige",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 274,
+    "name": "Barnedrapene i Baneheia",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 3728,
+    "name": "Barnedrapet i Kragerø",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 676,
+    "name": "Barnedrapet i Steinkjer",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 9897,
+    "name": "Barnedrapet på Ellingsrud",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8557,
+    "name": "Barnehagegranskingen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8237,
+    "name": "Barneskolemassakren i USA",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 895,
+    "name": "Baseball i OL 2004",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 3754,
+    "name": "Baseball i OL 2008",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 832,
+    "name": "Basketball",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 889,
+    "name": "Basketball i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3755,
+    "name": "Basketball i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7997,
+    "name": "Belgia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 287,
+    "name": "Belgia i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Belgia i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 609,
+    "name": "Belgia i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 725,
+    "name": "Belgisk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 779,
+    "name": "Ben Affleck",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 588,
+    "name": "Benedicte-forsvinningen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 12882,
+    "name": "Beredskap",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 830,
+    "name": "Bergens-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 958,
+    "name": "Bevegelser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 455,
+    "name": "Big Brother",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7448,
+    "name": "Bil",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1750,
+    "name": "Bil og miljø",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 314,
+    "name": "Bil og trafikk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 706,
+    "name": "Bilbomben i Drammen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 9838,
+    "name": "Bilhold",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13264,
+    "name": "Bill Cosby",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 179,
+    "name": "Bill Gates",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 192,
+    "name": "Billed-extra",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 800,
+    "name": "Biltest",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1728,
+    "name": "Bilutstillinger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 533,
+    "name": "Bio-terror",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Birgitte-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8217,
+    "name": "Birkedal-saken i Frp",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 648,
+    "name": "Birmingham",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 329,
+    "name": "Bislett Games 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 490,
+    "name": "Bislett Games 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 647,
+    "name": "Bislett Games 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 747,
+    "name": "Bislett Games 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 776,
+    "name": "Bislett Games 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6617,
+    "name": "Bislett-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 50,
+    "name": "Blackburn",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 12869,
+    "name": "Blakstad-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1051,
+    "name": "Blogg",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13260,
+    "name": "Blogger fra kampen mot ebola",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 569,
+    "name": "Bob i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1087,
+    "name": "Bob i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 67,
+    "name": "Bodø/Glimt",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 9478,
+    "name": "Bokanmeldelser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 541,
+    "name": "Boksing",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 885,
+    "name": "Boksing i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7447,
+    "name": "Bolig",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3722,
+    "name": "Boligblokk-kollapsen i Ålesund",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 281,
+    "name": "Boligmarkedet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 784,
+    "name": "Bolivia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 979,
+    "name": "Bollywood",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 508,
+    "name": "Bolton",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 242,
+    "name": "Bondevik-regjeringen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 899,
+    "name": "Bordtennis i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3757,
+    "name": "Bordtennis i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13077,
+    "name": "Bortføringen i Kongsvinger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8677,
+    "name": "Bortføringene i Cleveland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1064,
+    "name": "Bosnia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8617,
+    "name": "Boston-bombene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3129,
+    "name": "Bourbon Dolphin-katastrofen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 209,
+    "name": "Brad Pitt",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 148,
+    "name": "Bradford",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 69,
+    "name": "Brann SK",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 8197,
+    "name": "Brannberedskapen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9557,
+    "name": "Brannen på Frøya",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1077,
+    "name": "Branner",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 677,
+    "name": "Brasil",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Brasil i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 610,
+    "name": "Brasil i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1690,
+    "name": "Brasil i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6598,
+    "name": "Breddeidrett",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 207,
+    "name": "Britney Spears",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 212,
+    "name": "Bruce Willis",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6137,
+    "name": "Bruktbil",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 256,
+    "name": "Bryne",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 887,
+    "name": "Bryting i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3758,
+    "name": "Bryting i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7937,
+    "name": "Bråket om Muhammed-filmen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 892,
+    "name": "Bueskyting i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3759,
+    "name": "Bueskyting i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1029,
+    "name": "Bulgaria",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 855,
+    "name": "Bulgaria i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Bulgaria i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13252,
+    "name": "Burkina Faso",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3689,
+    "name": "Burma",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9197,
+    "name": "Bussdrapene i Årdal",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 712,
+    "name": "Bylarm",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1084,
+    "name": "Båt",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 122,
+    "name": "Bækkelaget",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 876,
+    "name": "Børge Ouslands turtips",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 382,
+    "name": "Børshandel",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 219,
+    "name": "Calista Flockhart",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 790,
+    "name": "Cameron Diaz",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1661,
+    "name": "Canada",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 214,
+    "name": "Carmen Electra",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 970,
+    "name": "Carola",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 203,
+    "name": "Catherine Zeta-Jones",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 205,
+    "name": "Celine Dion",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 379,
+    "name": "Champions League 00/01",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 492,
+    "name": "Champions League 01/02",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 3680,
+    "name": "Champions League 07/08",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 3731,
+    "name": "Champions League 08/09",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 3818,
+    "name": "Champions League 09/10",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 5958,
+    "name": "Champions League 10/11",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 6777,
+    "name": "Champions League 11/12",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 7817,
+    "name": "Champions League 12/13",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 161,
+    "name": "Champions League 1999/00",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 645,
+    "name": "Champions League 2002/03",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 753,
+    "name": "Champions League 2003/04",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 865,
+    "name": "Champions League 2004/05",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 1030,
+    "name": "Champions League 2005/06",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 1712,
+    "name": "Champions League 2006/07",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 13142,
+    "name": "Champions League 2014/15",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 716,
+    "name": "Championship",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 493,
+    "name": "Chandra Levy-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 827,
+    "name": "Charlize Theron",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 51,
+    "name": "Charlton",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Chelsea",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 586,
+    "name": "Chi-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 949,
+    "name": "Chile",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Chile i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13163,
+    "name": "Christiania Teater",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 432,
+    "name": "Christina Aguilera",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8397,
+    "name": "Christoffer-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Clinton",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 173,
+    "name": "Clinton-besøket",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 258,
+    "name": "Club 4",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3711,
+    "name": "Colombia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Colombia i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 138,
+    "name": "Color Line-brannen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 711,
+    "name": "Columbia-ulykken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 328,
+    "name": "Concorde-katastrofen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 874,
+    "name": "Copa America",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 611,
+    "name": "Costa Rica i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1669,
+    "name": "Costa Rica i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7177,
+    "name": "Costa-forliset",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 184,
+    "name": "Courtney Love",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 53,
+    "name": "Coventry",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 873,
+    "name": "Crystal Palace",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 908,
+    "name": "Cuba",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 335,
+    "name": "Cupen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1062,
+    "name": "Curling",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 570,
+    "name": "Curling i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1088,
+    "name": "Curling i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 116,
+    "name": "Dagens helt",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 104,
+    "name": "Dagens skilt",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 130,
+    "name": "Dagens turist",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 650,
+    "name": "Danmark",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 733,
+    "name": "Danmark - Norge 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 295,
+    "name": "Danmark i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 856,
+    "name": "Danmark i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Danmark i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 612,
+    "name": "Danmark i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 591,
+    "name": "Dansk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1072,
+    "name": "Data og internett",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1706,
+    "name": "Data og nett",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3712,
+    "name": "Data- og nett-tester",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3713,
+    "name": "Data- og nettguider",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 449,
+    "name": "Datakriminalitet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 266,
+    "name": "Datasikkerhet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 837,
+    "name": "David Beckham",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1040,
+    "name": "Demokratene",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 9358,
+    "name": "Den sentralafrikanske republikk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 54,
+    "name": "Derby",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": "13269",
+    "name": "Dialekter",
+    "type": {
+      "id": "10",
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1720,
+    "name": "Digital rett",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 255,
+    "name": "Din økonomi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 124,
+    "name": "Dioksin-skandalen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 504,
+    "name": "Djevelgrotten i Venezuela",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3133,
+    "name": "Dobbeltdrapet i Overhalla",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 641,
+    "name": "Doping",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3805,
+    "name": "Drapene på Søndre Land",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 3783,
+    "name": "Drapet i Molkom",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 864,
+    "name": "Drapet på Anne Slåtten",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1071,
+    "name": "Drapet på Anne Sofie Blom-Pettersen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 101,
+    "name": "Drapet på Barbro",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 451,
+    "name": "Drapet på Benjamin",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 719,
+    "name": "Drapet på Dereka",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 695,
+    "name": "Drapet på Egil Tostrup Bråten",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 931,
+    "name": "Drapet på Hedda",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 3720,
+    "name": "Drapet på Martine",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1663,
+    "name": "Drapet på Meta Øverli",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 3124,
+    "name": "Drapet på Mohamed Ahssain",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 835,
+    "name": "Drapet på Shila",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 5717,
+    "name": "Drapet på Vera Vildmyren",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 306,
+    "name": "Drapsmysteriet i Telemark",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 3697,
+    "name": "Drept av sine menn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 381,
+    "name": "Drivstoffprisen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 657,
+    "name": "Drosjedrapet i Stavanger",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 3684,
+    "name": "Dung Tran Larsen-forsvinningen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 823,
+    "name": "Dutroux-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 739,
+    "name": "Dyrene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1016,
+    "name": "Dødsbakterien i Østfold",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 664,
+    "name": "Dødsdommen mot Amina",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 981,
+    "name": "Dødshjelp",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 483,
+    "name": "Dødsstraff",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 590,
+    "name": "Dørvaktdrapet i Moss",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 980,
+    "name": "E-sport",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1107,
+    "name": "E.coli-bakterien",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 599,
+    "name": "E3 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 600,
+    "name": "E3 2002 - Gamecube",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 602,
+    "name": "E3 2002 - Xbox",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 730,
+    "name": "E3 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 844,
+    "name": "E3 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 988,
+    "name": "E3 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1666,
+    "name": "E3 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 663,
+    "name": "ECTS 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6517,
+    "name": "EM-kvalifisering 2010/11",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 415,
+    "name": "EU",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 485,
+    "name": "EU-toppmøtet i Göteborg",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13109,
+    "name": "Ebola",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 614,
+    "name": "Ecuador i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1670,
+    "name": "Ecuador i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1035,
+    "name": "Egypt",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 177,
+    "name": "EgyptAir-krasjet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9817,
+    "name": "Elbil",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1103,
+    "name": "Elektronikk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1678,
+    "name": "Elfenbenskysten i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 187,
+    "name": "Elian",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 658,
+    "name": "Elvis Presley",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 424,
+    "name": "Eminem",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 283,
+    "name": "England i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 851,
+    "name": "England i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 26,
+    "name": "England i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 613,
+    "name": "England i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1673,
+    "name": "England i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 916,
+    "name": "Eritrea",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3134,
+    "name": "Et rikere Norge",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 702,
+    "name": "Etiopia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3790,
+    "name": "Ettersnakk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 557,
+    "name": "Euro - Europas nye penger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 276,
+    "name": "Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3819,
+    "name": "Europa League 09/10",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 5957,
+    "name": "Europa League 10/11",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 6778,
+    "name": "Europa League 11/12",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 7818,
+    "name": "Europa League 12/13",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8938,
+    "name": "Europa League 2013/14",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13132,
+    "name": "Europa League 2014/15",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 12870,
+    "name": "Europarådet",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 1024,
+    "name": "Europride",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1007,
+    "name": "Eva Longoria",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 55,
+    "name": "Everton",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 336,
+    "name": "FA-cupen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 414,
+    "name": "FN",
+    "type": {
+      "id": 20,
+      "name": "Organisasjon"
+    }
+  },
+  {
+    "id": 5657,
+    "name": "Faiza-saken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 774,
+    "name": "Familievolden",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9737,
+    "name": "Fargeløst fellesskap",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 528,
+    "name": "Farmen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 896,
+    "name": "Fekting i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3760,
+    "name": "Fekting i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 387,
+    "name": "Fergeulykken i Hellas",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7439,
+    "name": "Ferie og feriepenger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3724,
+    "name": "Festivalsommeren",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7737,
+    "name": "Filippinene",
+    "type": {
+      "id": 12,
+      "name": "Land"
+    }
+  },
+  {
+    "id": 9477,
+    "name": "Filmanmeldelser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 740,
+    "name": "Filmfestivalen i Cannes",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 474,
+    "name": "Filmfestivalen i Cannes 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3784,
+    "name": "Filmfestivalen i Venezia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 688,
+    "name": "Finance Credit",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3793,
+    "name": "Finanskrisen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1662,
+    "name": "Finland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 764,
+    "name": "Fiskehistorier",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 427,
+    "name": "Fiskeri",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 951,
+    "name": "Flodbølgekatastrofen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 460,
+    "name": "Flyangrep mot Irak",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13136,
+    "name": "Flykatastrofen i Ukraina",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 9697,
+    "name": "Flymysteriet i Sørøst-Asia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 538,
+    "name": "Flystyrt i Queens",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 530,
+    "name": "Flystyrten i Svartehavet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 665,
+    "name": "Folkets drømmelandslag",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7017,
+    "name": "Folkets favorittbil",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 174,
+    "name": "Foreldre og barn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5817,
+    "name": "Foreldrevold",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 252,
+    "name": "Fornebu",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7446,
+    "name": "Forsikringer",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9239,
+    "name": "Forskning",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9877,
+    "name": "Forskningsavsløringen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1082,
+    "name": "Forskningsskandalen - Sudbø",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 756,
+    "name": "Forsvaret",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1023,
+    "name": "Fotball EM kvinner 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 878,
+    "name": "Fotball i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 595,
+    "name": "Fotball-EM 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 596,
+    "name": "Fotball-EM 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 956,
+    "name": "Fotball-EM 2012",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3822,
+    "name": "Fotball-EM 2016",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3820,
+    "name": "Fotball-EM Kvinner 2009",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 487,
+    "name": "Fotball-EM kvinner 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6557,
+    "name": "Fotball-NM",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 549,
+    "name": "Fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 597,
+    "name": "Fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 717,
+    "name": "Fotball-VM 2010",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6600,
+    "name": "Fotball-VM 2014",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6601,
+    "name": "Fotball-VM 2018",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7217,
+    "name": "Fotball-VM 2022",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 127,
+    "name": "Fotball-VM kvinner 1999",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 778,
+    "name": "Fotball-VM kvinner 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3687,
+    "name": "Fotball-VM kvinner 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 646,
+    "name": "Fotballstreiken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1707,
+    "name": "Foto og video",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3719,
+    "name": "Foto- og videoguider",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3718,
+    "name": "Foto- og videotester",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 961,
+    "name": "Frankrike",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 296,
+    "name": "Frankrike i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 852,
+    "name": "Frankrike i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3742,
+    "name": "Frankrike i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Frankrike i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 615,
+    "name": "Frankrike i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1693,
+    "name": "Frankrike i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3126,
+    "name": "Frankrikes valg 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 709,
+    "name": "Fransk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 819,
+    "name": "Freddy Adu",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 795,
+    "name": "Fredrikstad",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 1089,
+    "name": "Freestyle",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 571,
+    "name": "Freestyle i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 133,
+    "name": "Friidrett",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 877,
+    "name": "Friidrett i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3762,
+    "name": "Friidrett i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 655,
+    "name": "Friidretts-EM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1718,
+    "name": "Friidretts-EM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5977,
+    "name": "Friidretts-EM 2010",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13156,
+    "name": "Friidretts-EM 2014",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 151,
+    "name": "Friidretts-VM 1999",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 505,
+    "name": "Friidretts-VM 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 769,
+    "name": "Friidretts-VM 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1038,
+    "name": "Friidretts-VM 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1717,
+    "name": "Friidretts-VM 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 813,
+    "name": "Frogner-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 801,
+    "name": "Froland-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 344,
+    "name": "Frp",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 8777,
+    "name": "Frp-topp tiltalt for voldtekt",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 810,
+    "name": "Fugleinfluensa",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 507,
+    "name": "Fulham",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1033,
+    "name": "G8",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 501,
+    "name": "G8-møtet i Genova",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 731,
+    "name": "Game Boy Advance",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 545,
+    "name": "GameCube",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Gardermoen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 239,
+    "name": "Gasskraftverk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1703,
+    "name": "Gatekjøkken-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13127,
+    "name": "Gaza",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 561,
+    "name": "Geilo-drapene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 308,
+    "name": "Gen-revolusjonen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 468,
+    "name": "Genmat",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 218,
+    "name": "George Clooney",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 548,
+    "name": "George Harrison",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 794,
+    "name": "Georgia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 972,
+    "name": "Geri Halliwell",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8097,
+    "name": "Ghana",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1685,
+    "name": "Ghana i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 223,
+    "name": "Gift-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 978,
+    "name": "Gisele Bundchen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8317,
+    "name": "Gisseldramaet i Algerie",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 682,
+    "name": "Gisseldramaet i Moskva",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 270,
+    "name": "Gisselsaken i Hjelmeland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 431,
+    "name": "Gjengkriminalitet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5757,
+    "name": "Godstogulykken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 484,
+    "name": "Golf",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 425,
+    "name": "Grammy 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 565,
+    "name": "Grand Theft Auto 3",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 423,
+    "name": "Green Ålesund-forliset",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9837,
+    "name": "Gruveulykken i Tyrkia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 436,
+    "name": "Gry-saken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1074,
+    "name": "Guider",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13128,
+    "name": "Guinea",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9757,
+    "name": "Gullruten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7477,
+    "name": "Gunnar Sønsteby",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 215,
+    "name": "Gwyneth Paltrow",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 91,
+    "name": "Haakon",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3808,
+    "name": "Hageskolen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 870,
+    "name": "Hagestell",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 816,
+    "name": "Haiti",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 963,
+    "name": "Halle Berry",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6998,
+    "name": "Halloween-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 796,
+    "name": "HamKam",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 936,
+    "name": "Hamar-mysteriet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 13131,
+    "name": "Hamas",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 110,
+    "name": "Hamre-saken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 537,
+    "name": "Harry Potter",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 70,
+    "name": "Haugesund",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 254,
+    "name": "Haugesund-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1011,
+    "name": "Heidi Klum",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3788,
+    "name": "Heimdal-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 833,
+    "name": "Helan og Halvan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9497,
+    "name": "Helikopterstyrten på Sollihøgda",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6757,
+    "name": "Helikopterulykken i Hardanger",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 6677,
+    "name": "Hellas",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 847,
+    "name": "Hellas i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3746,
+    "name": "Hellas i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7455,
+    "name": "Helse",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 12872,
+    "name": "Helse Oslo Universitetssykehus",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 178,
+    "name": "Helse og medisin",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 713,
+    "name": "Helt Stein",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 551,
+    "name": "Hemsedal-mysteriet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7377,
+    "name": "Hercules-ulykken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8437,
+    "name": "Hestekjøttskandalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 943,
+    "name": "Hestesport",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1042,
+    "name": "Hilary Duff",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5917,
+    "name": "Historie og arkeologi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7417,
+    "name": "Hjelp oss å granske",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 98,
+    "name": "Hollywood",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 327,
+    "name": "Holmestrand-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3824,
+    "name": "Honduras",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 83,
+    "name": "Hopp",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 572,
+    "name": "Hopp i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1090,
+    "name": "Hopp i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 111,
+    "name": "Hovedside",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3125,
+    "name": "Hovefestivalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 210,
+    "name": "Hugh Grant",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 580,
+    "name": "Hundedrapet på Vest-Torpa",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 950,
+    "name": "Hundreårets øyeblikk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1021,
+    "name": "Hundreårsmarkeringen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1104,
+    "name": "Hus og hjem",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 123,
+    "name": "Hva skjer i engelsk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 906,
+    "name": "Hva skjer i engelsk fotball 2004?",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 315,
+    "name": "Hva skjer i engelsk fotball?",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 313,
+    "name": "Hvalfangst",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1109,
+    "name": "Hviterussland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7451,
+    "name": "Hytte",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 250,
+    "name": "Hågensen-brannen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 883,
+    "name": "Håndball i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3763,
+    "name": "Håndball i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 417,
+    "name": "Håndball-EM kvinner 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 684,
+    "name": "Håndball-EM kvinner 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 938,
+    "name": "Håndball-EM kvinner 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1741,
+    "name": "Håndball-EM kvinner 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3796,
+    "name": "Håndball-EM kvinner 2008",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 8157,
+    "name": "Håndball-EM kvinner 2012",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": "13268",
+    "name": "Håndball-EM kvinner 2014",
+    "type": {
+      "id": "10",
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 225,
+    "name": "Håndball-EM menn 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1079,
+    "name": "Håndball-EM menn 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3704,
+    "name": "Håndball-EM menn 2008",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 5557,
+    "name": "Håndball-EM menn 2010",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 7057,
+    "name": "Håndball-EM menn 2012",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 9457,
+    "name": "Håndball-EM menn 2014",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 550,
+    "name": "Håndball-VM VG-børsen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 176,
+    "name": "Håndball-VM kvinner 1999",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 542,
+    "name": "Håndball-VM kvinner 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 786,
+    "name": "Håndball-VM kvinner 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1059,
+    "name": "Håndball-VM kvinner 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3700,
+    "name": "Håndball-VM kvinner 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3828,
+    "name": "Håndball-VM kvinner 2009",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 7037,
+    "name": "Håndball-VM kvinner 2011",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 9357,
+    "name": "Håndball-VM kvinner 2013",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 121,
+    "name": "Håndball-VM menn 1999",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 448,
+    "name": "Håndball-VM menn 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 939,
+    "name": "Håndball-VM menn 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3117,
+    "name": "Håndball-VM menn 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3797,
+    "name": "Håndball-VM menn 2009",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 3835,
+    "name": "Hønefoss",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 347,
+    "name": "Høyre",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 3683,
+    "name": "IFA 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 495,
+    "name": "IOC",
+    "type": {
+      "id": 20,
+      "name": "Organisasjon"
+    }
+  },
+  {
+    "id": 13215,
+    "name": "IS",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 583,
+    "name": "Iditarod 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 828,
+    "name": "Iditarod 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 962,
+    "name": "Iditarod 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 741,
+    "name": "Idol",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3815,
+    "name": "Idrettshelse",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6599,
+    "name": "Idrettspolitikk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13083,
+    "name": "Imamangrepet i Oslo",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3725,
+    "name": "Incest-tragedien i Østerrike",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 838,
+    "name": "India",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 193,
+    "name": "Indian Airlines-kapringen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 143,
+    "name": "Indonesia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8177,
+    "name": "Ingebrigtsen-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 92,
+    "name": "Inger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6797,
+    "name": "Internasjonal fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 333,
+    "name": "Ipswich",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Irak",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Iran",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1682,
+    "name": "Iran i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 616,
+    "name": "Irland i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 573,
+    "name": "Ishockey i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1091,
+    "name": "Ishockey i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8658,
+    "name": "Ishockey-VM",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 262,
+    "name": "Ishockey-VM 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 472,
+    "name": "Ishockey-VM 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3132,
+    "name": "Ishockey-VM 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3727,
+    "name": "Ishockey-VM 2008",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 3812,
+    "name": "Ishockey-VM 2009",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 5857,
+    "name": "Ishockey-VM 2010",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 5677,
+    "name": "Islam-debatten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 768,
+    "name": "Island",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13126,
+    "name": "Israel ",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 685,
+    "name": "Italia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 288,
+    "name": "Italia i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 857,
+    "name": "Italia i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3743,
+    "name": "Italia i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Italia i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 617,
+    "name": "Italia i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1686,
+    "name": "Italia i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 512,
+    "name": "Italiensk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3789,
+    "name": "Jakt og fiske",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Jamaica i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 946,
+    "name": "Japan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Japan i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 618,
+    "name": "Japan i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1691,
+    "name": "Japan i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 324,
+    "name": "Jazzfestivalen i Molde",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5577,
+    "name": "Jemen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 221,
+    "name": "Jennifer Aniston",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 181,
+    "name": "Jennifer Lopez",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 206,
+    "name": "Jennifer Love Hewitt",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 660,
+    "name": "Jentedrapene i England",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 307,
+    "name": "Jernbanen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 802,
+    "name": "Jessica Simpson",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 429,
+    "name": "Jobben din",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6459,
+    "name": "Jordan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 814,
+    "name": "Jordan - nakenmodellen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13122,
+    "name": "Jordbruk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6477,
+    "name": "Jordskjelv i Japan",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 158,
+    "name": "Jordskjelvet i Hellas",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 450,
+    "name": "Jordskjelvet i India",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3729,
+    "name": "Jordskjelvet i Kina",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 435,
+    "name": "Jordskjelvkatastrofen i El Salvador",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 642,
+    "name": "Josephine-forsvinningen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 985,
+    "name": "Jude Law",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 901,
+    "name": "Judo i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3764,
+    "name": "Judo i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 291,
+    "name": "Jugoslavia i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 32,
+    "name": "Jugoslavia i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1739,
+    "name": "Julegave 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 798,
+    "name": "Julen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 222,
+    "name": "Julia Roberts",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7977,
+    "name": "Justin Bieber",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 789,
+    "name": "Justin Timberlake",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 235,
+    "name": "Jörg Haider",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7877,
+    "name": "KHL",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1028,
+    "name": "Kambodsja",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Kamerun i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 619,
+    "name": "Kamerun i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 670,
+    "name": "Kampen mot barnepornografi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 241,
+    "name": "Kampen om regjeringsmakten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7657,
+    "name": "Kampfiksing",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7277,
+    "name": "Kampsport",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 338,
+    "name": "Kanalsvømmeren",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9099,
+    "name": "Kari Aarstad Aase kommenterer",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9657,
+    "name": "Karsten Alnæs om 1814",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 117,
+    "name": "Kashmir-konflikten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1018,
+    "name": "Kathrine Sørland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1014,
+    "name": "Katie Holmes",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 672,
+    "name": "Keiko",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 966,
+    "name": "Keira Knightley",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 763,
+    "name": "Kelly-tragedien",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 9277,
+    "name": "Kennedy-attentatet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 140,
+    "name": "Kennedy-tragedien",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 737,
+    "name": "Kenya",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 960,
+    "name": "Kina",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 620,
+    "name": "Kina i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7717,
+    "name": "Kino-massakren",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 982,
+    "name": "Kirgisistan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13121,
+    "name": "Kjønn og identitet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3136,
+    "name": "Klimatrusselen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 811,
+    "name": "Knutby-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 5617,
+    "name": "Kokain-nettverket",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 84,
+    "name": "Kombinert",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 574,
+    "name": "Kombinert i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1092,
+    "name": "Kombinert i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7337,
+    "name": "Kommentaren",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 752,
+    "name": "Kommunestyre- og fylkestingsvalget 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 920,
+    "name": "Kon-Tiki-ekspedisjonen 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 263,
+    "name": "Kongehuset",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 441,
+    "name": "Kongo",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 71,
+    "name": "Kongsvinger",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 112,
+    "name": "Konkurranser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1063,
+    "name": "Konkurranser på VG Nett",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9637,
+    "name": "Korrupsjonssiktelsen mot Eirik Jensen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1093,
+    "name": "Kortbaneløp",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 746,
+    "name": "Kortfilmfestivalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 843,
+    "name": "Kosthold",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 345,
+    "name": "KrF",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 531,
+    "name": "Krigen mot terror",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 953,
+    "name": "Krigsforbrytersakene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9437,
+    "name": "Krim",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13167,
+    "name": "Kristen-Norge",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 145,
+    "name": "Kristin-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1083,
+    "name": "Kristina Hjartåker",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13250,
+    "name": "Kristofer Hivju ",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 7857,
+    "name": "Kroatia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 853,
+    "name": "Kroatia i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3738,
+    "name": "Kroatia i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 621,
+    "name": "Kroatia i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1692,
+    "name": "Kroatia i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 517,
+    "name": "Kronprins Felipe",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 202,
+    "name": "Kronprinsparet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 240,
+    "name": "Kugalskap",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 575,
+    "name": "Kunstløp i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1094,
+    "name": "Kunstløp i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 656,
+    "name": "Kunstmalerdrapet i Stavanger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 341,
+    "name": "Kursk-ulykken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 965,
+    "name": "Kurt Nilsen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6458,
+    "name": "Kuwait",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 777,
+    "name": "Kvinnefotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 539,
+    "name": "Kylie Minogue",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 496,
+    "name": "Kystpartiet",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 13159,
+    "name": "LO",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 1001,
+    "name": "LO",
+    "type": {
+      "id": 20,
+      "name": "Organisasjon"
+    }
+  },
+  {
+    "id": 3121,
+    "name": "LO-dramaet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 12879,
+    "name": "Lance Armstrong",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 903,
+    "name": "Landhockey i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3765,
+    "name": "Landhockey i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 81,
+    "name": "Landslaget",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 85,
+    "name": "Langrenn",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 576,
+    "name": "Langrenn i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1095,
+    "name": "Langrenn i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 154,
+    "name": "Latinomusikk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9337,
+    "name": "Latvia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 859,
+    "name": "Latvia i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13135,
+    "name": "Leder",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 56,
+    "name": "Leeds",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1057,
+    "name": "Legeattest-skandalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1110,
+    "name": "Legedrapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 673,
+    "name": "Legionella",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 57,
+    "name": "Leicester",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 185,
+    "name": "Lene Marlin",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 406,
+    "name": "Lene-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 224,
+    "name": "Leonardo DiCaprio",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3706,
+    "name": "Lesernes reisetips",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 275,
+    "name": "Libanon",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 755,
+    "name": "Liberia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6437,
+    "name": "Libya",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 337,
+    "name": "Ligacupen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Ligningen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9297,
+    "name": "Likestilling",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7357,
+    "name": "Likfunnet i Thailand",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 757,
+    "name": "Likskjendingen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 115,
+    "name": "Lille blå",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 585,
+    "name": "Lillehammers OL-søknad",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 74,
+    "name": "Lillestrøm",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 13249,
+    "name": "Lilyhammer",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 478,
+    "name": "Linda-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1009,
+    "name": "Lindsay Lohan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 175,
+    "name": "Linn-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 58,
+    "name": "Liverpool",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 191,
+    "name": "Liz Hurley",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3679,
+    "name": "Lokalvalget 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1725,
+    "name": "Lommemannen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1034,
+    "name": "London-bombene",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 678,
+    "name": "Lorentzen i Brasil",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1053,
+    "name": "Lost",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 742,
+    "name": "Lucia-stiftelsen",
+    "type": {
+      "id": 20,
+      "name": "Organisasjon"
+    }
+  },
+  {
+    "id": 233,
+    "name": "Luftfart",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 326,
+    "name": "Luftfartstilsynet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1705,
+    "name": "Lyd og bilde",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3715,
+    "name": "Lyd- og bildeguider",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3714,
+    "name": "Lyd- og bildetester",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 469,
+    "name": "Lyn",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 6017,
+    "name": "Lyst til å drepe",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1658,
+    "name": "Lånekassen(DP)",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9517,
+    "name": "Lærdal-brannen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13168,
+    "name": "Lærerstreiken",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 7438,
+    "name": "Lønn og arbeidsmiljø",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 829,
+    "name": "Lønnsoppgjøret",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 237,
+    "name": "Lønnsoppgjøret 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 475,
+    "name": "Lønnsoppgjøret 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 560,
+    "name": "Lønnsoppgjøret 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3130,
+    "name": "MC",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1736,
+    "name": "MTV Europe Music Awards",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 687,
+    "name": "MTV Europe Music Awards 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 934,
+    "name": "MTV Europe Music Awards 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 409,
+    "name": "MTV Music Awards 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 918,
+    "name": "MTV VMA 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3135,
+    "name": "Madeleine-forsvinningen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 213,
+    "name": "Madonna",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 826,
+    "name": "Madrid-massakren",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 8917,
+    "name": "Mads A. Andersen kommenterer",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 481,
+    "name": "Makedonia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3721,
+    "name": "Malawi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3752,
+    "name": "Malaysia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8357,
+    "name": "Mali",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 334,
+    "name": "Manchester City",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 88,
+    "name": "Manchester U.",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9077,
+    "name": "Manglerud-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 231,
+    "name": "Maradona",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6357,
+    "name": "Maria Amelie",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 871,
+    "name": "Maria Sjarapova",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9177,
+    "name": "Maria-mysteriet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 273,
+    "name": "Mariah Carey",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 780,
+    "name": "Marokko",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1008,
+    "name": "Martha Stewart",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": "13278",
+    "name": "Martin Ødegaard",
+    "type": {
+      "id": "11",
+      "name": "Person"
+    }
+  },
+  {
+    "id": 3131,
+    "name": "Massakren på Virginia Tech",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 438,
+    "name": "Mat",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 440,
+    "name": "Mat-test",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 452,
+    "name": "Matoppskrifter",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13139,
+    "name": "Mattilsynet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3726,
+    "name": "Matvarekrisen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 343,
+    "name": "Media",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 696,
+    "name": "Mehamn-ulykken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 825,
+    "name": "Mehmet-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 265,
+    "name": "Melodi Grand Prix",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 674,
+    "name": "Metanol-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1722,
+    "name": "Mexico",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Mexico i Fotball-VM",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 622,
+    "name": "Mexico i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1683,
+    "name": "Mexico i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 540,
+    "name": "Michael Jackson",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 59,
+    "name": "Middlesbrough",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 118,
+    "name": "Midtøsten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 229,
+    "name": "Mike Tyson",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 428,
+    "name": "Miljøvern",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8597,
+    "name": "Millionær-drapssaken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 108,
+    "name": "Min sommerhit",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 771,
+    "name": "Min stemme",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1027,
+    "name": "Misjonær-skandalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 692,
+    "name": "Miss World",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 693,
+    "name": "Miss World - Frøken Norges dagbok",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": "13274",
+    "name": "Mjøndalen",
+    "type": {
+      "id": "14",
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 582,
+    "name": "Mobbing",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1704,
+    "name": "Mobil og tele",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3717,
+    "name": "Mobil- og teleguider",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3716,
+    "name": "Mobil- og teletester",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 171,
+    "name": "Mobil-kommunikasjon",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3823,
+    "name": "Mobilspill",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 900,
+    "name": "Moderne femkamp i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 72,
+    "name": "Molde",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 3857,
+    "name": "Moldova",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 488,
+    "name": "Momsreformen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 983,
+    "name": "Monaco",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13243,
+    "name": "Monika-saken",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 3708,
+    "name": "Morgan-saken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 5537,
+    "name": "Morsomme skilt",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8477,
+    "name": "Mosambik",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1106,
+    "name": "Moské-bråket",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 73,
+    "name": "Moss",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 155,
+    "name": "Moter og modeller",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 244,
+    "name": "Motorsport",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1100,
+    "name": "Muhammed-tegningene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 959,
+    "name": "Mujahedin e-Khalq",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 668,
+    "name": "Mulla Krekar",
+    "type": {
+      "id": "11",
+      "name": "Person"
+    }
+  },
+  {
+    "id": 917,
+    "name": "Munch-ranet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 464,
+    "name": "Munn- og klovsyke",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9479,
+    "name": "Musikkanmeldelser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 302,
+    "name": "Musikkfestivaler 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8117,
+    "name": "Myanmar",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 808,
+    "name": "Møteplassen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 735,
+    "name": "NATO",
+    "type": {
+      "id": 20,
+      "name": "Organisasjon"
+    }
+  },
+  {
+    "id": 9617,
+    "name": "NAV",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 652,
+    "name": "NHL",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3137,
+    "name": "NM 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3730,
+    "name": "NM 2008",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 3817,
+    "name": "NM 2009",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 5837,
+    "name": "NM 2010",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 473,
+    "name": "NM fotball 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 643,
+    "name": "NM fotball 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 736,
+    "name": "NM fotball 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 839,
+    "name": "NM fotball 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1002,
+    "name": "NM fotball 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1701,
+    "name": "NM fotball 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 977,
+    "name": "Naomi Campbell",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1723,
+    "name": "Narkotika",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1726,
+    "name": "Natascha Kampusch",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8957,
+    "name": "Nav-drapet i Oslo",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3702,
+    "name": "Navigasjon",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 340,
+    "name": "Nazimarsjen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1020,
+    "name": "Nederland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 297,
+    "name": "Nederland i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 860,
+    "name": "Nederland i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3744,
+    "name": "Nederland i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Nederland i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1679,
+    "name": "Nederland i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 710,
+    "name": "Nederlandsk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 480,
+    "name": "Nepal",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3707,
+    "name": "Nettsamfunn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9597,
+    "name": "Neurontin-sakene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 60,
+    "name": "Newcastle",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Newth",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 975,
+    "name": "Nick Lachey",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13114,
+    "name": "Nico & Vinz",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 230,
+    "name": "Nicole Kidman",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 976,
+    "name": "Nicole Richie",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1039,
+    "name": "Niger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 694,
+    "name": "Nigeria",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 623,
+    "name": "Nigeria i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 93,
+    "name": "Nina",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7158,
+    "name": "Nintendo 3DS",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 922,
+    "name": "Nintendo DS",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 990,
+    "name": "Nintendo Wii",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7161,
+    "name": "Nintendo Wii U",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 418,
+    "name": "Nobels Fredspris 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 679,
+    "name": "Nobels fredspris",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 535,
+    "name": "Nobels fredspris 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 834,
+    "name": "Nokas-ranet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 404,
+    "name": "Nokia Game",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 129,
+    "name": "Nord-Irland",
+    "type": {
+      "id": 12,
+      "name": "Land"
+    }
+  },
+  {
+    "id": 125,
+    "name": "Nord-Korea-Sør-Korea",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 521,
+    "name": "Nordstrand-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1019,
+    "name": "Norge - Italia 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 292,
+    "name": "Norge i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6097,
+    "name": "Norge i krig",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 157,
+    "name": "Norsk film",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3804,
+    "name": "Norsk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7297,
+    "name": "Norsk håndball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7298,
+    "name": "Norsk ishockey",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9717,
+    "name": "Norsk kvinne narkotatt i Ecuador",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6977,
+    "name": "Norsk politikk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3806,
+    "name": "Norske fotballtalenter",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3814,
+    "name": "Norske helter",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13228,
+    "name": "Norske helter 2014",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 330,
+    "name": "Norway Cup 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 765,
+    "name": "Norway Cup 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 907,
+    "name": "Norway Cup 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1037,
+    "name": "Norway Cup 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1719,
+    "name": "Norway Cup 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 136,
+    "name": "Norwegian Wood",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 905,
+    "name": "Norwich",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 61,
+    "name": "Nottingham F.",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6417,
+    "name": "Nye Norge",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1727,
+    "name": "Nye biler",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 458,
+    "name": "Nyttig om reise",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 559,
+    "name": "Nyttårsferingen 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 558,
+    "name": "Nøtterøy-forsvinningen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 500,
+    "name": "OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 499,
+    "name": "OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 598,
+    "name": "OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 494,
+    "name": "OL 2008",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 947,
+    "name": "OL 2010",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 913,
+    "name": "OL 2012",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 797,
+    "name": "OL 2014",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 1711,
+    "name": "OL 2018",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 5897,
+    "name": "OL 2022",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 3827,
+    "name": "Obama i Norge",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 724,
+    "name": "Oberstløytnant Waage kommenterer",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 95,
+    "name": "Odd",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 13214,
+    "name": "Odd Nerdrum",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 317,
+    "name": "Oddleiv",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 86,
+    "name": "Oddleiv i EM 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 581,
+    "name": "Oddleiv i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 383,
+    "name": "Oddleiv i sofaen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8737,
+    "name": "Oklahoma-tornadoen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 12876,
+    "name": "Olav Lundanes",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 89,
+    "name": "Ole Eskilds nettkjenning",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7437,
+    "name": "Ole Kristian Strøm kommenterer",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 426,
+    "name": "Olje og energi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13224,
+    "name": "Oljefondet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8678,
+    "name": "One Direction",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6837,
+    "name": "Opptøyene i England",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 9857,
+    "name": "Oppvekst",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1017,
+    "name": "Oprah Winfrey",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8017,
+    "name": "Ordførersaken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 12875,
+    "name": "Orientering",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 162,
+    "name": "Orkanen «Floyd»",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1043,
+    "name": "Orkanen «Katrina»",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1049,
+    "name": "Orkanen «Rita»",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8077,
+    "name": "Orkanen «Sandy»",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 271,
+    "name": "Orkdal-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 967,
+    "name": "Orlando Bloom",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7317,
+    "name": "Os-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Oscar",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6217,
+    "name": "Overvåkningsavsløringen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8877,
+    "name": "Overvåkningslekkasjene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 964,
+    "name": "Ozzy Osbourne",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13110,
+    "name": "P-husdrapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 547,
+    "name": "PC-spill",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 880,
+    "name": "Padling i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3767,
+    "name": "Padling i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 169,
+    "name": "Pakistan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13137,
+    "name": "Palestina",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 208,
+    "name": "Pamela Anderson",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3809,
+    "name": "Paradise Hotel",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Paraguay",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 624,
+    "name": "Paraguay i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1674,
+    "name": "Paraguay i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 584,
+    "name": "Paralympics 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 923,
+    "name": "Paralympics 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 697,
+    "name": "Paris - Dakar 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 799,
+    "name": "Paris - Dakar 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 805,
+    "name": "Paris Hilton",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 554,
+    "name": "Paris-Dakar",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 715,
+    "name": "Parkering",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7257,
+    "name": "Parteringsdrapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 957,
+    "name": "Paven",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 791,
+    "name": "Penelope Cruz",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 587,
+    "name": "Pengeslukene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 944,
+    "name": "Pengespill",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7440,
+    "name": "Pensjon",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 767,
+    "name": "Pensjonistpartiet",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 806,
+    "name": "Pensjonsreformen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6397,
+    "name": "Personvern",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1060,
+    "name": "Peru",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3832,
+    "name": "Petter Northug",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8457,
+    "name": "Pistorius-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 410,
+    "name": "Planet Project",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1746,
+    "name": "Planlegg ferien",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 991,
+    "name": "PlayStation 3",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 921,
+    "name": "PlayStation Portable",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 785,
+    "name": "Playoff 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1055,
+    "name": "Playoff 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 544,
+    "name": "Playstation 2",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7160,
+    "name": "Playstation 4",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7159,
+    "name": "Playstation Vita",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 462,
+    "name": "Polarheltene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1056,
+    "name": "Polen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3739,
+    "name": "Polen i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 625,
+    "name": "Polen i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1671,
+    "name": "Polen i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6237,
+    "name": "Politi-hverdagen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7197,
+    "name": "Politiets sikkerhetstjeneste (PST)",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1041,
+    "name": "Politikergrillen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1010,
+    "name": "Politiskuddene i Larvik",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 466,
+    "name": "Popstars",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 318,
+    "name": "Porsanger-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 748,
+    "name": "Portsmouth",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 284,
+    "name": "Portugal i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 848,
+    "name": "Portugal i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3733,
+    "name": "Portugal i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 626,
+    "name": "Portugal i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1684,
+    "name": "Portugal i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1724,
+    "name": "Premier League",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3798,
+    "name": "President Barack Obama",
+    "type": {
+      "id": 11,
+      "name": "Person"
+    }
+  },
+  {
+    "id": 445,
+    "name": "President George W. Bush",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 120,
+    "name": "President-valg USA",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 690,
+    "name": "Prestige-katastrofen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 803,
+    "name": "Prinsesse Ingrid Alexandra",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 552,
+    "name": "Prinsesse Märtha og Ari Behn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3750,
+    "name": "Prostitusjon",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3799,
+    "name": "Psykisk helse",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13138,
+    "name": "Psykologi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 935,
+    "name": "Pyramide-skandalen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 105,
+    "name": "På grillen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 163,
+    "name": "På vei mot år 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 164,
+    "name": "På vei mot år 2000 INFO",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 134,
+    "name": "Quart 1999",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 247,
+    "name": "Quart 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1032,
+    "name": "Quartfestivalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 489,
+    "name": "Quartfestivalen 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 868,
+    "name": "Quartfestivalen 2004-dagbok",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1660,
+    "name": "Radio",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1022,
+    "name": "Rahila-saken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 141,
+    "name": "Ran",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 113,
+    "name": "Randi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 246,
+    "name": "Randi-mysteriet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13247,
+    "name": "Rasdramaet i Rauma",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 227,
+    "name": "Rasulykken i Lyngen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 461,
+    "name": "Reality-TV",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1745,
+    "name": "Rebecca-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 536,
+    "name": "Regjeringen Bondevik",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 243,
+    "name": "Regjeringen Stoltenberg",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 640,
+    "name": "Reise - fotokonkurranse",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 2517,
+    "name": "Reise- og ferietips(DP)",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 190,
+    "name": "Reiseliv",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1080,
+    "name": "Reiseliv 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1078,
+    "name": "Reiselivsmesser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 457,
+    "name": "Reiselivsnyheter",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 4577,
+    "name": "Reisepanelet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 456,
+    "name": "Reisereportasjer",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9257,
+    "name": "Religion",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 815,
+    "name": "Renee Zellweger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 267,
+    "name": "Renten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5997,
+    "name": "Republikanerne",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 261,
+    "name": "Rettssaken mot tobakksindustrien",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 391,
+    "name": "Revolusjonen i Jugoslavia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 894,
+    "name": "Ridesport i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3768,
+    "name": "Ridesport i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 703,
+    "name": "Riise-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6917,
+    "name": "Riksrevisjonen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 264,
+    "name": "Roar Hagen-tegninger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 773,
+    "name": "Robbie Williams",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13154,
+    "name": "Robin Williams (1951-2014)",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 232,
+    "name": "Robinson",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 807,
+    "name": "Rocknes-katastrofen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 114,
+    "name": "Roggen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6077,
+    "name": "Roing",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 881,
+    "name": "Roing i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3769,
+    "name": "Roing i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 945,
+    "name": "Romania",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 285,
+    "name": "Romania i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3745,
+    "name": "Romania i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Romfart",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7677,
+    "name": "Romfolket",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 75,
+    "name": "Rosenborg",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 135,
+    "name": "Roskilde-festivalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 751,
+    "name": "Rovmordet i Haugesund",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 836,
+    "name": "Royal League 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1058,
+    "name": "Royal League 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1738,
+    "name": "Royal League 2006/07",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13146,
+    "name": "Rugby",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 5777,
+    "name": "Rundens mål",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 321,
+    "name": "Rusmidler",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3128,
+    "name": "Russen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 99,
+    "name": "Russland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 849,
+    "name": "Russland i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3747,
+    "name": "Russland i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 627,
+    "name": "Russland i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 498,
+    "name": "Rødt",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 152,
+    "name": "Røkke",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 831,
+    "name": "Røykeloven",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 720,
+    "name": "SARS",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 532,
+    "name": "SAS-ulykken i Milano",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 348,
+    "name": "SV",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 9377,
+    "name": "SVINESUND",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 718,
+    "name": "Saddam Husseins Irak",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 183,
+    "name": "Salma Hayek",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 812,
+    "name": "Sandaker-skuddene",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1101,
+    "name": "Sandefjord",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 7157,
+    "name": "Sandnes Ulf",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 220,
+    "name": "Sandra Bullock",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 556,
+    "name": "Sandvika-mysteriet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3120,
+    "name": "Sandvolleyball",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 6337,
+    "name": "Sarpsborg 08",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 1697,
+    "name": "Saudi-Arabaia i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 628,
+    "name": "Saudi-Arabia i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8997,
+    "name": "Scandinavian Star",
+    "type": {
+      "id": "10",
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 971,
+    "name": "Scarlett Johansson",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3811,
+    "name": "Scientologikirken",
+    "type": {
+      "id": 20,
+      "name": "Organisasjon"
+    }
+  },
+  {
+    "id": 879,
+    "name": "Seiling i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3770,
+    "name": "Seiling i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 761,
+    "name": "Seim-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1659,
+    "name": "Selvangivelse 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3723,
+    "name": "Selvangivelsen 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6497,
+    "name": "Selvangivelsen 2010(DP)",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7117,
+    "name": "Selvangivelsen 2011(DP)",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9578,
+    "name": "Selvangivelsen 2013",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 408,
+    "name": "Selvmordssaken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 629,
+    "name": "Senegal i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 346,
+    "name": "Senterpartiet",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 3710,
+    "name": "Serbia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1680,
+    "name": "Serbia & Montenegro i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Serbia og Montenegro",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1742,
+    "name": "Seriemorderen i Ipswich",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 413,
+    "name": "Sex og samliv",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 12883,
+    "name": "Sexkjøpsloven",
+    "type": {
+      "id": 1,
+      "name": "Standard"
+    }
+  },
+  {
+    "id": 7237,
+    "name": "Sexskandalen i Venstre",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 762,
+    "name": "Sharon-besøket",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 62,
+    "name": "Sheffield W.",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 661,
+    "name": "Siamesertvillingene Maria og Maria",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1046,
+    "name": "Sienna Miller",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 268,
+    "name": "Sierra Leone",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 170,
+    "name": "Signe-forsvinningen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7777,
+    "name": "Sigrid-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1737,
+    "name": "Sikkerhetsskolen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1076,
+    "name": "Sjakk",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 1721,
+    "name": "Sjuves kjøkken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9157,
+    "name": "Skatten 2012",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13238,
+    "name": "Skatten 2013",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 926,
+    "name": "Skatten din",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 96,
+    "name": "Skeid",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1096,
+    "name": "Skeleton i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 443,
+    "name": "Ski-VM 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 705,
+    "name": "Ski-VM 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 940,
+    "name": "Ski-VM 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3119,
+    "name": "Ski-VM 2007",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 3807,
+    "name": "Ski-VM 2009",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 6157,
+    "name": "Ski-VM 2011",
+    "type": {
+      "id": 13,
+      "name": "Mesterskap"
+    }
+  },
+  {
+    "id": 8417,
+    "name": "Ski-VM 2013",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3703,
+    "name": "Skihistoriens største",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 987,
+    "name": "Skipsfart",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 821,
+    "name": "Skiskyting",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 87,
+    "name": "Skiskyting 99",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 578,
+    "name": "Skiskyting i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1097,
+    "name": "Skiskyting i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3685,
+    "name": "Skogbrannene i Hellas",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 416,
+    "name": "Skole og utdanning",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 150,
+    "name": "Skolebøker99",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3698,
+    "name": "Skolemassakren i Jokela",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 3792,
+    "name": "Skolemassakren i Kauhajoki",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 732,
+    "name": "Skolestart",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 659,
+    "name": "Skolestart 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 514,
+    "name": "Skotsk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 40,
+    "name": "Skottland i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6177,
+    "name": "Skuddene i Malmö",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 759,
+    "name": "Skuddramaet på Gardermoen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 482,
+    "name": "Skytedramaet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13151,
+    "name": "Skyting",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 888,
+    "name": "Skyting i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3771,
+    "name": "Skyting i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 197,
+    "name": "Skøyter",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 577,
+    "name": "Skøyter i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1098,
+    "name": "Skøyter i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 842,
+    "name": "Slanking",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9317,
+    "name": "Slaverisaken i London",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 180,
+    "name": "Sleipner-forliset",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 293,
+    "name": "Slovenia i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 630,
+    "name": "Slovenia i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 249,
+    "name": "Smykkesaken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 282,
+    "name": "Smøladrapssaken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 680,
+    "name": "Snikskytteren",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 411,
+    "name": "Snowboard",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 579,
+    "name": "Snowboard i OL 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1099,
+    "name": "Snowboard i OL 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3693,
+    "name": "Snutter",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3791,
+    "name": "Sofis Mote",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 902,
+    "name": "Softball i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3772,
+    "name": "Softball i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 76,
+    "name": "Sogndal",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 822,
+    "name": "Sognsvann-skytingen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 467,
+    "name": "Solbakkens kollaps",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9057,
+    "name": "Solberg-regjeringen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3686,
+    "name": "Solskjær legger opp",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1747,
+    "name": "Somalia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 758,
+    "name": "Sommer",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 106,
+    "name": "Sommerhilsen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3677,
+    "name": "Sommeridyll",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3678,
+    "name": "Sommeridyll 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 316,
+    "name": "Sommerværet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9217,
+    "name": "Sosiale medier",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 63,
+    "name": "Southampton",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 320,
+    "name": "Spania",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 294,
+    "name": "Spania i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 850,
+    "name": "Spania i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3748,
+    "name": "Spania i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Spania i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 631,
+    "name": "Spania i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1698,
+    "name": "Spania i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 433,
+    "name": "Spansk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 234,
+    "name": "Spellemannprisen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 182,
+    "name": "Spice Girls",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 546,
+    "name": "Spillanmeldelser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 301,
+    "name": "Spionsaken mot Viksveen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Spionskandalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1048,
+    "name": "Sport og fritid",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 195,
+    "name": "Sportsnotiser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 691,
+    "name": "Sri Lanka",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 305,
+    "name": "St. Hansfest 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 77,
+    "name": "Stabæk",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 1025,
+    "name": "Stand up-konkurransen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 257,
+    "name": "Start",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 8977,
+    "name": "Stathelle-mysteriet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 477,
+    "name": "Statoil",
+    "type": {
+      "id": 3,
+      "name": "Selskap"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Statsbudsjettet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 167,
+    "name": "Statsbudsjettet 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 389,
+    "name": "Statsbudsjettet 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 534,
+    "name": "Statsbudsjettet 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 675,
+    "name": "Statsbudsjettet 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 782,
+    "name": "Statsbudsjettet 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 925,
+    "name": "Statsbudsjettet 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1054,
+    "name": "Statsbudsjettet 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1731,
+    "name": "Statsbudsjettet 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3691,
+    "name": "Statsbudsjettet 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3786,
+    "name": "Statsbudsjettet 2009",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3825,
+    "name": "Statsbudsjettet 2010",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6117,
+    "name": "Statsbudsjettet 2011",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7957,
+    "name": "Statsbudsjettet 2013",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9117,
+    "name": "Statsbudsjettet 2014",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13160,
+    "name": "Statsbudsjettet 2015",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 817,
+    "name": "Stavanger-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 13246,
+    "name": "Stjernekamp ",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1047,
+    "name": "Stoltenberg-regjeringen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9537,
+    "name": "Storbrannen i Flatanger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 323,
+    "name": "Storbritannia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 390,
+    "name": "Storebrand",
+    "type": {
+      "id": 3,
+      "name": "Selskap"
+    }
+  },
+  {
+    "id": 486,
+    "name": "Stortingsvalget 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 846,
+    "name": "Stortingsvalget 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3787,
+    "name": "Stortingsvalget 2009",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7538,
+    "name": "Strøm og fyring",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 2138,
+    "name": "Strøm og oppvarming(DP)",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7452,
+    "name": "Strøm/fyring",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 707,
+    "name": "Strømprisene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 78,
+    "name": "Strømsgodset",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 7449,
+    "name": "Student",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 818,
+    "name": "Studentdrapene",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 869,
+    "name": "Sudan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 666,
+    "name": "Sultkatastrofen i det sørlige Afrika",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 147,
+    "name": "Sunderland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5937,
+    "name": "Surrogati-debatten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13176,
+    "name": "Svalbard",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1075,
+    "name": "Svart arbeid",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 929,
+    "name": "Svein A. Røhne kommenterer presidentvalg",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 854,
+    "name": "Sveits i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3734,
+    "name": "Sveits i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1694,
+    "name": "Sveits i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 420,
+    "name": "Svelvik-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 594,
+    "name": "Svensk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 928,
+    "name": "Sverige",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 299,
+    "name": "Sverige i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 858,
+    "name": "Sverige i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3749,
+    "name": "Sverige i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 632,
+    "name": "Sverige i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1675,
+    "name": "Sverige i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1015,
+    "name": "Sverige-safari 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3813,
+    "name": "Svineinfluensa",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3781,
+    "name": "Svømming",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 890,
+    "name": "Svømming i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3773,
+    "name": "Svømming i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Swissair",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 300,
+    "name": "Sydney-OL",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 350,
+    "name": "Sydney-OL: Badminton",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 351,
+    "name": "Sydney-OL: Baseball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 352,
+    "name": "Sydney-OL: Basketball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 353,
+    "name": "Sydney-OL: Boksing",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 380,
+    "name": "Sydney-OL: Bordtennis",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 354,
+    "name": "Sydney-OL: Bryting",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 355,
+    "name": "Sydney-OL: Bueskyting",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 356,
+    "name": "Sydney-OL: Fekting",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 357,
+    "name": "Sydney-OL: Fotball kvinner",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 358,
+    "name": "Sydney-OL: Fotball menn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 359,
+    "name": "Sydney-OL: Friidrett",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 360,
+    "name": "Sydney-OL: Håndball kvinner",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 361,
+    "name": "Sydney-OL: Håndball menn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 362,
+    "name": "Sydney-OL: Judo",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 363,
+    "name": "Sydney-OL: Landhockey",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 364,
+    "name": "Sydney-OL: Moderne femkamp",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 365,
+    "name": "Sydney-OL: Padling",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 366,
+    "name": "Sydney-OL: Ridesport",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 367,
+    "name": "Sydney-OL: Roing",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 368,
+    "name": "Sydney-OL: Seiling",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 369,
+    "name": "Sydney-OL: Skyting",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 370,
+    "name": "Sydney-OL: Softball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 371,
+    "name": "Sydney-OL: Svømming",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 372,
+    "name": "Sydney-OL: Sykling",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 373,
+    "name": "Sydney-OL: Taekwondo",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 376,
+    "name": "Sydney-OL: Tennis",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 377,
+    "name": "Sydney-OL: Triathlon",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 374,
+    "name": "Sydney-OL: Turn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 375,
+    "name": "Sydney-OL: Vektløfting",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 378,
+    "name": "Sydney-OL: Volleyball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5597,
+    "name": "Sykehus-Norge",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 491,
+    "name": "Sykkel",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 882,
+    "name": "Sykling i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3774,
+    "name": "Sykling i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1729,
+    "name": "Synagogeskuddene",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 6457,
+    "name": "Syria",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 126,
+    "name": "Sør-Afrika",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 633,
+    "name": "Sør-Afrika i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 43,
+    "name": "Sør-Korea",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 634,
+    "name": "Sør-Korea i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1695,
+    "name": "Sør-Korea i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3688,
+    "name": "TV-skolen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13248,
+    "name": "TVNorge",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 886,
+    "name": "Taekwondo i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3775,
+    "name": "Taekwondo i OL 208",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 165,
+    "name": "Taiwan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 172,
+    "name": "Tamil-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 516,
+    "name": "Tampa-dramaet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 248,
+    "name": "Taxi-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 9579,
+    "name": "Teateranmeldelser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 863,
+    "name": "Tegneseriekonkurransen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9238,
+    "name": "Teknologi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7537,
+    "name": "Teknologi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9237,
+    "name": "Teknologi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3123,
+    "name": "Teknologimesser",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 269,
+    "name": "Telenor",
+    "type": {
+      "id": 3,
+      "name": "Selskap"
+    }
+  },
+  {
+    "id": 166,
+    "name": "Telenor-Telia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 476,
+    "name": "Tennis",
+    "type": {
+      "id": 16,
+      "name": "Idrettsgren"
+    }
+  },
+  {
+    "id": 3776,
+    "name": "Tennis i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 884,
+    "name": "Tennis i OL2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 973,
+    "name": "Teri Hatcher",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3701,
+    "name": "Terra-skandalen",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 6817,
+    "name": "Terrorangrepet 22. juli",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 6899,
+    "name": "Terrorangrepet 22. juli - Anders Behring Breivik",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7837,
+    "name": "Terrorangrepet 22. juli - Dommen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6900,
+    "name": "Terrorangrepet 22. juli - Etterforskningen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7757,
+    "name": "Terrorangrepet 22. juli - Kommisjonsrapporten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6877,
+    "name": "Terrorangrepet 22. juli - Nyhetsrunden",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6898,
+    "name": "Terrorangrepet 22. juli - Ofrene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6897,
+    "name": "Terrorangrepet 22. juli - Politiet og beredskapen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6901,
+    "name": "Terrorangrepet 22. juli - Politikk og samfunn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7397,
+    "name": "Terrorangrepet 22. juli - Rettssaken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7697,
+    "name": "Terrorangrepet 22.juli - Ettårsdagen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3800,
+    "name": "Terrorangrepet i Mumbai",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 6277,
+    "name": "Terrorangrepet i Stockholm",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": "13275",
+    "name": "Terrorangrepet mot Charlie Hebdo",
+    "type": {
+      "id": "15",
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 3821,
+    "name": "Terrorisme",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 984,
+    "name": "Terrorsaken i Sverige",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 522,
+    "name": "Terrorsjokk i USA - Angrepet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 523,
+    "name": "Terrorsjokk i USA - Bakgrunn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 527,
+    "name": "Terrorsjokk i USA - Etterforskingen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 526,
+    "name": "Terrorsjokk i USA - Følgene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 524,
+    "name": "Terrorsjokk i USA - Ofrene",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 525,
+    "name": "Terrorsjokk i USA - Reaksjoner",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 743,
+    "name": "Terrortrussel mot Norge",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1073,
+    "name": "Tester",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 952,
+    "name": "Thailand",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 698,
+    "name": "The trial against Jon Johansen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 272,
+    "name": "Thomas Quick",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 592,
+    "name": "Thor Heyerdahl",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 319,
+    "name": "Tibet2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8297,
+    "name": "Tidligere lege siktet for overgrep",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8657,
+    "name": "Tigging",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 388,
+    "name": "Tina-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8897,
+    "name": "Tippetips",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 671,
+    "name": "Tobakk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 168,
+    "name": "Togkrasj i London",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1696,
+    "name": "Togo i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 251,
+    "name": "Togulykken i Lillestrøm",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 194,
+    "name": "Togulykken på Åsta",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 216,
+    "name": "Tom Cruise",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 211,
+    "name": "Tom Hanks",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 701,
+    "name": "Tore Tønne",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 422,
+    "name": "Torpedo-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1714,
+    "name": "Torshov-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 64,
+    "name": "Tottenham",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 872,
+    "name": "Tour de France 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 932,
+    "name": "Tour de France 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1664,
+    "name": "Tour de France 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3138,
+    "name": "Tour de France 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3751,
+    "name": "Tour de France 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3816,
+    "name": "Tour de France 2009",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5877,
+    "name": "Tour de France 2010",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6597,
+    "name": "Tour de France 2011",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7557,
+    "name": "Tour de France 2012",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8757,
+    "name": "Tour de France 2013",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 107,
+    "name": "Trailer'n",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13281,
+    "name": "Tranby-saken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1702,
+    "name": "Trav & galopp",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 520,
+    "name": "Travis",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8337,
+    "name": "Travtips",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6037,
+    "name": "Treholt-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3831,
+    "name": "Trening",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 841,
+    "name": "Treningstips",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 904,
+    "name": "Triahtlon i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3777,
+    "name": "Triathlon i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 699,
+    "name": "Tricolor-forliset",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 912,
+    "name": "Trikkedrapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1676,
+    "name": "Trinidad og Tobago i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 562,
+    "name": "Trippeldrapet - rettsreferat",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3810,
+    "name": "Trippeldrapet i Tromsø",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 1732,
+    "name": "Trippeldrapet på Kalbakken",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 103,
+    "name": "Trippeldrapet på Orderud-gård",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 969,
+    "name": "Tro og livssyn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 79,
+    "name": "Tromsø",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 3802,
+    "name": "Tromsø internasjonale filmfestival",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 94,
+    "name": "Trude",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 915,
+    "name": "Truls Dæhli kommenterer Athen-OL",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 421,
+    "name": "Trygdejukset",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1065,
+    "name": "Tsjekkia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 298,
+    "name": "Tsjekkia i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 861,
+    "name": "Tsjekkia i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3735,
+    "name": "Tsjekkia i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1687,
+    "name": "Tsjekkia i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 186,
+    "name": "Tsjetsjenia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6377,
+    "name": "Tunisia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 635,
+    "name": "Tunisia i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1699,
+    "name": "Tunisia i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 132,
+    "name": "Tunnel-brannen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9137,
+    "name": "Turkmenistan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 891,
+    "name": "Turn i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3778,
+    "name": "Turn i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1013,
+    "name": "Tyra Banks",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 131,
+    "name": "Tyrkia",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 290,
+    "name": "Tyrkia i Euro 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3737,
+    "name": "Tyrkia i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 636,
+    "name": "Tyrkia i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 875,
+    "name": "Tyrkisk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 513,
+    "name": "Tysk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 845,
+    "name": "Tyskland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 862,
+    "name": "Tyskland i Euro 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3740,
+    "name": "Tyskland i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 286,
+    "name": "Tyskland i VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Tyskland i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 637,
+    "name": "Tyskland i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1672,
+    "name": "Tyskland i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 564,
+    "name": "Tysterskandalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1036,
+    "name": "U2",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8797,
+    "name": "U21-EM 2013",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 651,
+    "name": "UDI",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 412,
+    "name": "UEFA-cupen 2000/01",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 510,
+    "name": "UEFA-cupen 2001/02",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 662,
+    "name": "UEFA-cupen 2002/03",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 754,
+    "name": "UEFA-cupen 2003/04",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 866,
+    "name": "UEFA-cupen 2004/05",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1031,
+    "name": "UEFA-cupen 2005/06",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1713,
+    "name": "UEFA-cupen 2006/07",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3681,
+    "name": "UEFA-cupen 2007/08",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3785,
+    "name": "UEFA-cupen 2008/09",
+    "type": {
+      "id": 17,
+      "name": "Turnering"
+    }
+  },
+  {
+    "id": 6978,
+    "name": "USA",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 46,
+    "name": "USA i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 639,
+    "name": "USA i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1688,
+    "name": "USA i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 714,
+    "name": "USAs presidentvalg 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1734,
+    "name": "USAs presidentvalg 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6999,
+    "name": "USAs presidentvalg 2012",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1735,
+    "name": "USAs valg 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13242,
+    "name": "Ubåtmysteriet i Sverige",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 606,
+    "name": "Uganda",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 937,
+    "name": "Ukraina",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1700,
+    "name": "Ukraina i fotball-VM 2006",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 434,
+    "name": "Ulvejakten",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8697,
+    "name": "Ulvøya-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 772,
+    "name": "Ungkaren/Ungkarskvinnen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 430,
+    "name": "Uran-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 638,
+    "name": "Uruguay i fotball-VM 2002",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1004,
+    "name": "Usbekistan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 927,
+    "name": "Ut av sofaen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 100,
+    "name": "Utrolige historier",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5697,
+    "name": "VG Manager",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 201,
+    "name": "VG Replikk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 723,
+    "name": "VG følger Irak-krisen fra USA",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 722,
+    "name": "VG i krigssonen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3139,
+    "name": "VG-Lista Topp 20",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3732,
+    "name": "VG-Snekker",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9777,
+    "name": "VG-ekspertene blogger",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 128,
+    "name": "VG-lista",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13141,
+    "name": "VG-lista Tromsø Sortland",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6197,
+    "name": "VG-serie om samlivsbrudd",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1709,
+    "name": "VGs båtskole",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8518,
+    "name": "VGs skrivekonkurranse",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 82,
+    "name": "VM alpint 99",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 196,
+    "name": "VM for klubblag 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 238,
+    "name": "VM i skiskyting 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 444,
+    "name": "VM i skiskyting 2001",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 708,
+    "name": "VM i skiskyting 2003",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 809,
+    "name": "VM i skiskyting 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 941,
+    "name": "VM i skiskyting 2005",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1749,
+    "name": "VM i skiskyting 2007",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3709,
+    "name": "VM i skiskyting 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 459,
+    "name": "Valentinsdagen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13106,
+    "name": "Valg 2015",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 149,
+    "name": "Valg99",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6637,
+    "name": "Valget 2011",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7797,
+    "name": "Valget 2013",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3696,
+    "name": "Vannalarmen i Oslo",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 840,
+    "name": "Vegard Ulvangs treningstips",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9677,
+    "name": "Vegvesenets ulykkesrapporter",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 993,
+    "name": "Vektklubb.no",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 893,
+    "name": "Vektløfting i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3779,
+    "name": "Vektløfting i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 589,
+    "name": "Venezuela",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 349,
+    "name": "Venstre",
+    "type": {
+      "id": 19,
+      "name": "Parti"
+    }
+  },
+  {
+    "id": 644,
+    "name": "Verdensbanken",
+    "type": {
+      "id": 20,
+      "name": "Organisasjon"
+    }
+  },
+  {
+    "id": 1740,
+    "name": "Vestfold-drapene",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 788,
+    "name": "Victoria Beckham",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1012,
+    "name": "Victoria Silvstedt",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 992,
+    "name": "Vietnam",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 80,
+    "name": "Viking",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 325,
+    "name": "Vin og øl",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 954,
+    "name": "Vinmonopol-granskingen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 437,
+    "name": "Vintest",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 654,
+    "name": "Vitenskap og forskning",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6997,
+    "name": "Voldtektsbølgen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6577,
+    "name": "Voldtektssaken mot Strauss-Kahn",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 898,
+    "name": "Volleyball i OL 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3780,
+    "name": "Volleyball i OL 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 515,
+    "name": "Volvo Ocean Race",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 518,
+    "name": "Volvo Ocean Race - Ukesrapport",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 5797,
+    "name": "Vulkanasken fra Island",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 97,
+    "name": "Vålerenga",
+    "type": {
+      "id": 14,
+      "name": "Lag"
+    }
+  },
+  {
+    "id": 9397,
+    "name": "Vålnes-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 403,
+    "name": "Vær og uvær",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 911,
+    "name": "WTO",
+    "type": {
+      "id": 20,
+      "name": "Organisasjon"
+    }
+  },
+  {
+    "id": 146,
+    "name": "Watford",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3690,
+    "name": "Webtips",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 649,
+    "name": "West Bromwich",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 65,
+    "name": "West Ham",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 792,
+    "name": "Westlife",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 204,
+    "name": "Whitney Houston",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1026,
+    "name": "Wigan",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6257,
+    "name": "WikiLeaks",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6537,
+    "name": "William og Kate",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 66,
+    "name": "Wimbledon",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 749,
+    "name": "Wolverhampton",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 1081,
+    "name": "Wonderboy-saken",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 919,
+    "name": "World Cup i ishockey 2004",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3705,
+    "name": "X Games",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 543,
+    "name": "Xbox",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 989,
+    "name": "Xbox 360",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 7162,
+    "name": "Xbox 720",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9037,
+    "name": "Ylvis",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 259,
+    "name": "Zimbabwe",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 303,
+    "name": "a-ha",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13140,
+    "name": "boikott",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 395,
+    "name": "jul_dagenssang",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 401,
+    "name": "jul_dram",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 402,
+    "name": "jul_husk",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 397,
+    "name": "jul_liste",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 394,
+    "name": "jul_minsang",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 400,
+    "name": "jul_oppskrift",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 398,
+    "name": "jul_plate",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 13087,
+    "name": "schumacher",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 8717,
+    "name": "«Lady Domina»-forsvinningen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 9017,
+    "name": "Ålesund-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 144,
+    "name": "År 2000",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 160,
+    "name": "År 2000-feiringen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 159,
+    "name": "År 2000-teknologi",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 744,
+    "name": "Årvoll-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 260,
+    "name": "Åsane-drapet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 6579,
+    "name": "Ødelagt i helsevesenet",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 924,
+    "name": "Øksedramaet på Kato Air",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 393,
+    "name": "Ørje-drapet",
+    "type": {
+      "id": 15,
+      "name": "Hendelse"
+    }
+  },
+  {
+    "id": 8817,
+    "name": "Østerrike",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 3741,
+    "name": "Østerrike i Euro 2008",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Østerrike i fotball-VM '98",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 750,
+    "name": "Østerriksk fotball",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  },
+  {
+    "id": 914,
+    "name": "Øyafestivalen",
+    "type": {
+      "id": 10,
+      "name": "Generell"
+    }
+  }
+]
