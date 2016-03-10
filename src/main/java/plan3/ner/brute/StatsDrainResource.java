@@ -1,5 +1,9 @@
 package plan3.ner.brute;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -67,12 +71,12 @@ public class StatsDrainResource {
     public static Optional<RouterEntry> parseEntry(final String message) {
         final Matcher m = ENTRY_PATTERN.matcher(message);
         if (m.matches()) {
-            final String timestampString = m.group(1);
             final String system = m.group(2);
             final String type = m.group(3);
             final String entryMessage = m.group(4);
             if ("heroku".equals(system) && "router".equals(type)) {
-                return Optional.of(new RouterEntry(timestampString, entryMessage));
+                final Instant timestamp = toInstant(m.group(1));
+                return Optional.of(new RouterEntry(timestamp, entryMessage));
             }
             LOGGER.info("Non router message = {} entry, omitting", message);
             return Optional.empty();
@@ -82,12 +86,18 @@ public class StatsDrainResource {
         }
     }
 
+    private static Instant toInstant(final String timestampString) {
+        return LocalDateTime.from(DateTimeFormatter.ISO_DATE_TIME.parse(
+                timestampString)).toInstant(
+                ZoneOffset.UTC);
+    }
+
     private static class RouterEntry {
-        private final String timestamp;
+        private final Instant timestamp;
 
         private final String message;
 
-        public RouterEntry(final String timestamp, final String message) {
+        public RouterEntry(final Instant timestamp, final String message) {
             this.timestamp = timestamp;
             this.message = message;
         }
@@ -104,6 +114,8 @@ public class StatsDrainResource {
     public static void main(final String[] args) {
 //        final String s1 = "<158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425";
         final String s1 = "<190>1 2016-03-10T12:32:26.864447+00:00 host app web.1 - 5.226.119.97 - - [10/Mar/2016:12:32:26 +0000] \"POST /advise HTTP/1.1\" 200 2 \"https://cms-playground.plan3dev.se/workbench/o65B;newsroom=fvn\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36";
+//        Instant.from(DateTimeFormatter.ISO_DATE_TIME.parse("2016-03-10T12:32:26.864447+00:00"));
+        final Instant instant = toInstant("2016-03-10T12:32:26.864447+00:00");
 
         System.out.println(parseEntry(s1));
     }
