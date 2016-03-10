@@ -14,6 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.HeaderParam;
 import javax.ws.rs.POST;
@@ -43,7 +44,7 @@ public class StatsDrainResource {
 
     @POST
     @Consumes("application/logplex-1")
-    public void consumeBatch(@QueryParam("app") final String appName,
+    public void consumeBatch(@NotNull @QueryParam("app") final String appName,
                              @HeaderParam("Logplex-MsgCount") final int messageCount,
                              @HeaderParam("Logplex-Frame-Id") final String frameId,
                              @Context final UriInfo uriInfo,
@@ -56,7 +57,7 @@ public class StatsDrainResource {
                 .collect(Collectors.toList());
         if(!routerEntries.isEmpty()) {
             LOGGER.info("Got some logs to process {}", routerEntries);
-            this.statsQueue.enqueue(JsonUtil.asJson(new RouterEntries(frameId, routerEntries, "plan3-tag-advisor-dev")));
+            this.statsQueue.enqueue(JsonUtil.asJson(new RouterEntries(frameId, routerEntries, appName)));
         }
     }
 
