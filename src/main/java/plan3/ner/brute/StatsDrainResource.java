@@ -32,20 +32,20 @@ public class StatsDrainResource {
         LOGGER.info("Got some logs {}", parseMessages(logs, messageCount));
     }
 
-    public static List<String> parseMessages(final String s, final int number) {
+    public static List<String> parseMessages(final String blob, final int number) {
         int currentIdx = 0;
         final List<String> result = new ArrayList<>(number);
-        while (currentIdx < s.length()) {
-            final String next = s.substring(currentIdx);
+        while (currentIdx < blob.length()) {
+            final String next = blob.substring(currentIdx);
             final Matcher m = MSG_LEN_PAT.matcher(next);
             if (m.find()) {
                 final String len = m.group(1);
                 final int messageLen = Integer.parseInt(len);
-                final String message = s.substring(currentIdx + len.length() + 1, currentIdx + messageLen);
+                final String message = blob.substring(currentIdx + len.length() + 1, currentIdx + messageLen);
                 result.add(message);
                 currentIdx += len.length() + messageLen;
             } else {
-                throw new IllegalArgumentException("something wrong has happened");
+                throw new IllegalArgumentException("something wrong has happened " + blob);
             }
         }
         return result;
