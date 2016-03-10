@@ -5,8 +5,8 @@ import io.dropwizard.setup.Bootstrap;
 import net.sourceforge.argparse4j.inf.Namespace;
 import plan3.msg.queue.QueueConsumer;
 import plan3.pure.redis.JedisUtil;
-import plan3.pure.redis.Tx;
 import plan3.restin.jackson.JsonUtil;
+import redis.clients.jedis.Jedis;
 
 import java.util.Optional;
 
@@ -35,20 +35,23 @@ public class StatsConsumer extends ConfiguredCommand<StatsDrainConfiguration> {
                        final StatsDrainConfiguration configuration) throws Exception {
         new QueueConsumer(configuration.statsQueue(), message -> {
             final RouterEntries entries = JsonUtil.fromJson(message.getPayload(), RouterEntries.class);
-            LOGGER.info("Entry consumed {}", entries);
-            try(Tx tx = this.jedis.tx()) {
-                if(tx.redis().get(processedFrameId(entries)) == null) {
-                    tx.redis().setex(processedFrameId(entries), USE_MARK_EXPIRATION, "true");
+            LOGGER.info("Entries consumed {}", entries);
+            try(Jedis jedis = this.jedis.nonTx()) {
+                if(jedis.get(processedFrameId(entries)) == null) {
+                    jedis.setex(processedFrameId(entries), USE_MARK_EXPIRATION, "true");
                     entries.getEntries().forEach(e -> {
-                        final Long count = tx.redis().incr(counterId(e)).get();
+                        final Long count = jedis.incr(counterId(e));
                         final String avgServiceTimeId = avgServiceTimeId(e);
-                        final Float avgSoFar = Optional.ofNullable(tx.redis().get(avgServiceTimeId).get())
+                        final Float avgSoFar = Optional.ofNullable(jedis.get(avgServiceTimeId))
                                 .map(Float::parseFloat)
                                 .orElse(0.0f);
                         final int serviceTime = e.getMessage().getServiceMs() + e.getMessage().getConnectMs();
                         final Float newAvg = (avgSoFar * (count - 1) + serviceTime) / count;
-                        tx.redis().setex(avgServiceTimeId, USE_MARK_EXPIRATION, newAvg.toString());
+                        jedis.setex(avgServiceTimeId, USE_MARK_EXPIRATION, newAvg.toString());
                     });
+                }
+                else {
+                    LOGGER.info("Entries alread in redis {}", entries);
                 }
             }
             return true;
