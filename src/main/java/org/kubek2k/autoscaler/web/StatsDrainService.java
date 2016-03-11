@@ -19,7 +19,7 @@ public class StatsDrainService extends Application<StatsDrainConfiguration> {
         bootstrap.addBundle(new Plan3Bundle(env));
         final JedisUtil jedis = new JedisUtil(env.required("REDIS_URL"));
         bootstrap.addCommand(new StatsConsumer(jedis));
-        bootstrap.addCommand(new StatsObserver(jedis));
+        bootstrap.addCommand(new StatsObserver(this, jedis));
         LogConfigurer.configure(env.optional("LOGGING"));
     }
 

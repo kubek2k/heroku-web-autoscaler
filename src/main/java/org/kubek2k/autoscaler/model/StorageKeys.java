@@ -13,4 +13,8 @@ public class StorageKeys {
     public static String processedFrameId(final RouterEntries entry) {
         return "frame-processed-" + entry.getFrameId();
     }
+
+    public static String numberOfDynosId(final String appName, final long epochSecond) {
+        return appName + "-numer-of-dynos-" + (epochSecond / 10);
+    }
 }

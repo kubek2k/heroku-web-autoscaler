@@ -3,6 +3,7 @@ package org.kubek2k.autoscaler.web;
 import static java.util.Arrays.asList;
 
 import io.dropwizard.Configuration;
+import io.dropwizard.client.JerseyClientConfiguration;
 import io.dropwizard.setup.Environment;
 import plan3.msg.queue.Queue;
 import plan3.msg.sqs.SQSClient;
@@ -17,14 +18,21 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.WebTarget;
+
+import org.kubek2k.autoscaler.heroku.Heroku;
+
 public class StatsDrainConfiguration extends Configuration implements Plan3DwConfiguration {
 
     private final Env env;
     private final String serviceApiKey;
+    private final JerseyClientConfiguration jerseyClientConfiguration;
 
     public StatsDrainConfiguration() {
         this.env = new Env(System.getenv());
         this.serviceApiKey = this.env.required("API_KEY");
+        this.jerseyClientConfiguration = new JerseyClientConfiguration();
     }
 
     @Override
@@ -56,5 +64,13 @@ public class StatsDrainConfiguration extends Configuration implements Plan3DwCon
 
     public Queue statsQueue() {
         return new SQSClient().queue(this.env.required("STATS_QUEUE_URL"));
+    }
+
+    public Heroku heroku(final Environment environment) {
+        final Client klyent = new io.dropwizard.client.JerseyClientBuilder(environment)
+                .using(this.jerseyClientConfiguration)
+                .build("some-http-client");
+        final WebTarget herokuApiTarget = klyent.target("https://api.heroku.com/");
+        return new Heroku(herokuApiTarget, this.env.required("HEROKU_ACCESS_TOKEN"));
     }
 }

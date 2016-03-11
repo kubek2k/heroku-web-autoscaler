@@ -21,6 +21,11 @@
             <version>43</version>
         </dependency>
         <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-client</artifactId>
+            <version>0.8.4</version>
+        </dependency>
+        <dependency>
             <groupId>plan3.pure</groupId>
             <artifactId>pure-logging</artifactId>
             <version>${pure.version}</version>
