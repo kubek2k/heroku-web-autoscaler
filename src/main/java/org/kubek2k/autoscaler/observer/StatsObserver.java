@@ -18,6 +18,7 @@ import java.util.stream.LongStream;
 
 import org.kubek2k.autoscaler.heroku.Heroku;
 import org.kubek2k.autoscaler.model.StorageKeys;
+import org.kubek2k.autoscaler.model.TimeStats;
 import org.kubek2k.autoscaler.web.StatsDrainConfiguration;
 import org.kubek2k.autoscaler.web.StatsDrainService;
 import org.slf4j.Logger;
@@ -49,45 +50,45 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         prefillRatioEntries(appName);
         while(true) {
             final long lastObservation = Instant.now().getEpochSecond() - 10;
-            try(Jedis jedis = this.jedis.nonTx()) {
-                final List<TimeStats> lastMinuteStats = LongStream.iterate(lastObservation, i -> i - 10)
-                        .limit(6)
-                        .mapToObj(observation -> {
-                            final Double serviceTime = optGet(jedis, StorageKeys.avgServiceTimeId(appName, observation))
-                                    .map(Double::parseDouble)
-                                    .orElse(0.0d);
-                            final Integer hitCount = optGet(jedis, StorageKeys.counterId(appName, observation))
-                                    .map(Integer::parseInt)
-                                    .orElse(0);
-                            return new TimeStats(serviceTime, hitCount);
-                        })
-                        .collect(Collectors.toList());
-                final TimeStats latest = lastMinuteStats.get(0);
-                final int aggregatedHitCount = lastMinuteStats.stream()
-                        .map(t -> t.hitCount)
-                        .reduce((c1, c2) -> c1 + c2)
-                        .get();
-                final double aggregatedAvgServiceTime = lastMinuteStats.stream()
-                        .map(t -> t.avgServiceTime * t.hitCount)
-                        .reduce((t1, t2) -> t1 + t2)
-                        .get() / aggregatedHitCount;
+            final TimeStats latestStats = getTimeStats(appName, Instant.now().getEpochSecond() - 10);
+            final List<TimeStats> lastMinuteStats = this.ratioEntries.stream()
+                    .limit(6)
+                    .map(RatioEntry::getTimeStats)
+                    .collect(Collectors.toList());
+            final int aggregatedHitCount = lastMinuteStats.stream()
+                    .map(t -> t.hitCount)
+                    .reduce((c1, c2) -> c1 + c2)
+                    .get();
+            final double aggregatedAvgServiceTime = lastMinuteStats.stream()
+                    .map(t -> t.avgServiceTime * t.hitCount)
+                    .reduce((t1, t2) -> t1 + t2)
+                    .get() / aggregatedHitCount;
 
-                final TimeStats aggregatedLastMinuteStats = new TimeStats(aggregatedAvgServiceTime, aggregatedHitCount);
-                LOGGER.info("Last minute stats {}. Aggregated {}", lastMinuteStats, aggregatedLastMinuteStats);
-                final int dynoCount = heroku.getNumberOfWebDynos(appName);
-                final double ratio = countRatio(aggregatedLastMinuteStats, dynoCount);
-                LOGGER.info("Number of dynos of {}: {}. Ratio: {}. The new dyno count could be: {}", appName, dynoCount,
-                        ratio, countNewDynoCount(latest, 400.0, ratio));
+            final TimeStats aggregatedLastMinuteStats = new TimeStats(aggregatedAvgServiceTime, aggregatedHitCount);
+            LOGGER.info("Last minute stats {}. Aggregated {}", lastMinuteStats, aggregatedLastMinuteStats);
+            final int dynoCount = heroku.getNumberOfWebDynos(appName);
+            final double ratio = countRatio(aggregatedLastMinuteStats, dynoCount, 60);
+            LOGGER.info("Number of dynos of {}: {}. Ratio: {}. The new dyno count could be: {}", appName, dynoCount,
+                    ratio, countNewDynoCount(latestStats, 400.0, ratio, 10));
 
-                // new way
-                this.ratioEntries.removeLast();
-                this.ratioEntries.addFirst(new RatioEntry(lastObservation, countRatio(latest, dynoCount)));
-                final double ratioMedian = countRatioMedian();
-                LOGGER.info("Ratio median based on knowledge from the cache: {}. It would mean that new dyno count should be {}",
-                        ratioMedian, countNewDynoCount(latest, 400.0, ratioMedian));
+            // new way
+            this.ratioEntries.removeLast();
+            this.ratioEntries.addFirst(new RatioEntry(lastObservation, countRatio(latestStats, dynoCount, 10),
+                    latestStats));
+            final double ratioMedian = countRatioMedian();
+            LOGGER.info("Ratio median based on knowledge from the cache: {}. " +
+                    "It would mean that new dyno count should be {}", ratioMedian,
+                    countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratioMedian, 60));
 
-            }
             Thread.sleep(10000);
+        }
+    }
+
+    private TimeStats getTimeStats(final String appName, final long observation) {
+        try (final Jedis jedis = this.jedis.nonTx()) {
+            final Double serviceTime = getServiceTime(appName, jedis, observation);
+            final Integer hitCount = getHitCount(appName, jedis, observation);
+            return new TimeStats(serviceTime, hitCount);
         }
     }
 
@@ -95,20 +96,15 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         final long lastObservation = Instant.now().getEpochSecond() - 20;
         LOGGER.info("Prefilling cache");
 
-        try(Jedis jedis = this.jedis.nonTx()) {
+        try(final Jedis jedis = this.jedis.nonTx()) {
             LongStream.iterate(lastObservation, i -> i - 10)
                     .limit(RATIO_CACHE_SIZE)
                     .mapToObj(observation -> {
-                        final Double serviceTime = optGet(jedis, StorageKeys.avgServiceTimeId(appName, observation))
-                                .map(Double::parseDouble)
-                                .orElse(0.0d);
-                        final Integer hitCount = optGet(jedis, StorageKeys.counterId(appName, observation))
-                                .map(Integer::parseInt)
-                                .orElse(0);
-                        final Integer dynoCount = optGet(jedis, StorageKeys.numberOfDynosId(appName, observation))
-                                .map(Integer::parseInt)
-                                .orElse(8); // TODO this should be value_minimal
-                        return new RatioEntry(observation, countRatio(new TimeStats(serviceTime, hitCount), dynoCount));
+                        final Double serviceTime = getServiceTime(appName, jedis, observation);
+                        final Integer hitCount = getHitCount(appName, jedis, observation);
+                        final Integer dynoCount = getDynoCount(appName, jedis, observation);
+                        final TimeStats timeStats = new TimeStats(serviceTime, hitCount);
+                        return new RatioEntry(observation, countRatio(timeStats, dynoCount, 10), timeStats);
                     })
                     .forEach(this.ratioEntries::add);
         }
@@ -116,9 +112,26 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         LOGGER.info("Prefilling done");
     }
 
+    private Integer getDynoCount(final String appName, final Jedis jedis, final long observation) {
+        return optGet(jedis, StorageKeys.numberOfDynosId(appName, observation))
+                .map(Integer::parseInt)
+                .orElse(8); // TODO this should be value_minimal
+    }
+
+    private Integer getHitCount(final String appName, final Jedis jedis, final long observation) {
+        return optGet(jedis, StorageKeys.counterId(appName, observation))
+                .map(Integer::parseInt)
+                .orElse(0);
+    }
+
+    private Double getServiceTime(final String appName, final Jedis jedis, final long observation) {
+        return optGet(jedis, StorageKeys.avgServiceTimeId(appName, observation))
+                                    .map(Double::parseDouble)
+                                    .orElse(0.0d);
+    }
+
     public double countRatioMedian() {
         final TreeMultiset<RatioEntry> medianFinder = TreeMultiset.create(new Comparator<RatioEntry>() {
-
             @Override
             public int compare(final RatioEntry o1, final RatioEntry o2) {
                 return o1.getRatio() - o2.getRatio() > 0 ? 1 : -1;
@@ -128,34 +141,20 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         return Iterables.get(medianFinder, medianFinder.size() / 2).getRatio();
     }
 
-    public double countRatio(final TimeStats lastMinuteStats, final int dynoCount) {
-        return ((double) dynoCount) * lastMinuteStats.avgServiceTime / lastMinuteStats.hitCount;
+    public double countRatio(final TimeStats periodStats, final int dynoCount, final long period) {
+        if (periodStats.hitCount > 0) {
+            return ((double) dynoCount) * periodStats.avgServiceTime * period / periodStats.hitCount;
+        } else {
+            return 0.0;
+        }
     }
 
-    public double countNewDynoCount(final TimeStats latestStats, final double desiredServiceTime, final double ratio) {
-        return ((double) latestStats.hitCount * ratio) / desiredServiceTime;
+    public double countNewDynoCount(final TimeStats latestStats, final double desiredServiceTime, final double ratio, final long period) {
+        return ((double) latestStats.hitCount * ratio) / desiredServiceTime / period;
     }
 
     private Optional<String> optGet(final Jedis jedis, final String key) {
         return Optional.ofNullable(jedis.get(key));
     }
 
-    public static class TimeStats {
-        private final Double avgServiceTime;
-
-        private final Integer hitCount;
-
-        public TimeStats(final Double avgServiceTime, final Integer hitCount) {
-            this.avgServiceTime = avgServiceTime;
-            this.hitCount = hitCount;
-        }
-
-        @Override
-        public String toString() {
-            return "TimeStats{" +
-                    "avgServiceTime=" + avgServiceTime +
-                    ", hitCount=" + hitCount +
-                    '}';
-        }
-    }
 }
