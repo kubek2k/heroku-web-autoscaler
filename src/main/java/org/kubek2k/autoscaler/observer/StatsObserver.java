@@ -66,14 +66,10 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
 
             final TimeStats aggregatedLastMinuteStats = new TimeStats(aggregatedAvgServiceTime, aggregatedHitCount);
             final int dynoCount = heroku.getNumberOfWebDynos(appName);
-            final double ratio = countRatio(aggregatedLastMinuteStats, dynoCount, 60);
-            LOGGER.info("Number of dynos of {}: {}. Ratio: {}. The new dyno count could be: {}", appName, dynoCount,
-                    ratio, countNewDynoCount(latestStats, 400.0, ratio, 10));
 
             // new way
             this.ratioEntries.removeLast();
-            this.ratioEntries.addFirst(new RatioEntry(lastObservation, countRatio(latestStats, dynoCount, 10),
-                    latestStats));
+            this.ratioEntries.addFirst(new RatioEntry(lastObservation, dynoCount, latestStats, 10));
             final double ratioMedian = countRatioMedian();
             LOGGER.info("Ratio median based on knowledge from the cache: {}. " +
                     "It would mean that new dyno count should be {}", ratioMedian,
@@ -103,7 +99,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                         final Integer hitCount = getHitCount(appName, jedis, observation);
                         final Integer dynoCount = getDynoCount(appName, jedis, observation);
                         final TimeStats timeStats = new TimeStats(serviceTime, hitCount);
-                        return new RatioEntry(observation, countRatio(timeStats, dynoCount, 10), timeStats);
+                        return new RatioEntry(observation, dynoCount, timeStats, 10);
                     })
                     .forEach(this.ratioEntries::add);
         }
@@ -140,13 +136,13 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         return Iterables.get(medianFinder, medianFinder.size() / 2).getRatio();
     }
 
-    public double countRatio(final TimeStats periodStats, final int dynoCount, final long period) {
-        if (periodStats.hitCount > 0) {
-            return ((double) dynoCount) * periodStats.avgServiceTime * period / periodStats.hitCount;
-        } else {
-            return 0.0;
-        }
-    }
+//    public double countRatio(final TimeStats periodStats, final int dynoCount, final long period) {
+//        if (periodStats.hitCount > 0) {
+//            return ((double) dynoCount) * periodStats.avgServiceTime * period / periodStats.hitCount;
+//        } else {
+//            return 0.0;
+//        }
+//    }
 
     public double countNewDynoCount(final TimeStats latestStats, final double desiredServiceTime, final double ratio, final long period) {
         return ((double) latestStats.hitCount * ratio) / desiredServiceTime / period;

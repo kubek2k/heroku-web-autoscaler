@@ -6,14 +6,26 @@ public class RatioEntry {
 
     private final long epochTimestamp;
 
-    private final double ratio;
+    private final int dynoCount;
 
     private final TimeStats timeStats;
 
-    public RatioEntry(final long epochTimestamp, final double ratio, final TimeStats timeStats) {
+    public final Double avgServiceTime;
+
+    public final Integer hitCount;
+
+    private final long period;
+
+    public RatioEntry(final long epochTimestamp,
+                      final int dynoCount,
+                      final TimeStats timeStats,
+                      final long period) {
         this.epochTimestamp = epochTimestamp;
-        this.ratio = ratio;
+        this.dynoCount = dynoCount;
         this.timeStats = timeStats;
+        this.avgServiceTime = timeStats.avgServiceTime;
+        this.hitCount = timeStats.hitCount;
+        this.period = period;
     }
 
     public long getEpochTimestamp() {
@@ -21,11 +33,15 @@ public class RatioEntry {
     }
 
     public double getRatio() {
-        return this.ratio;
+        if (this.hitCount > 0) {
+            return ((double) this.dynoCount) * this.avgServiceTime * this.period / this.hitCount;
+        } else {
+            return 0.0;
+        }
     }
 
     public TimeStats getTimeStats() {
-        return timeStats;
+        return this.timeStats;
     }
 }
 
