@@ -23,11 +23,11 @@ import org.slf4j.LoggerFactory;
 public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StatsObserver.class);
-    public static final int RATIO_CACHE_SIZE = 50;
-    private final JedisUtil jedis;
-    public static final int LOOKBACK_WINDOW_SIZE = 60;
+    private static final int RATIO_CACHE_SIZE = 50;
+    private static final int LOOKBACK_WINDOW_SIZE = 60;
 
     private final RatioEntriesCache ratioEntriesCache = new RatioEntriesCache();
+    private final JedisUtil jedis;
 
     public StatsObserver(final StatsDrainService service, final JedisUtil jedis) {
         super(service, "observe", "Observes stats and reacts");
@@ -44,7 +44,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         while(true) {
             final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
             final TimeStats mostRecentStats = getTimeStats(appName, Instant.now().getEpochSecond() - Granularity.GRANULARITY);
-            final TimeStats aggregatedLastMinuteStats = this.ratioEntriesCache.aggregateLookbackWindow(LOOKBACK_WINDOW_SIZE);
+            final TimeStats aggregatedLastMinuteStats = this.ratioEntriesCache.aggregateBack(LOOKBACK_WINDOW_SIZE);
             final int currentDynoCount = heroku.getNumberOfWebDynos(appName);
             this.ratioEntriesCache.addNewRatioEntry(lastObservation, mostRecentStats, currentDynoCount);
             final double ratioMedian = this.ratioEntriesCache.countRatioMedian();
@@ -65,9 +65,8 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
     }
 
     private void prefillRatioEntries(final String appName) {
-        final long lastObservation = Instant.now().getEpochSecond() - 20;
+        final long lastObservation = Instant.now().getEpochSecond() - 2*Granularity.GRANULARITY;
         LOGGER.info("Prefilling cache");
-
         try(final Jedis jedis = this.jedis.nonTx()) {
             LongStream.iterate(lastObservation, i -> i - Granularity.GRANULARITY)
                     .limit(RATIO_CACHE_SIZE)

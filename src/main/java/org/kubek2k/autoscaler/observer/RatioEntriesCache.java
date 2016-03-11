@@ -22,7 +22,7 @@ public class RatioEntriesCache {
         this.ratioEntries.add(ratioEntry);
     }
 
-    public TimeStats aggregateLookbackWindow(final int lookbackWindowSize) {
+    public TimeStats aggregateBack(final int lookbackWindowSize) {
         final List<TimeStats> lastMinuteStats = this.ratioEntries.stream()
                 .limit(lookbackWindowSize / Granularity.GRANULARITY)
                 .map(RatioEntry::getTimeStats)
