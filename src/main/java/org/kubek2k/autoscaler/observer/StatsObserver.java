@@ -65,7 +65,6 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                     .get() / aggregatedHitCount;
 
             final TimeStats aggregatedLastMinuteStats = new TimeStats(aggregatedAvgServiceTime, aggregatedHitCount);
-            LOGGER.info("Last minute stats {}. Aggregated {}", lastMinuteStats, aggregatedLastMinuteStats);
             final int dynoCount = heroku.getNumberOfWebDynos(appName);
             final double ratio = countRatio(aggregatedLastMinuteStats, dynoCount, 60);
             LOGGER.info("Number of dynos of {}: {}. Ratio: {}. The new dyno count could be: {}", appName, dynoCount,
