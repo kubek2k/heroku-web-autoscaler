@@ -8,12 +8,7 @@ import plan3.pure.redis.JedisUtil;
 import redis.clients.jedis.Jedis;
 
 import java.time.Instant;
-import java.util.Comparator;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
 import org.kubek2k.autoscaler.Granularity;
@@ -25,18 +20,14 @@ import org.kubek2k.autoscaler.web.StatsDrainService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.Iterables;
-import com.google.common.collect.TreeMultiset;
-
 public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StatsObserver.class);
     public static final int RATIO_CACHE_SIZE = 50;
+    private final JedisUtil jedis;
     public static final int LOOKBACK_WINDOW_SIZE = 60;
 
-    private final JedisUtil jedis;
-
-    private final Deque<RatioEntry> ratioEntries = new LinkedList<>();
+    private final RatioEntriesCache ratioEntriesCache = new RatioEntriesCache();
 
     public StatsObserver(final StatsDrainService service, final JedisUtil jedis) {
         super(service, "observe", "Observes stats and reacts");
@@ -53,13 +44,10 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         while(true) {
             final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
             final TimeStats mostRecentStats = getTimeStats(appName, Instant.now().getEpochSecond() - Granularity.GRANULARITY);
-            final TimeStats aggregatedLastMinuteStats = aggregateLookbackWindow();
-            final int dynoCount = heroku.getNumberOfWebDynos(appName);
-
-            // new way
-            this.ratioEntries.removeLast();
-            this.ratioEntries.addFirst(new RatioEntry(lastObservation, dynoCount, mostRecentStats, Granularity.GRANULARITY));
-            final double ratioMedian = countRatioMedian();
+            final TimeStats aggregatedLastMinuteStats = this.ratioEntriesCache.aggregateLookbackWindow(LOOKBACK_WINDOW_SIZE);
+            final int currentDynoCount = heroku.getNumberOfWebDynos(appName);
+            this.ratioEntriesCache.addNewRatioEntry(lastObservation, mostRecentStats, currentDynoCount);
+            final double ratioMedian = this.ratioEntriesCache.countRatioMedian();
             LOGGER.info("Ratio median based on knowledge from the cache: {}. " +
                     "It would mean that new dyno count should be {}", ratioMedian,
                     countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratioMedian, LOOKBACK_WINDOW_SIZE));
@@ -68,26 +56,10 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         }
     }
 
-    private TimeStats aggregateLookbackWindow() {
-        final List<TimeStats> lastMinuteStats = this.ratioEntries.stream()
-                .limit(LOOKBACK_WINDOW_SIZE / Granularity.GRANULARITY)
-                .map(RatioEntry::getTimeStats)
-                .collect(Collectors.toList());
-        final int aggregatedHitCount = lastMinuteStats.stream()
-                .map(t -> t.hitCount)
-                .reduce((c1, c2) -> c1 + c2)
-                .get();
-        final double aggregatedAvgServiceTime = lastMinuteStats.stream()
-                .map(t -> t.avgServiceTime * t.hitCount)
-                .reduce((t1, t2) -> t1 + t2)
-                .get() / aggregatedHitCount;
-        return new TimeStats(aggregatedAvgServiceTime, aggregatedHitCount);
-    }
-
-    private TimeStats getTimeStats(final String appName, final long observation) {
+    private TimeStats getTimeStats(final String appName, final long pointInTime) {
         try (final Jedis jedis = this.jedis.nonTx()) {
-            final Double serviceTime = getServiceTime(appName, jedis, observation);
-            final Integer hitCount = getHitCount(appName, jedis, observation);
+            final Double serviceTime = getServiceTime(appName, jedis, pointInTime);
+            final Integer hitCount = getHitCount(appName, jedis, pointInTime);
             return new TimeStats(serviceTime, hitCount);
         }
     }
@@ -100,15 +72,12 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
             LongStream.iterate(lastObservation, i -> i - Granularity.GRANULARITY)
                     .limit(RATIO_CACHE_SIZE)
                     .mapToObj(observation -> {
-                        final Double serviceTime = getServiceTime(appName, jedis, observation);
-                        final Integer hitCount = getHitCount(appName, jedis, observation);
                         final Integer dynoCount = getDynoCount(appName, jedis, observation);
-                        final TimeStats timeStats = new TimeStats(serviceTime, hitCount);
+                        final TimeStats timeStats = getTimeStats(appName, observation);
                         return new RatioEntry(observation, dynoCount, timeStats, Granularity.GRANULARITY);
                     })
-                    .forEach(this.ratioEntries::add);
+                    .forEach(this.ratioEntriesCache::add);
         }
-
         LOGGER.info("Prefilling done");
     }
 
@@ -128,17 +97,6 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         return optGet(jedis, StorageKeys.avgServiceTimeId(appName, observation))
                                     .map(Double::parseDouble)
                                     .orElse(0.0d);
-    }
-
-    public double countRatioMedian() {
-        final TreeMultiset<RatioEntry> medianFinder = TreeMultiset.create(new Comparator<RatioEntry>() {
-            @Override
-            public int compare(final RatioEntry o1, final RatioEntry o2) {
-                return o1.getRatio() - o2.getRatio() > 0 ? 1 : -1;
-            }
-        });
-        medianFinder.addAll(this.ratioEntries);
-        return Iterables.get(medianFinder, medianFinder.size() / 2).getRatio();
     }
 
     public double countNewDynoCount(final TimeStats latestStats, final double desiredServiceTime, final double ratio, final long period) {
