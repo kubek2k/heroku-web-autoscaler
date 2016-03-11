@@ -16,6 +16,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
+import org.kubek2k.autoscaler.Granularity;
 import org.kubek2k.autoscaler.heroku.Heroku;
 import org.kubek2k.autoscaler.model.StorageKeys;
 import org.kubek2k.autoscaler.model.TimeStats;
@@ -31,6 +32,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StatsObserver.class);
     public static final int RATIO_CACHE_SIZE = 50;
+    public static final int LOOKBACK = 60;
 
     private final JedisUtil jedis;
 
@@ -49,10 +51,10 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         final Heroku heroku = configuration.heroku(environment);
         prefillRatioEntries(appName);
         while(true) {
-            final long lastObservation = Instant.now().getEpochSecond() - 10;
-            final TimeStats latestStats = getTimeStats(appName, Instant.now().getEpochSecond() - 10);
+            final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
+            final TimeStats latestStats = getTimeStats(appName, Instant.now().getEpochSecond() - Granularity.GRANULARITY);
             final List<TimeStats> lastMinuteStats = this.ratioEntries.stream()
-                    .limit(6)
+                    .limit(LOOKBACK / Granularity.GRANULARITY)
                     .map(RatioEntry::getTimeStats)
                     .collect(Collectors.toList());
             final int aggregatedHitCount = lastMinuteStats.stream()
@@ -69,11 +71,11 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
 
             // new way
             this.ratioEntries.removeLast();
-            this.ratioEntries.addFirst(new RatioEntry(lastObservation, dynoCount, latestStats, 10));
+            this.ratioEntries.addFirst(new RatioEntry(lastObservation, dynoCount, latestStats, Granularity.GRANULARITY));
             final double ratioMedian = countRatioMedian();
             LOGGER.info("Ratio median based on knowledge from the cache: {}. " +
                     "It would mean that new dyno count should be {}", ratioMedian,
-                    countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratioMedian, 60));
+                    countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratioMedian, LOOKBACK));
 
             Thread.sleep(10000);
         }
@@ -92,14 +94,14 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         LOGGER.info("Prefilling cache");
 
         try(final Jedis jedis = this.jedis.nonTx()) {
-            LongStream.iterate(lastObservation, i -> i - 10)
+            LongStream.iterate(lastObservation, i -> i - Granularity.GRANULARITY)
                     .limit(RATIO_CACHE_SIZE)
                     .mapToObj(observation -> {
                         final Double serviceTime = getServiceTime(appName, jedis, observation);
                         final Integer hitCount = getHitCount(appName, jedis, observation);
                         final Integer dynoCount = getDynoCount(appName, jedis, observation);
                         final TimeStats timeStats = new TimeStats(serviceTime, hitCount);
-                        return new RatioEntry(observation, dynoCount, timeStats, 10);
+                        return new RatioEntry(observation, dynoCount, timeStats, Granularity.GRANULARITY);
                     })
                     .forEach(this.ratioEntries::add);
         }
@@ -135,14 +137,6 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         medianFinder.addAll(this.ratioEntries);
         return Iterables.get(medianFinder, medianFinder.size() / 2).getRatio();
     }
-
-//    public double countRatio(final TimeStats periodStats, final int dynoCount, final long period) {
-//        if (periodStats.hitCount > 0) {
-//            return ((double) dynoCount) * periodStats.avgServiceTime * period / periodStats.hitCount;
-//        } else {
-//            return 0.0;
-//        }
-//    }
 
     public double countNewDynoCount(final TimeStats latestStats, final double desiredServiceTime, final double ratio, final long period) {
         return ((double) latestStats.hitCount * ratio) / desiredServiceTime / period;
