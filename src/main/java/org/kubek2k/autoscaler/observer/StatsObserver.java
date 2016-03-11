@@ -32,7 +32,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StatsObserver.class);
     public static final int RATIO_CACHE_SIZE = 50;
-    public static final int LOOKBACK = 60;
+    public static final int LOOKBACK_WINDOW_SIZE = 60;
 
     private final JedisUtil jedis;
 
@@ -52,33 +52,36 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         prefillRatioEntries(appName);
         while(true) {
             final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
-            final TimeStats latestStats = getTimeStats(appName, Instant.now().getEpochSecond() - Granularity.GRANULARITY);
-            final List<TimeStats> lastMinuteStats = this.ratioEntries.stream()
-                    .limit(LOOKBACK / Granularity.GRANULARITY)
-                    .map(RatioEntry::getTimeStats)
-                    .collect(Collectors.toList());
-            final int aggregatedHitCount = lastMinuteStats.stream()
-                    .map(t -> t.hitCount)
-                    .reduce((c1, c2) -> c1 + c2)
-                    .get();
-            final double aggregatedAvgServiceTime = lastMinuteStats.stream()
-                    .map(t -> t.avgServiceTime * t.hitCount)
-                    .reduce((t1, t2) -> t1 + t2)
-                    .get() / aggregatedHitCount;
-
-            final TimeStats aggregatedLastMinuteStats = new TimeStats(aggregatedAvgServiceTime, aggregatedHitCount);
+            final TimeStats mostRecentStats = getTimeStats(appName, Instant.now().getEpochSecond() - Granularity.GRANULARITY);
+            final TimeStats aggregatedLastMinuteStats = aggregateLookbackWindow();
             final int dynoCount = heroku.getNumberOfWebDynos(appName);
 
             // new way
             this.ratioEntries.removeLast();
-            this.ratioEntries.addFirst(new RatioEntry(lastObservation, dynoCount, latestStats, Granularity.GRANULARITY));
+            this.ratioEntries.addFirst(new RatioEntry(lastObservation, dynoCount, mostRecentStats, Granularity.GRANULARITY));
             final double ratioMedian = countRatioMedian();
             LOGGER.info("Ratio median based on knowledge from the cache: {}. " +
                     "It would mean that new dyno count should be {}", ratioMedian,
-                    countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratioMedian, LOOKBACK));
+                    countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratioMedian, LOOKBACK_WINDOW_SIZE));
 
             Thread.sleep(10000);
         }
+    }
+
+    private TimeStats aggregateLookbackWindow() {
+        final List<TimeStats> lastMinuteStats = this.ratioEntries.stream()
+                .limit(LOOKBACK_WINDOW_SIZE / Granularity.GRANULARITY)
+                .map(RatioEntry::getTimeStats)
+                .collect(Collectors.toList());
+        final int aggregatedHitCount = lastMinuteStats.stream()
+                .map(t -> t.hitCount)
+                .reduce((c1, c2) -> c1 + c2)
+                .get();
+        final double aggregatedAvgServiceTime = lastMinuteStats.stream()
+                .map(t -> t.avgServiceTime * t.hitCount)
+                .reduce((t1, t2) -> t1 + t2)
+                .get() / aggregatedHitCount;
+        return new TimeStats(aggregatedAvgServiceTime, aggregatedHitCount);
     }
 
     private TimeStats getTimeStats(final String appName, final long observation) {
