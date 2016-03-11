@@ -48,7 +48,16 @@ public class StatsObserver extends ConfiguredCommand<StatsDrainConfiguration> {
                             return new TimeStats(serviceTime, hitCount);
                         })
                         .collect(Collectors.toList());
-                LOGGER.info("Last minute stats {}", lastMinuteStats);
+                final int aggregatedHitCount = lastMinuteStats.stream()
+                        .map(t -> t.hitCount)
+                        .reduce((c1, c2) -> c1 + c2)
+                        .get();
+                final double aggregatedAvgServiceTime = lastMinuteStats.stream()
+                        .map(t -> t.avgServiceTime * t.hitCount)
+                        .reduce((t1, t2) -> t1 + t2)
+                        .get() / aggregatedHitCount;
+
+                LOGGER.info("Last minute stats {}. Aggregated {}", lastMinuteStats, new TimeStats(aggregatedAvgServiceTime, aggregatedHitCount));
             }
             Thread.sleep(10000);
         }
