@@ -6,7 +6,6 @@ import net.sourceforge.argparse4j.inf.Namespace;
 import plan3.ner.brute.model.RatioEntry;
 import plan3.pure.redis.JedisUtil;
 import plan3.pure.redis.Tx;
-import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Response;
 import redis.clients.jedis.Transaction;
 
@@ -48,7 +47,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         prefillRatioEntries(appName, heroku.getNumberOfWebDynos(appName));
         while(true) {
             final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
-            final TimeStats mostRecentStats = getTimeStats(appName,
+            final TimeStats mostRecentStats = getTimeStats2(appName,
                     Instant.now().getEpochSecond() - Granularity.GRANULARITY);
             final TimeStats aggregatedLastMinuteStats = this.ratioEntriesCache.aggregateBack(LOOKBACK_WINDOW_SIZE);
             final int currentDynoCount = heroku.getNumberOfWebDynos(appName);
@@ -62,15 +61,15 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         }
     }
 
-    private TimeStats getTimeStats(final String appName, final long pointInTime) {
-        try(final Jedis jedis = this.jedis.nonTx()) {
-            final Double serviceTime = getServiceTime(appName, jedis, pointInTime);
-            final Integer hitCount = getHitCount(appName, jedis, pointInTime);
-            return new TimeStats(serviceTime, hitCount);
+    private TimeStats getTimeStats2(final String appName, final long pointInTime) {
+        final Object [] responses;
+        try (final Tx tx = this.jedis.tx()) {
+            responses = getTimeStatsResponses(appName, pointInTime, tx.redis());
         }
+        return new TimeStats(extractAvgServiceTime(responses), extractHitCount(responses));
     }
 
-    private Object[] getTimeStats(final String appName, final long pointInTime, final Transaction tx) {
+    private Object[] getTimeStatsResponses(final String appName, final long pointInTime, final Transaction tx) {
         final Response<String> avgServiceTime = tx.get(StorageKeys.avgServiceTimeId(appName, pointInTime));
         final Response<String> hitCount = tx.get(StorageKeys.counterId(appName, pointInTime));
         return new Object[]{pointInTime, avgServiceTime, hitCount};
@@ -79,16 +78,12 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
     private void prefillRatioEntries(final String appName, final int initialDynoCount) {
         final long lastObservation = Instant.now().getEpochSecond() - 2 * Granularity.GRANULARITY;
         LOGGER.info("Prefilling cache");
-        final List<Object[]> timeStatsResponses = getTimeStatsInOneShot(appName, lastObservation);
-        timeStatsResponses.stream()
+        getTimeStatsInOneShot(appName, lastObservation)
+                .stream()
                 .map(pair -> {
                     final Long epochTimestamp = (Long) pair[0];
-                    final Double avgServiceTime = Optional.ofNullable(((Response<String>) pair[1]).get())
-                            .map(Double::parseDouble)
-                            .orElse(0.0);
-                    final Integer hitCount = Optional.ofNullable(((Response<String>) pair[2]).get())
-                            .map(Integer::parseInt)
-                            .orElse(0);
+                    final Double avgServiceTime = extractAvgServiceTime(pair);
+                    final Integer hitCount = extractHitCount(pair);
                     return new RatioEntry(epochTimestamp,
                             initialDynoCount,
                             new TimeStats(avgServiceTime, hitCount),
@@ -98,25 +93,26 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         LOGGER.info("Prefilling done {}", this.ratioEntriesCache);
     }
 
-    private List<Object[]> getTimeStatsInOneShot(final String appName, final long lastObservation) {
-        try(final Tx tx = this.jedis.tx()) {
-            return LongStream.iterate(lastObservation, i -> i - Granularity.GRANULARITY)
-                    .limit(RATIO_CACHE_SIZE)
-                    .mapToObj(observation -> getTimeStats(appName, observation, tx.redis()))
-                    .collect(Collectors.toList());
-        }
-    }
-
-    private Integer getHitCount(final String appName, final Jedis jedis, final long observation) {
-        return optGet(jedis, StorageKeys.counterId(appName, observation))
+    private Integer extractHitCount(final Object[] responseArr) {
+        return Optional.ofNullable(((Response<String>) responseArr[2]).get())
                 .map(Integer::parseInt)
                 .orElse(0);
     }
 
-    private Double getServiceTime(final String appName, final Jedis jedis, final long observation) {
-        return optGet(jedis, StorageKeys.avgServiceTimeId(appName, observation))
+    private Double extractAvgServiceTime(final Object[] responseArr) {
+        return Optional.ofNullable(((Response<String>) responseArr[1]).get())
                 .map(Double::parseDouble)
-                .orElse(0.0d);
+                .orElse(0.0);
+    }
+
+    private List<Object[]> getTimeStatsInOneShot(final String appName, final long lastObservation) {
+        try(final Tx tx = this.jedis.tx()) {
+            return LongStream.iterate(lastObservation,
+                    i -> i - Granularity.GRANULARITY)
+                    .limit(RATIO_CACHE_SIZE)
+                    .mapToObj(observation -> getTimeStatsResponses(appName, observation, tx.redis()))
+                    .collect(Collectors.toList());
+        }
     }
 
     public double countNewDynoCount(final TimeStats latestStats,
@@ -125,9 +121,4 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                                     final long period) {
         return ((double) latestStats.hitCount * ratio) / desiredServiceTime / period;
     }
-
-    private Optional<String> optGet(final Jedis jedis, final String key) {
-        return Optional.ofNullable(jedis.get(key));
-    }
-
 }
