@@ -55,4 +55,11 @@ public class RatioEntriesCache {
         this.ratioEntries.removeLast();
         this.ratioEntries.addFirst(new RatioEntry(lastObservation, currentDynoCount, mostRecentStats, Granularity.GRANULARITY));
     }
+
+    @Override
+    public String toString() {
+        return "RatioEntriesCache{" +
+                "ratioEntries=" + this.ratioEntries +
+                '}';
+    }
 }

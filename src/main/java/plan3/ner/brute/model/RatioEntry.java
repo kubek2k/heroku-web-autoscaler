@@ -43,5 +43,17 @@ public class RatioEntry {
     public TimeStats getTimeStats() {
         return this.timeStats;
     }
+
+    @Override
+    public String toString() {
+        return "RatioEntry{" +
+                "epochTimestamp=" + epochTimestamp +
+                ", dynoCount=" + dynoCount +
+                ", timeStats=" + timeStats +
+                ", avgServiceTime=" + avgServiceTime +
+                ", hitCount=" + hitCount +
+                ", period=" + period +
+                '}';
+    }
 }
 

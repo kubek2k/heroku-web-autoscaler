@@ -77,7 +77,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                     })
                     .forEach(this.ratioEntriesCache::add);
         }
-        LOGGER.info("Prefilling done");
+        LOGGER.info("Prefilling done {}", this.ratioEntriesCache);
     }
 
     private Integer getDynoCount(final String appName, final Jedis jedis, final long observation) {
