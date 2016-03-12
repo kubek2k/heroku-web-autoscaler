@@ -65,12 +65,13 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                         LOOKBACK_WINDOW_SIZE);
                 StatsObserver.this.timePeriodStatsCache.addNewRatioEntry(mostRecentStats);
                 final Optional<Double> ratioMedian = StatsObserver.this.timePeriodStatsCache.countRatioMedian();
-                final double inferredDynoCount =
-                        ratioMedian.map(ratio -> countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratio)).orElse(0.0);
-                LOGGER.info(
-                        "Ratio median based on knowledge from the cache: {}. It would mean that new dyno count should be {}",
-                        ratioMedianReporter.report(ratioMedian.get()),
-                        inferredDynoCountReporter.report(inferredDynoCount));
+                ratioMedian.ifPresent(ratio -> {
+                    final double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratio);
+                    LOGGER.info(
+                            "Ratio median based on knowledge from the cache: {}. It would mean that new dyno count should be {}",
+                            ratioMedianReporter.report(ratioMedian.get()),
+                            inferredDynoCountReporter.report(inferredDynoCount));
+                });
             }
             catch(final Exception e) {
                 LOGGER.warn("Decision making for " + appName + " failed ", e);
