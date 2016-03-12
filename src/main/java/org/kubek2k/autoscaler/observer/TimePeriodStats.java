@@ -12,7 +12,6 @@ public class TimePeriodStats {
     private final double avgServiceTime;
 
     public final int hitCount;
-    private Double hitRate;
 
     public TimePeriodStats(final long periodStartTimestamp,
                            final long periodLength,
@@ -45,7 +44,7 @@ public class TimePeriodStats {
     }
 
     public Double getHitRate() {
-        return (double) this.periodLength / this.hitCount;
+        return (double) this.hitCount / this.periodLength;
     }
 
     @Override
@@ -56,7 +55,8 @@ public class TimePeriodStats {
                 ", avgDynoCount=" + avgDynoCount +
                 ", avgServiceTime=" + avgServiceTime +
                 ", hitCount=" + hitCount +
-                ", hitRate=" + hitRate +
+                ", hitRate=" + this.getHitRate() +
+                ", ratio=" + this.getRatio() +
                 '}';
     }
 }

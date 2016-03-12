@@ -61,15 +61,18 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
             try {
                 final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
                 final TimePeriodStats mostRecentStats = getTimePeriodStats(appName, lastObservation, heroku);
+                LOGGER.info("Most recent ratio is {} for time stats {}", mostRecentStats.getRatio(), mostRecentStats);
                 final TimePeriodStats aggregatedLastMinuteStats = StatsObserver.this.timePeriodStatsCache.aggregateBack(
                         LOOKBACK_WINDOW_SIZE);
                 StatsObserver.this.timePeriodStatsCache.addNewRatioEntry(mostRecentStats);
                 final Optional<Double> ratioMedian = StatsObserver.this.timePeriodStatsCache.countRatioMedian();
                 ratioMedian.ifPresent(ratio -> {
-                    final double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratio);
+                    final Double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratio);
                     LOGGER.info(
-                            "Ratio median based on knowledge from the cache: {}. It would mean that new dyno count should be {}",
-                            ratioMedianReporter.report(ratioMedian.get()),
+                            "Ratio median based on knowledge from the cache: {}. " +
+                                    "It would mean that new dyno count for last minute stats {} should be {}",
+                            ratioMedianReporter.report(ratio),
+                            aggregatedLastMinuteStats,
                             inferredDynoCountReporter.report(inferredDynoCount));
                 });
             }
@@ -143,7 +146,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         }
     }
 
-    public double countNewDynoCount(final TimePeriodStats latestStats,
+    public Double countNewDynoCount(final TimePeriodStats latestStats,
                                     final double desiredServiceTime,
                                     final double ratio) {
         return (latestStats.getHitRate() * ratio) / desiredServiceTime;
