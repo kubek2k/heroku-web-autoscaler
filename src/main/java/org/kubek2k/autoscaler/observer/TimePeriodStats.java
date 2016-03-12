@@ -47,4 +47,16 @@ public class TimePeriodStats {
     public Double getHitRate() {
         return (double) this.periodLength / this.hitCount;
     }
+
+    @Override
+    public String toString() {
+        return "TimePeriodStats{" +
+                "periodStartTimestamp=" + periodStartTimestamp +
+                ", periodLength=" + periodLength +
+                ", avgDynoCount=" + avgDynoCount +
+                ", avgServiceTime=" + avgServiceTime +
+                ", hitCount=" + hitCount +
+                ", hitRate=" + hitRate +
+                '}';
+    }
 }
