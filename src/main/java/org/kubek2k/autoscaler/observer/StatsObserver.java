@@ -51,9 +51,9 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         try {
             final String appName = "plan3-article-api";
             final Heroku heroku = configuration.heroku(environment);
-            final PoorMansLibrato.MeasureReporter dynoCountReporter = this.librato.measureReporter("dyno-count", "dynos", Optional.of(appName));
-            final PoorMansLibrato.MeasureReporter inferredDynoCountReporter = this.librato.measureReporter("inferred-dyno-count", "dynos", Optional.of(appName));
-            final PoorMansLibrato.MeasureReporter ratioMedianReporter = this.librato.measureReporter("ratio-median", "", Optional.of(appName));
+            final PoorMansLibrato.MeasureReporter dynoCountReporter = this.librato.sampleReporter("dyno-count", "dynos", Optional.of(appName));
+            final PoorMansLibrato.MeasureReporter inferredDynoCountReporter = this.librato.sampleReporter("inferred-dyno-count", "dynos", Optional.of(appName));
+            final PoorMansLibrato.MeasureReporter ratioMedianReporter = this.librato.sampleReporter("ratio-median", "", Optional.of(appName));
             prefillRatioEntries(appName, heroku.getNumberOfWebDynos(appName));
             this.executorService.scheduleAtFixedRate(() -> {
                 final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
