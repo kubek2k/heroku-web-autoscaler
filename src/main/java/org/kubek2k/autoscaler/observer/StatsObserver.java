@@ -60,15 +60,14 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         this.executorService.scheduleAtFixedRate(() -> {
             try {
                 final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
-                final TimePeriodStats mostRecentStats = getTimeStats2(appName, lastObservation, heroku);
+                final TimePeriodStats mostRecentStats = getTimePeriodStats(appName, lastObservation, heroku);
                 final TimePeriodStats aggregatedLastMinuteStats = StatsObserver.this.timePeriodStatsCache.aggregateBack(
                         LOOKBACK_WINDOW_SIZE);
                 StatsObserver.this.timePeriodStatsCache.addNewRatioEntry(mostRecentStats);
                 final double ratioMedian = StatsObserver.this.timePeriodStatsCache.countRatioMedian();
                 final double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats,
                         400.0,
-                        ratioMedian,
-                        LOOKBACK_WINDOW_SIZE);
+                        ratioMedian);
                 LOGGER.info(
                         "Ratio median based on knowledge from the cache: {}. It would mean that new dyno count should be {}",
                         ratioMedianReporter.report(ratioMedian),
@@ -81,9 +80,9 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         this.executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
     }
 
-    private TimePeriodStats getTimeStats2(final String appName,
-                                          final long pointInTime,
-                                          final Heroku heroku) throws ExecutionException {
+    private TimePeriodStats getTimePeriodStats(final String appName,
+                                               final long pointInTime,
+                                               final Heroku heroku) throws ExecutionException {
         final Object[] responses;
         try(final Tx tx = this.jedis.tx()) {
             responses = getTimeStatsResponses(appName, pointInTime, tx.redis());
@@ -146,8 +145,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
 
     public double countNewDynoCount(final TimePeriodStats latestStats,
                                     final double desiredServiceTime,
-                                    final double ratio,
-                                    final long period) {
-        return ((double) latestStats.hitCount * ratio) / desiredServiceTime / period;
+                                    final double ratio) {
+        return (latestStats.getHitRate() * ratio) / desiredServiceTime;
     }
 }

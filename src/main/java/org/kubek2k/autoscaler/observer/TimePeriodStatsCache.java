@@ -1,9 +1,9 @@
 package org.kubek2k.autoscaler.observer;
 
-import java.util.Comparator;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.kubek2k.autoscaler.Granularity;
@@ -29,14 +29,13 @@ public class TimePeriodStatsCache {
     }
 
     public double countRatioMedian() {
-        final TreeMultiset<TimePeriodStats> medianFinder = TreeMultiset.create(new Comparator<TimePeriodStats>() {
-            @Override
-            public int compare(final TimePeriodStats o1, final TimePeriodStats o2) {
-                return o1.getRatio() - o2.getRatio() > 0 ? 1 : -1;
-            }
-        });
-        medianFinder.addAll(this.ratioEntries);
-        return Iterables.get(medianFinder, medianFinder.size() / 2).getRatio();
+        final TreeMultiset<Double> medianFinder = TreeMultiset.create();
+        final TreeMultiset<Double> ratios = this.ratioEntries.stream()
+                .map(TimePeriodStats::getRatio)
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .collect(Collectors.toCollection(TreeMultiset::create));
+        return Iterables.get(medianFinder, medianFinder.size() / 2);
     }
 
     public void addNewRatioEntry(final TimePeriodStats mostRecentStats) {

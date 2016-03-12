@@ -1,5 +1,7 @@
 package org.kubek2k.autoscaler.observer;
 
+import java.util.Optional;
+
 public class TimePeriodStats {
     private final long periodStartTimestamp;
 
@@ -10,6 +12,7 @@ public class TimePeriodStats {
     private final double avgServiceTime;
 
     public final int hitCount;
+    private Double hitRate;
 
     public TimePeriodStats(final long periodStartTimestamp,
                            final long periodLength,
@@ -23,11 +26,12 @@ public class TimePeriodStats {
         this.hitCount = hitCount;
     }
 
-    public double getRatio() {
-        if (this.hitCount > 0) {
-            return ((double) this.avgDynoCount) * this.avgServiceTime * this.periodLength / this.hitCount;
-        } else {
-            return 0.0;
+    public Optional<Double> getRatio() {
+        if(this.hitCount > 0) {
+            return Optional.of(((double) this.avgDynoCount) * this.avgServiceTime * this.periodLength / this.hitCount);
+        }
+        else {
+            return Optional.empty();
         }
     }
 
@@ -35,8 +39,12 @@ public class TimePeriodStats {
         final long newPeriodLength = this.periodLength + other.periodLength;
         return new TimePeriodStats(Math.min(this.periodStartTimestamp, other.periodStartTimestamp),
                 newPeriodLength,
-                (this.avgDynoCount*this.periodLength + other.avgDynoCount*other.periodLength) / newPeriodLength,
-                (this.avgServiceTime*this.periodLength + other.avgServiceTime*other.periodLength) / newPeriodLength,
+                (this.avgDynoCount * this.periodLength + other.avgDynoCount * other.periodLength) / newPeriodLength,
+                (this.avgServiceTime * this.periodLength + other.avgServiceTime * other.periodLength) / newPeriodLength,
                 this.hitCount + other.hitCount);
+    }
+
+    public Double getHitRate() {
+        return (double) this.periodLength / this.hitCount;
     }
 }
