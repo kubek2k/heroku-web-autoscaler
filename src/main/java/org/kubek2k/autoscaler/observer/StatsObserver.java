@@ -64,13 +64,12 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                 final TimePeriodStats aggregatedLastMinuteStats = StatsObserver.this.timePeriodStatsCache.aggregateBack(
                         LOOKBACK_WINDOW_SIZE);
                 StatsObserver.this.timePeriodStatsCache.addNewRatioEntry(mostRecentStats);
-                final double ratioMedian = StatsObserver.this.timePeriodStatsCache.countRatioMedian();
-                final double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats,
-                        400.0,
-                        ratioMedian);
+                final Optional<Double> ratioMedian = StatsObserver.this.timePeriodStatsCache.countRatioMedian();
+                final double inferredDynoCount =
+                        ratioMedian.map(ratio -> countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratio)).orElse(0.0);
                 LOGGER.info(
                         "Ratio median based on knowledge from the cache: {}. It would mean that new dyno count should be {}",
-                        ratioMedianReporter.report(ratioMedian),
+                        ratioMedianReporter.report(ratioMedian.get()),
                         inferredDynoCountReporter.report(inferredDynoCount));
             }
             catch(final Exception e) {

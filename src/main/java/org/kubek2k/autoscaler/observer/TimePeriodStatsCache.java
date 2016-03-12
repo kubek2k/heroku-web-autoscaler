@@ -28,14 +28,17 @@ public class TimePeriodStatsCache {
                 .get();
     }
 
-    public double countRatioMedian() {
-        final TreeMultiset<Double> medianFinder = TreeMultiset.create();
+    public Optional<Double> countRatioMedian() {
         final TreeMultiset<Double> ratios = this.ratioEntries.stream()
                 .map(TimePeriodStats::getRatio)
                 .filter(Optional::isPresent)
                 .map(Optional::get)
                 .collect(Collectors.toCollection(TreeMultiset::create));
-        return Iterables.get(medianFinder, medianFinder.size() / 2);
+        if (!ratios.isEmpty()) {
+            return Optional.of(Iterables.get(ratios, ratios.size() / 2));
+        } else {
+            return Optional.empty();
+        }
     }
 
     public void addNewRatioEntry(final TimePeriodStats mostRecentStats) {
