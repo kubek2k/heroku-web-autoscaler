@@ -11,7 +11,7 @@ import org.kubek2k.autoscaler.Granularity;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.TreeMultiset;
 
-public class RatioEntriesCache {
+public class TimePeriodStatsCache {
 
     private final Deque<TimePeriodStats> ratioEntries = new LinkedList<>();
 

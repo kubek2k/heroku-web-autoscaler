@@ -33,7 +33,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
     private static final int RATIO_CACHE_SIZE = 50;
     private static final int LOOKBACK_WINDOW_SIZE = 60;
 
-    private final RatioEntriesCache ratioEntriesCache = new RatioEntriesCache();
+    private final TimePeriodStatsCache timePeriodStatsCache = new TimePeriodStatsCache();
     private final ScheduledExecutorService executorService = Executors.newScheduledThreadPool(5);
     private final PoorMansLibrato librato = new PoorMansLibrato("heroku.web.autoscaler");
     private final JedisUtil jedis;
@@ -61,10 +61,10 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
             try {
                 final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
                 final TimePeriodStats mostRecentStats = getTimeStats2(appName, lastObservation, heroku);
-                final TimePeriodStats aggregatedLastMinuteStats = StatsObserver.this.ratioEntriesCache.aggregateBack(
+                final TimePeriodStats aggregatedLastMinuteStats = StatsObserver.this.timePeriodStatsCache.aggregateBack(
                         LOOKBACK_WINDOW_SIZE);
-                StatsObserver.this.ratioEntriesCache.addNewRatioEntry(mostRecentStats);
-                final double ratioMedian = StatsObserver.this.ratioEntriesCache.countRatioMedian();
+                StatsObserver.this.timePeriodStatsCache.addNewRatioEntry(mostRecentStats);
+                final double ratioMedian = StatsObserver.this.timePeriodStatsCache.countRatioMedian();
                 final double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats,
                         400.0,
                         ratioMedian,
@@ -118,8 +118,8 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                             avgServiceTime,
                             hitCount);
                 })
-                .forEach(this.ratioEntriesCache::add);
-        LOGGER.info("Prefilling done {}", this.ratioEntriesCache);
+                .forEach(this.timePeriodStatsCache::add);
+        LOGGER.info("Prefilling done {}", this.timePeriodStatsCache);
     }
 
     private Integer extractHitCount(final Object[] responseArr) {
