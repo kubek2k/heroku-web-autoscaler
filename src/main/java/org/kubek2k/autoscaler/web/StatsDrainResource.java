@@ -146,12 +146,4 @@ public class StatsDrainResource {
                 timestampString)).toInstant(
                 ZoneOffset.UTC);
     }
-
-    public static void main(final String[] args) {
-        final String s1 = "<158>1 2016-03-10T10:25:13.229818+00:00 host heroku router - at=info method=OPTIONS path=\"/advise\" host=tag-advisor.api.plan3dev.se request_id=0a61dd29-a8e2-4729-9ca0-424d0d67d8a0 fwd=\"5.226.119.97\" dyno=web.1 connect=1ms service=4ms status=200 bytes=425";
-        final String s2 = "- sock=client at=warning code=H27 desc=\"Client Request Interrupted\" method=GET path=\"/articles/subscribe/yK7E?Authorization=Plan3JWT_eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0b3ZlLmxpZnZlbmRhaGxAc2NoaWJzdGVkLnNlIiwicm9sZSI6ImVkaXRvciIsImV4cCI6MTQ1NzYxNzM2NiwibmV3c3Jvb20iOiJzdmRzZSJ9.LzheCp1zUsBL0UKbNm-MzLcjL8YKZSdL1cYwQ4t6Z75A37yDmug_ru5DEpShe1YWATcBL2ph63OQSOvJ1X0au3TM_MJol36qV1j2ioGfIbcwZBypmTAD4EAUmMsFDrIJjHaEnTIGKGg7ZK7QzhLYHfi6Gn6Tzom82ElXrQgVZ9c\" host=article.api.plan3.se request_id=e8249bc6-f96c-411c-b0d4-8a1afa05bbd6 fwd=\"83.255.58.47\" dyno=web.5 connect=3ms service=26673ms status=499 bytes=";
-        final String s3 = "- sock=client at=warning code=H27 desc=\"Client Request Interrupted\" method=GET path=\"/articles/subscribe/27Qq?Authorization=Plan3JWT_eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJoZWxlbmEuc2FsbHN0cm9tQHNjaGlic3RlZC5zZSIsInJvbGUiOiJlZGl0b3IiLCJleHAiOjE0NTc3Mjc1NjIsIm5ld3Nyb29tIjoib21uaSJ9.VL7zqsqnzrl5s09QeazYmEP66dJHRF4q0GMLq95k1C1rssZ3WdKFIHz7ur2dhIcUlSVUSpqTftxBAbnukZm8qlHEqWjfJZrbz3TRDEmOGSLfBwUrw3sZyKiRARfZZDXWehIHkGZ-ru12D58HAR7PeGcgGlYAzSrMoB47Z90GnrY\" host=article.api.plan3.se request_id=ea6d026a-eb28-4b17-a75e-652b2bac3764 fwd=\"144.63.247.11\" dyno=web.8 connect=0ms service=22483ms status=499 bytes=";
-        parseRouterStats(s3);
-        System.out.println(JsonUtil.asJson(parseEntry(s1)));
-    }
 }
