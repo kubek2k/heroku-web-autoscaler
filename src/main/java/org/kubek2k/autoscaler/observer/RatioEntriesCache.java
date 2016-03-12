@@ -1,7 +1,5 @@
 package org.kubek2k.autoscaler.observer;
 
-import plan3.ner.brute.model.RatioEntry;
-
 import java.util.Comparator;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -9,39 +7,31 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.kubek2k.autoscaler.Granularity;
-import org.kubek2k.autoscaler.model.TimeStats;
 
 import com.google.common.collect.Iterables;
 import com.google.common.collect.TreeMultiset;
 
 public class RatioEntriesCache {
 
-    private final Deque<RatioEntry> ratioEntries = new LinkedList<>();
+    private final Deque<TimePeriodStats> ratioEntries = new LinkedList<>();
 
-    public void add(final RatioEntry ratioEntry) {
+    public void add(final TimePeriodStats ratioEntry) {
         this.ratioEntries.add(ratioEntry);
     }
 
-    public TimeStats aggregateBack(final int lookbackWindowSize) {
-        final List<TimeStats> lastMinuteStats = this.ratioEntries.stream()
+    public TimePeriodStats aggregateBack(final int lookbackWindowSize) {
+        final List<TimePeriodStats> lastMinuteStats = this.ratioEntries.stream()
                 .limit(lookbackWindowSize / Granularity.GRANULARITY)
-                .map(RatioEntry::getTimeStats)
                 .collect(Collectors.toList());
-        final int aggregatedHitCount = lastMinuteStats.stream()
-                .map(t -> t.hitCount)
-                .reduce((c1, c2) -> c1 + c2)
+        return lastMinuteStats.stream()
+                .reduce(TimePeriodStats::aggregate)
                 .get();
-        final double aggregatedAvgServiceTime = lastMinuteStats.stream()
-                .map(t -> t.avgServiceTime * t.hitCount)
-                .reduce((t1, t2) -> t1 + t2)
-                .get() / aggregatedHitCount;
-        return new TimeStats(aggregatedAvgServiceTime, aggregatedHitCount);
     }
 
     public double countRatioMedian() {
-        final TreeMultiset<RatioEntry> medianFinder = TreeMultiset.create(new Comparator<RatioEntry>() {
+        final TreeMultiset<TimePeriodStats> medianFinder = TreeMultiset.create(new Comparator<TimePeriodStats>() {
             @Override
-            public int compare(final RatioEntry o1, final RatioEntry o2) {
+            public int compare(final TimePeriodStats o1, final TimePeriodStats o2) {
                 return o1.getRatio() - o2.getRatio() > 0 ? 1 : -1;
             }
         });
@@ -49,11 +39,9 @@ public class RatioEntriesCache {
         return Iterables.get(medianFinder, medianFinder.size() / 2).getRatio();
     }
 
-    public void addNewRatioEntry(final long lastObservation,
-                                  final TimeStats mostRecentStats,
-                                  final int currentDynoCount) {
+    public void addNewRatioEntry(final TimePeriodStats mostRecentStats) {
         this.ratioEntries.removeLast();
-        this.ratioEntries.addFirst(new RatioEntry(lastObservation, currentDynoCount, mostRecentStats, Granularity.GRANULARITY));
+        this.ratioEntries.addFirst(mostRecentStats);
     }
 
     @Override

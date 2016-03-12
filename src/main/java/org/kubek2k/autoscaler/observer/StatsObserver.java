@@ -3,7 +3,6 @@ package org.kubek2k.autoscaler.observer;
 import io.dropwizard.cli.EnvironmentCommand;
 import io.dropwizard.setup.Environment;
 import net.sourceforge.argparse4j.inf.Namespace;
-import plan3.ner.brute.model.RatioEntry;
 import plan3.pure.redis.JedisUtil;
 import plan3.pure.redis.Tx;
 import redis.clients.jedis.Response;
@@ -12,6 +11,7 @@ import redis.clients.jedis.Transaction;
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +22,6 @@ import org.kubek2k.autoscaler.Granularity;
 import org.kubek2k.autoscaler.heroku.Heroku;
 import org.kubek2k.autoscaler.librato.PoorMansLibrato;
 import org.kubek2k.autoscaler.model.StorageKeys;
-import org.kubek2k.autoscaler.model.TimeStats;
 import org.kubek2k.autoscaler.web.StatsDrainConfiguration;
 import org.kubek2k.autoscaler.web.StatsDrainService;
 import org.slf4j.Logger;
@@ -48,44 +47,54 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
     protected void run(final Environment environment,
                        final Namespace namespace,
                        final StatsDrainConfiguration configuration) throws Exception {
-        try {
-            final String appName = "plan3-article-api";
-            final Heroku heroku = configuration.heroku(environment);
-            final PoorMansLibrato.MeasureReporter dynoCountReporter = this.librato.sampleReporter("dyno-count", "dynos", Optional.of(appName));
-            final PoorMansLibrato.MeasureReporter inferredDynoCountReporter = this.librato.sampleReporter("inferred-dyno-count", "dynos", Optional.of(appName));
-            final PoorMansLibrato.MeasureReporter ratioMedianReporter = this.librato.sampleReporter("ratio-median", "", Optional.of(appName));
-            prefillRatioEntries(appName, heroku.getNumberOfWebDynos(appName));
-            this.executorService.scheduleAtFixedRate(() -> {
+        final String appName = "plan3-article-api";
+        final Heroku heroku = configuration.heroku(environment);
+        final PoorMansLibrato.MeasureReporter inferredDynoCountReporter = this.librato.sampleReporter(
+                "inferred-dyno-count",
+                "dynos",
+                Optional.of(appName));
+        final PoorMansLibrato.MeasureReporter ratioMedianReporter = this.librato.sampleReporter("ratio-median",
+                "",
+                Optional.of(appName));
+        prefillRatioEntries(appName, heroku.getNumberOfWebDynos(appName));
+        this.executorService.scheduleAtFixedRate(() -> {
+            try {
                 final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
-                final TimeStats mostRecentStats = getTimeStats2(appName,
-                        Instant.now().getEpochSecond() - Granularity.GRANULARITY);
-                final TimeStats aggregatedLastMinuteStats = StatsObserver.this.ratioEntriesCache.aggregateBack(
+                final TimePeriodStats mostRecentStats = getTimeStats2(appName, lastObservation, heroku);
+                final TimePeriodStats aggregatedLastMinuteStats = StatsObserver.this.ratioEntriesCache.aggregateBack(
                         LOOKBACK_WINDOW_SIZE);
-                final int currentDynoCount = dynoCountReporter.report(heroku.getNumberOfWebDynos(appName));
-                StatsObserver.this.ratioEntriesCache.addNewRatioEntry(lastObservation,
-                        mostRecentStats,
-                        currentDynoCount);
+                StatsObserver.this.ratioEntriesCache.addNewRatioEntry(mostRecentStats);
                 final double ratioMedian = StatsObserver.this.ratioEntriesCache.countRatioMedian();
                 final double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats,
                         400.0,
                         ratioMedian,
                         LOOKBACK_WINDOW_SIZE);
-                LOGGER.info("Ratio median based on knowledge from the cache: {}. It would mean that new dyno count should be {}",
+                LOGGER.info(
+                        "Ratio median based on knowledge from the cache: {}. It would mean that new dyno count should be {}",
                         ratioMedianReporter.report(ratioMedian),
                         inferredDynoCountReporter.report(inferredDynoCount));
-            }, 0, Granularity.GRANULARITY, TimeUnit.SECONDS).get();
-            this.executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
-        } catch (final Exception e) {
-            LOGGER.info("Making decision failed", e);
-        }
+            }
+            catch(final Exception e) {
+                LOGGER.warn("Decision making for " + appName + " failed ", e);
+            }
+        }, 0, Granularity.GRANULARITY, TimeUnit.SECONDS).get();
+        this.executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
     }
 
-    private TimeStats getTimeStats2(final String appName, final long pointInTime) {
+    private TimePeriodStats getTimeStats2(final String appName,
+                                          final long pointInTime,
+                                          final Heroku heroku) throws ExecutionException {
         final Object[] responses;
         try(final Tx tx = this.jedis.tx()) {
             responses = getTimeStatsResponses(appName, pointInTime, tx.redis());
         }
-        return new TimeStats(extractAvgServiceTime(responses), extractHitCount(responses));
+        final Double avgServiceTime = extractAvgServiceTime(responses);
+        final Integer hitCount = extractHitCount(responses);
+        return new TimePeriodStats(pointInTime,
+                Granularity.GRANULARITY,
+                heroku.getNumberOfWebDynos(appName),
+                avgServiceTime,
+                hitCount);
     }
 
     private Object[] getTimeStatsResponses(final String appName, final long pointInTime, final Transaction tx) {
@@ -103,10 +112,11 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                     final Long epochTimestamp = (Long) pair[0];
                     final Double avgServiceTime = extractAvgServiceTime(pair);
                     final Integer hitCount = extractHitCount(pair);
-                    return new RatioEntry(epochTimestamp,
+                    return new TimePeriodStats(epochTimestamp,
+                            Granularity.GRANULARITY,
                             initialDynoCount,
-                            new TimeStats(avgServiceTime, hitCount),
-                            10);
+                            avgServiceTime,
+                            hitCount);
                 })
                 .forEach(this.ratioEntriesCache::add);
         LOGGER.info("Prefilling done {}", this.ratioEntriesCache);
@@ -134,7 +144,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         }
     }
 
-    public double countNewDynoCount(final TimeStats latestStats,
+    public double countNewDynoCount(final TimePeriodStats latestStats,
                                     final double desiredServiceTime,
                                     final double ratio,
                                     final long period) {
