@@ -13,14 +13,14 @@ import com.google.common.collect.TreeMultiset;
 
 public class TimePeriodStatsCache {
 
-    private final Deque<TimePeriodStats> ratioEntries = new LinkedList<>();
+    private final Deque<TimePeriodStats> timePeriodStats = new LinkedList<>();
 
-    public void add(final TimePeriodStats ratioEntry) {
-        this.ratioEntries.add(ratioEntry);
+    public void add(final TimePeriodStats stat) {
+        this.timePeriodStats.add(stat);
     }
 
     public TimePeriodStats aggregateBack(final int lookbackWindowSize) {
-        final List<TimePeriodStats> lastMinuteStats = this.ratioEntries.stream()
+        final List<TimePeriodStats> lastMinuteStats = this.timePeriodStats.stream()
                 .limit(lookbackWindowSize / Granularity.GRANULARITY)
                 .collect(Collectors.toList());
         return lastMinuteStats.stream()
@@ -29,7 +29,7 @@ public class TimePeriodStatsCache {
     }
 
     public Optional<Double> countRatioMedian() {
-        final TreeMultiset<Double> ratios = this.ratioEntries.stream()
+        final TreeMultiset<Double> ratios = this.timePeriodStats.stream()
                 .map(TimePeriodStats::getRatio)
                 .filter(Optional::isPresent)
                 .map(Optional::get)
@@ -41,15 +41,15 @@ public class TimePeriodStatsCache {
         }
     }
 
-    public void addNewRatioEntry(final TimePeriodStats mostRecentStats) {
-        this.ratioEntries.removeLast();
-        this.ratioEntries.addFirst(mostRecentStats);
+    public void addStats(final TimePeriodStats mostRecentStats) {
+        this.timePeriodStats.removeLast();
+        this.timePeriodStats.addFirst(mostRecentStats);
     }
 
     @Override
     public String toString() {
-        return "RatioEntriesCache{" +
-                "ratioEntries=" + this.ratioEntries +
+        return "TimePeriodStatsCache{" +
+                "timePeriodStats=" + this.timePeriodStats +
                 '}';
     }
 }

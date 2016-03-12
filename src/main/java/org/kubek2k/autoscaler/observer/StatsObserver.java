@@ -64,7 +64,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                 LOGGER.info("Most recent ratio is {} for time stats {}", mostRecentStats.getRatio(), mostRecentStats);
                 final TimePeriodStats aggregatedLastMinuteStats = StatsObserver.this.timePeriodStatsCache.aggregateBack(
                         LOOKBACK_WINDOW_SIZE);
-                StatsObserver.this.timePeriodStatsCache.addNewRatioEntry(mostRecentStats);
+                StatsObserver.this.timePeriodStatsCache.addStats(mostRecentStats);
                 final Optional<Double> ratioMedian = StatsObserver.this.timePeriodStatsCache.countRatioMedian();
                 ratioMedian.ifPresent(ratio -> {
                     final Double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratio);
