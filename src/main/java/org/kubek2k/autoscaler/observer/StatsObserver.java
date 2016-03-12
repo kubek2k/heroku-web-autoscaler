@@ -12,11 +12,15 @@ import redis.clients.jedis.Transaction;
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
 import org.kubek2k.autoscaler.Granularity;
 import org.kubek2k.autoscaler.heroku.Heroku;
+import org.kubek2k.autoscaler.librato.PoorMansLibrato;
 import org.kubek2k.autoscaler.model.StorageKeys;
 import org.kubek2k.autoscaler.model.TimeStats;
 import org.kubek2k.autoscaler.web.StatsDrainConfiguration;
@@ -31,6 +35,8 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
     private static final int LOOKBACK_WINDOW_SIZE = 60;
 
     private final RatioEntriesCache ratioEntriesCache = new RatioEntriesCache();
+    private final ScheduledExecutorService executorService = Executors.newScheduledThreadPool(5);
+    private final PoorMansLibrato librato = new PoorMansLibrato("heroku.web.autoscaler");
     private final JedisUtil jedis;
 
     public StatsObserver(final StatsDrainService service, final JedisUtil jedis) {
@@ -42,28 +48,41 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
     protected void run(final Environment environment,
                        final Namespace namespace,
                        final StatsDrainConfiguration configuration) throws Exception {
-        final String appName = "plan3-article-api";
-        final Heroku heroku = configuration.heroku(environment);
-        prefillRatioEntries(appName, heroku.getNumberOfWebDynos(appName));
-        while(true) {
-            final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
-            final TimeStats mostRecentStats = getTimeStats2(appName,
-                    Instant.now().getEpochSecond() - Granularity.GRANULARITY);
-            final TimeStats aggregatedLastMinuteStats = this.ratioEntriesCache.aggregateBack(LOOKBACK_WINDOW_SIZE);
-            final int currentDynoCount = heroku.getNumberOfWebDynos(appName);
-            this.ratioEntriesCache.addNewRatioEntry(lastObservation, mostRecentStats, currentDynoCount);
-            final double ratioMedian = this.ratioEntriesCache.countRatioMedian();
-            LOGGER.info("Ratio median based on knowledge from the cache: {}. " +
-                            "It would mean that new dyno count should be {}", ratioMedian,
-                    countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratioMedian, LOOKBACK_WINDOW_SIZE));
-
-            Thread.sleep(10000);
+        try {
+            final String appName = "plan3-article-api";
+            final Heroku heroku = configuration.heroku(environment);
+            final PoorMansLibrato.MeasureReporter dynoCountReporter = this.librato.measureReporter("dyno-count", "dynos", Optional.of(appName));
+            final PoorMansLibrato.MeasureReporter inferredDynoCountReporter = this.librato.measureReporter("inferred-dyno-count", "dynos", Optional.of(appName));
+            final PoorMansLibrato.MeasureReporter ratioMedianReporter = this.librato.measureReporter("ratio-median", "", Optional.of(appName));
+            prefillRatioEntries(appName, heroku.getNumberOfWebDynos(appName));
+            this.executorService.scheduleAtFixedRate(() -> {
+                final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
+                final TimeStats mostRecentStats = getTimeStats2(appName,
+                        Instant.now().getEpochSecond() - Granularity.GRANULARITY);
+                final TimeStats aggregatedLastMinuteStats = StatsObserver.this.ratioEntriesCache.aggregateBack(
+                        LOOKBACK_WINDOW_SIZE);
+                final int currentDynoCount = dynoCountReporter.report(heroku.getNumberOfWebDynos(appName));
+                StatsObserver.this.ratioEntriesCache.addNewRatioEntry(lastObservation,
+                        mostRecentStats,
+                        currentDynoCount);
+                final double ratioMedian = StatsObserver.this.ratioEntriesCache.countRatioMedian();
+                final double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats,
+                        400.0,
+                        ratioMedian,
+                        LOOKBACK_WINDOW_SIZE);
+                LOGGER.info("Ratio median based on knowledge from the cache: {}. It would mean that new dyno count should be {}",
+                        ratioMedianReporter.report(ratioMedian),
+                        inferredDynoCountReporter.report(inferredDynoCount));
+            }, 0, Granularity.GRANULARITY, TimeUnit.SECONDS).get();
+            this.executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
+        } catch (final Exception e) {
+            LOGGER.info("Making decision failed", e);
         }
     }
 
     private TimeStats getTimeStats2(final String appName, final long pointInTime) {
-        final Object [] responses;
-        try (final Tx tx = this.jedis.tx()) {
+        final Object[] responses;
+        try(final Tx tx = this.jedis.tx()) {
             responses = getTimeStatsResponses(appName, pointInTime, tx.redis());
         }
         return new TimeStats(extractAvgServiceTime(responses), extractHitCount(responses));
