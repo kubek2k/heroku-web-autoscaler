@@ -62,10 +62,9 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                 final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
                 final TimePeriodStats mostRecentStats = getTimePeriodStats(appName, lastObservation, heroku);
                 LOGGER.info("Most recent ratio is {} for time stats {}", mostRecentStats.getRatio(), mostRecentStats);
-                final TimePeriodStats aggregatedLastMinuteStats = StatsObserver.this.timePeriodStatsCache.aggregateBack(
-                        LOOKBACK_WINDOW_SIZE);
-                StatsObserver.this.timePeriodStatsCache.addStats(mostRecentStats);
-                final Optional<Double> ratioMedian = StatsObserver.this.timePeriodStatsCache.countRatioMedian();
+                final TimePeriodStats aggregatedLastMinuteStats = this.timePeriodStatsCache.aggregateBack(LOOKBACK_WINDOW_SIZE);
+                this.timePeriodStatsCache.addStats(mostRecentStats);
+                final Optional<Double> ratioMedian = this.timePeriodStatsCache.countRatioMedian();
                 ratioMedian.ifPresent(ratio -> {
                     final Double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratio);
                     LOGGER.info(

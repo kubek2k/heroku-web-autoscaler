@@ -26,8 +26,12 @@ public class TimePeriodStats {
     }
 
     public Optional<Double> getRatio() {
-        if(this.hitCount > 0) {
-            return Optional.of(((double) this.avgDynoCount) * this.avgServiceTime * this.periodLength / this.hitCount);
+        if(this.getHitRate() > 0.0) {
+            final Double loadPerHit = this.avgServiceTime / this.getHitRate();
+            final long uniformlyDistributedHits = (this.hitCount / this.avgDynoCount) * this.avgDynoCount;
+            final long nonUniformlyDistributedHits = this.hitCount % this.avgDynoCount;
+
+            return Optional.of((uniformlyDistributedHits + nonUniformlyDistributedHits) / this.hitCount * loadPerHit);
         }
         else {
             return Optional.empty();
