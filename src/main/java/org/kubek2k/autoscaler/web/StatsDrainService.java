@@ -19,7 +19,10 @@ public class StatsDrainService extends Application<StatsDrainConfiguration> {
         bootstrap.addBundle(new Plan3Bundle(env));
         final JedisUtil jedis = new JedisUtil(env.required("REDIS_URL"));
         bootstrap.addCommand(new StatsConsumer(jedis));
-        bootstrap.addCommand(new StatsObserver(this, jedis));
+        final Double targetAverageServiceTime = env.optional("TARGET_AVERAGE_SERVICE_TIME")
+                .map(Double::parseDouble)
+                .orElse(400.0);
+        bootstrap.addCommand(new StatsObserver(this, jedis, targetAverageServiceTime));
         LogConfigurer.configure(env.optional("LOGGING"));
     }
 

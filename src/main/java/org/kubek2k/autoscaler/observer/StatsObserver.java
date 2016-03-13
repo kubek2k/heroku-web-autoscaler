@@ -37,10 +37,14 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
     private final ScheduledExecutorService executorService = Executors.newScheduledThreadPool(5);
     private final PoorMansLibrato librato = new PoorMansLibrato("heroku.web.autoscaler");
     private final JedisUtil jedis;
+    private final Double targetAverageServiceTime;
 
-    public StatsObserver(final StatsDrainService service, final JedisUtil jedis) {
+    public StatsObserver(final StatsDrainService service,
+                         final JedisUtil jedis,
+                         final Double targetAverageServiceTime) {
         super(service, "observe", "Observes stats and reacts");
         this.jedis = jedis;
+        this.targetAverageServiceTime = targetAverageServiceTime;
     }
 
     @Override
@@ -66,7 +70,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                 this.timePeriodStatsCache.addStats(mostRecentStats);
                 final Optional<Double> ratioMedian = this.timePeriodStatsCache.countRatioMedian();
                 ratioMedian.ifPresent(ratio -> {
-                    final Double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats, 400.0, ratio);
+                    final Double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats, this.targetAverageServiceTime, ratio);
                     LOGGER.info(
                             "Ratio median based on knowledge from the cache: {}. " +
                                     "It would mean that new dyno count for last minute stats {} should be {}",
