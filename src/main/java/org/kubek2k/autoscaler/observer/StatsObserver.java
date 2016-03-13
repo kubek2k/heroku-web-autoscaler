@@ -38,6 +38,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
     private final PoorMansLibrato librato = new PoorMansLibrato("heroku.web.autoscaler");
     private final JedisUtil jedis;
     private final Double targetAverageServiceTime;
+    private final ScalingDecision scalingDecision;
 
     public StatsObserver(final StatsDrainService service,
                          final JedisUtil jedis,
@@ -45,6 +46,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         super(service, "observe", "Observes stats and reacts");
         this.jedis = jedis;
         this.targetAverageServiceTime = targetAverageServiceTime;
+        this.scalingDecision = new ScalingDecision();
     }
 
     @Override
@@ -59,6 +61,10 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                 Optional.of(appName));
         final PoorMansLibrato.MeasureReporter ratioMedianReporter = this.librato.sampleReporter("ratio-median",
                 "",
+                Optional.of(appName));
+        final PoorMansLibrato.MeasureReporter scaledDynoCount = this.librato.sampleReporter(
+                "scaled-dyno-count",
+                "dynos",
                 Optional.of(appName));
         prefillRatioEntries(appName, heroku.getNumberOfWebDynos(appName));
         this.executorService.scheduleAtFixedRate(() -> {
@@ -77,6 +83,12 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                             ratioMedianReporter.report(ratio),
                             aggregatedLastMinuteStats,
                             inferredDynoCountReporter.report(inferredDynoCount));
+                    final int newDynoCount = (int) Math.ceil(inferredDynoCount);
+                    if (this.scalingDecision.shouldIScale(appName, mostRecentStats.getAvgDynoCount(), newDynoCount)) {
+                       scaledDynoCount.report(newDynoCount);
+                    } else {
+                       scaledDynoCount.report(mostRecentStats.getAvgDynoCount());
+                    }
                 });
             }
             catch(final Exception e) {

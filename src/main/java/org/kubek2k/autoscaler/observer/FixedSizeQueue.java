@@ -1,8 +1,7 @@
-package org.kubek2k.autoscaler.heroku;
+package org.kubek2k.autoscaler.observer;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Optional;
 import java.util.stream.Stream;
 
 public class FixedSizeQueue<T> {
@@ -28,7 +27,7 @@ public class FixedSizeQueue<T> {
         return this.internal.stream();
     }
 
-    public Optional<T> recentlyAdded() {
-        return Optional.ofNullable(this.internal.peek());
+    public int size() {
+        return this.internal.size();
     }
 }

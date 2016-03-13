@@ -7,7 +7,7 @@ public class TimePeriodStats {
 
     private final long periodLength;
 
-    private final long avgDynoCount;
+    private final int avgDynoCount;
 
     private final double avgServiceTime;
 
@@ -15,7 +15,7 @@ public class TimePeriodStats {
 
     public TimePeriodStats(final long periodStartTimestamp,
                            final long periodLength,
-                           final long avgDynoCount,
+                           final int avgDynoCount,
                            final double avgServiceTime,
                            final int hitCount) {
         this.periodStartTimestamp = periodStartTimestamp;
@@ -42,13 +42,17 @@ public class TimePeriodStats {
         final long newPeriodLength = this.periodLength + other.periodLength;
         return new TimePeriodStats(Math.min(this.periodStartTimestamp, other.periodStartTimestamp),
                 newPeriodLength,
-                (this.avgDynoCount * this.periodLength + other.avgDynoCount * other.periodLength) / newPeriodLength,
+                (int)((this.avgDynoCount * this.periodLength + other.avgDynoCount * other.periodLength) / newPeriodLength),
                 (this.avgServiceTime * this.periodLength + other.avgServiceTime * other.periodLength) / newPeriodLength,
                 this.hitCount + other.hitCount);
     }
 
     public Double getHitRate() {
         return (double) this.hitCount / this.periodLength;
+    }
+
+    public int getAvgDynoCount() {
+        return this.avgDynoCount;
     }
 
     @Override
