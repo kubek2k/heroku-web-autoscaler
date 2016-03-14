@@ -4,11 +4,13 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
+import com.google.common.collect.ImmutableMap;
 
 public class Heroku {
 
@@ -38,5 +40,18 @@ public class Heroku {
                     .invoke(new GenericType<Map<String, Object>>() {});
             return Integer.parseInt(result.get("quantity").toString());
         });
+    }
+
+    public void scale(final String appName, final int newDynoCount) {
+        final ImmutableMap<String, String> quantity = ImmutableMap.of("quantity", Integer.toString(newDynoCount));
+        this.herokuWebTarget
+                .path("apps")
+                .path(appName)
+                .path("formation")
+                .path("web")
+                .request()
+                .accept("application/vnd.heroku+json; version=3")
+                .header("Authorization", "Bearer " + this.apiKey)
+                .method("PATCH", Entity.json(quantity));
     }
 }

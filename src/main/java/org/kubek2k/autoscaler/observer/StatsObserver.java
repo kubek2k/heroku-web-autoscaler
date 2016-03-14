@@ -72,11 +72,14 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                 final long lastObservation = Instant.now().getEpochSecond() - Granularity.GRANULARITY;
                 final TimePeriodStats mostRecentStats = getTimePeriodStats(appName, lastObservation, heroku);
                 LOGGER.info("Most recent ratio is {} for time stats {}", mostRecentStats.getRatio(), mostRecentStats);
-                final TimePeriodStats aggregatedLastMinuteStats = this.timePeriodStatsCache.aggregateBack(LOOKBACK_WINDOW_SIZE);
+                final TimePeriodStats aggregatedLastMinuteStats = this.timePeriodStatsCache.aggregateBack(
+                        LOOKBACK_WINDOW_SIZE);
                 this.timePeriodStatsCache.addStats(mostRecentStats);
                 final Optional<Double> ratioMedian = this.timePeriodStatsCache.countRatioMedian();
                 ratioMedian.ifPresent(ratio -> {
-                    final Double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats, this.targetAverageServiceTime, ratio);
+                    final Double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats,
+                            this.targetAverageServiceTime,
+                            ratio);
                     LOGGER.info(
                             "Ratio median based on knowledge from the cache: {}. " +
                                     "It would mean that new dyno count for last minute stats {} should be {}",
@@ -84,10 +87,12 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                             aggregatedLastMinuteStats,
                             inferredDynoCountReporter.report(inferredDynoCount));
                     final int newDynoCount = (int) Math.ceil(inferredDynoCount);
-                    if (this.scalingDecision.shouldIScale(appName, mostRecentStats.getAvgDynoCount(), newDynoCount)) {
-                       scaledDynoCount.report(newDynoCount);
-                    } else {
-                       scaledDynoCount.report(mostRecentStats.getAvgDynoCount());
+                    if(this.scalingDecision.shouldIScale(appName, mostRecentStats.getAvgDynoCount(), newDynoCount)) {
+                        scaledDynoCount.report(newDynoCount);
+                        heroku.scale(appName, newDynoCount);
+                    }
+                    else {
+                        scaledDynoCount.report(mostRecentStats.getAvgDynoCount());
                     }
                 });
             }

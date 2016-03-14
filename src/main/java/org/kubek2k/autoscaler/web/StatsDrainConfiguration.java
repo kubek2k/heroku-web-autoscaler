@@ -67,6 +67,7 @@ public class StatsDrainConfiguration extends Configuration implements Plan3DwCon
     }
 
     public Heroku heroku(final Environment environment) {
+        this.jerseyClientConfiguration.setGzipEnabled(false);
         final Client klyent = new io.dropwizard.client.JerseyClientBuilder(environment)
                 .using(this.jerseyClientConfiguration)
                 .build("some-http-client");
