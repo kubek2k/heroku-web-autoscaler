@@ -89,7 +89,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
                     final int newDynoCount = (int) Math.ceil(inferredDynoCount);
                     if(this.scalingDecision.shouldIScale(appName, mostRecentStats.getAvgDynoCount(), newDynoCount)) {
                         scaledDynoCount.report(newDynoCount);
-                        heroku.scale(appName, newDynoCount);
+//                        heroku.scale(appName, newDynoCount);
                     }
                     else {
                         scaledDynoCount.report(mostRecentStats.getAvgDynoCount());

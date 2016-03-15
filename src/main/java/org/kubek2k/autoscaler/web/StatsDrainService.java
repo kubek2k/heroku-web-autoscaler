@@ -21,7 +21,7 @@ public class StatsDrainService extends Application<StatsDrainConfiguration> {
         bootstrap.addCommand(new StatsConsumer(jedis));
         final Double targetAverageServiceTime = env.optional("TARGET_AVERAGE_SERVICE_TIME")
                 .map(Double::parseDouble)
-                .orElse(400.0);
+                .orElse(250.0);
         bootstrap.addCommand(new StatsObserver(this, jedis, targetAverageServiceTime));
         LogConfigurer.configure(env.optional("LOGGING"));
     }
