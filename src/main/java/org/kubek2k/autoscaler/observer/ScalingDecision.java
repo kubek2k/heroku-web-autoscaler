@@ -17,10 +17,21 @@ public class ScalingDecision {
     private final int maxDynoCount = 16;
 
     public boolean shouldIScale(final String appName, final int currentDynoCount, final int newDynoCount) {
+        final FixedSizeQueue<Integer> appMemory = getOrCreateNewOne(appName);
+        final boolean shouldScale = shouldIScaleInternal(currentDynoCount, newDynoCount, appMemory);
+        if (shouldScale) {
+            appMemory.add(newDynoCount);
+        } else {
+            appMemory.add(currentDynoCount);
+        }
+        return shouldScale;
+    }
+
+    private boolean shouldIScaleInternal(final int currentDynoCount,
+                                         final int newDynoCount,
+                                         final FixedSizeQueue<Integer> appMemory) {
         if (currentDynoCount != newDynoCount) {
             if (newDynoCount >= this.minDynoCount && newDynoCount <= this.maxDynoCount) {
-                final FixedSizeQueue<Integer> appMemory = getOrCreateNewOne(appName);
-                appMemory.add(currentDynoCount);
                 if(hasEnoughKnowledge(appMemory)) {
                     if(scalingUp(currentDynoCount, newDynoCount)) {
                         return shouldScaleUp(appMemory);
@@ -29,6 +40,7 @@ public class ScalingDecision {
                         return shouldScaleDown(appMemory);
                     }
                 }
+                appMemory.add(currentDynoCount);
                 LOGGER.info("Not enough information in memory to perform scaling decision");
                 return false;
             } else {
