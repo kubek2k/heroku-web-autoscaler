@@ -16,7 +16,7 @@ public class FixedSizeQueue<T> {
 
     public void add(final T o) {
         synchronized(this.sync) {
-            this.internal.add(o);
+            this.internal.addFirst(o);
             if(this.internal.size() > this.maxSize) {
                 this.internal.removeLast();
             }
