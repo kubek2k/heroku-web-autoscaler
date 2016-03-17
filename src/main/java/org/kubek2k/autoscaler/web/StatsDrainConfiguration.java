@@ -74,4 +74,8 @@ public class StatsDrainConfiguration extends Configuration implements Plan3DwCon
         final WebTarget herokuApiTarget = klyent.target("https://api.heroku.com/");
         return new Heroku(herokuApiTarget, this.env.required("HEROKU_ACCESS_TOKEN"));
     }
+
+    public List<String> appNames() {
+        return Pattern.compile(",").splitAsStream(this.env.required("APP_NAMES")).collect(Collectors.toList());
+    }
 }

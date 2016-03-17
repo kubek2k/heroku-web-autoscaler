@@ -5,6 +5,7 @@ import io.dropwizard.setup.Environment;
 import net.sourceforge.argparse4j.inf.Namespace;
 import plan3.pure.redis.JedisUtil;
 
+import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -34,16 +35,15 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
     protected void run(final Environment environment,
                        final Namespace namespace,
                        final StatsDrainConfiguration configuration) throws Exception {
-        final String appName = "plan3-article-api";
-        final Heroku heroku = configuration.heroku(environment);
-        final TimePeriodStatsCache timePeriodStatsCache = new TimePeriodStatsCache(this.jedis);
-        timePeriodStatsCache.prefill(appName, heroku.getNumberOfWebDynos(appName));
-        this.executorService.scheduleAtFixedRate(new ScalingTask(appName,
-                heroku,
-                this.targetAverageServiceTime, this.librato, timePeriodStatsCache), 0, Granularity.GRANULARITY, TimeUnit.SECONDS).get();
-        this.executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
+        final List<String> appNames = configuration.appNames();
+        for(final String appName : appNames) {
+            final Heroku heroku = configuration.heroku(environment);
+            final TimePeriodStatsCache timePeriodStatsCache = new TimePeriodStatsCache(this.jedis);
+            timePeriodStatsCache.prefill(appName, heroku.getNumberOfWebDynos(appName));
+            this.executorService.scheduleAtFixedRate(new ScalingTask(appName,
+                    heroku,
+                    this.targetAverageServiceTime, this.librato, timePeriodStatsCache), 0, Granularity.GRANULARITY, TimeUnit.SECONDS).get();
+            this.executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
+        }
     }
-
-
-
 }
