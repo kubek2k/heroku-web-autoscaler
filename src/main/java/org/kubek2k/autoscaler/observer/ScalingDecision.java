@@ -1,7 +1,9 @@
 package org.kubek2k.autoscaler.observer;
 
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,10 +36,14 @@ public class ScalingDecision {
             if (newDynoCount >= this.minDynoCount && newDynoCount <= this.maxDynoCount) {
                 if(hasEnoughKnowledge(appMemory)) {
                     if(scalingUp(currentDynoCount, newDynoCount)) {
-                        return shouldScaleUp(appMemory);
+                        final boolean scaleUp = shouldScaleUp(appMemory);
+                        LOGGER.info("Decision to scale up {}", scaleUp);
+                        return scaleUp;
                     }
                     else {
-                        return shouldScaleDown(appMemory);
+                        final boolean scaleDown = shouldScaleDown(appMemory);
+                        LOGGER.info("Decision to scale down {}", scaleDown);
+                        return scaleDown;
                     }
                 }
                 appMemory.add(currentDynoCount);
@@ -64,10 +70,11 @@ public class ScalingDecision {
     }
 
     private boolean shouldScaleDown(final FixedSizeQueue<Integer> appMemory) {
-        return appMemory.currently()
+        final List<Integer> collect = appMemory.currently()
                 .limit(60)
-                .distinct()
-                .count() == 1;
+                .distinct().collect(Collectors.toList());
+        LOGGER.info("Basis for decision to scale down {}", collect);
+        return collect.size() == 1;
     }
 
     private boolean scalingUp(final int currentDynoCount, final int newDynoCount) {
