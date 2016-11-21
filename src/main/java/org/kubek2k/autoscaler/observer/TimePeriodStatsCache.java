@@ -25,15 +25,16 @@ import com.google.common.collect.TreeMultiset;
 
 public class TimePeriodStatsCache {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(TimePeriodStatsCache.class);
+    private final Logger logger;
     private static final int RATIO_CACHE_SIZE = 50;
 
     private final Deque<TimePeriodStats> timePeriodStats = new LinkedList<>();
 
     private final JedisUtil jedis;
 
-    public TimePeriodStatsCache(final JedisUtil jedis) {
+    public TimePeriodStatsCache(final JedisUtil jedis, final String appName) {
         this.jedis = jedis;
+        this.logger = LoggerFactory.getLogger(TimePeriodStatsCache.class.getCanonicalName() + "-" + appName);
     }
 
     public void add(final TimePeriodStats stat) {
@@ -69,7 +70,7 @@ public class TimePeriodStatsCache {
 
     public void prefill(final String appName, final int initialDynoCount) {
         final long lastObservation = Instant.now().getEpochSecond() - 2 * Granularity.GRANULARITY;
-        LOGGER.info("Prefilling cache");
+        this.logger.info("Prefilling cache");
         getTimeStatsInOneShot(appName, lastObservation)
                 .stream()
                 .map(pair -> {
@@ -83,7 +84,7 @@ public class TimePeriodStatsCache {
                             hitCount);
                 })
                 .forEach(this::add);
-        LOGGER.info("Prefilling done {}", this);
+        this.logger.info("Prefilling done {}", this);
     }
 
     private Integer extractHitCount(final Object[] responseArr) {

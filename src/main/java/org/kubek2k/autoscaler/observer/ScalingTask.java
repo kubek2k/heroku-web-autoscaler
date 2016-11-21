@@ -10,8 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 class ScalingTask implements Runnable {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ScalingTask.class);
     private static final int LOOKBACK_WINDOW_SIZE = 60;
+    private final Logger logger;
     private final String appName;
     private final Heroku heroku;
     private final PoorMansLibrato.MeasureReporter ratioMedianReporter;
@@ -35,6 +35,7 @@ class ScalingTask implements Runnable {
         this.ratioMedianReporter = librato.sampleReporter("ratio-median", "", Optional.of(appName));
         this.scaledDynoCount = librato.sampleReporter("scaled-dyno-count", "dynos", Optional.of(appName));
         this.hitRateReporter = librato.sampleReporter("hit-rate", "", Optional.of(appName));
+        this.logger = LoggerFactory.getLogger(ScalingTask.class.getCanonicalName() + "-" + appName);
     }
 
     @Override
@@ -44,7 +45,7 @@ class ScalingTask implements Runnable {
             final TimePeriodStats mostRecentStats = this.timePeriodStatsCache.getTimePeriodStats(this.appName,
                     lastObservation,
                     this.heroku);
-            LOGGER.info("Most recent ratio is {} for time stats {}",
+            this.logger.info("Most recent ratio is {} for time stats {}",
                     mostRecentStats.getRatio(),
                     mostRecentStats);
             final TimePeriodStats aggregatedLastMinuteStats = this.timePeriodStatsCache.aggregateBack(
@@ -55,7 +56,7 @@ class ScalingTask implements Runnable {
                 final Double inferredDynoCount = countNewDynoCount(aggregatedLastMinuteStats,
                         this.targetAverageServiceTime,
                         ratio);
-                LOGGER.info("Ratio median based on knowledge from the cache: {}. " +
+                this.logger.info("Ratio median based on knowledge from the cache: {}. " +
                                 "It would mean that new dyno count for last minute stats {} should be {}",
                         this.ratioMedianReporter.report(ratio),
                         aggregatedLastMinuteStats,
@@ -74,7 +75,7 @@ class ScalingTask implements Runnable {
             });
         }
         catch(final Exception e) {
-            LOGGER.warn("Decision making for " + this.appName + " failed ", e);
+            this.logger.warn("Decision making for " + this.appName + " failed ", e);
         }
     }
 
