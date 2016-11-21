@@ -38,7 +38,7 @@ public class StatsObserver extends EnvironmentCommand<StatsDrainConfiguration> {
         final List<String> appNames = configuration.appNames();
         for(final String appName : appNames) {
             final Heroku heroku = configuration.heroku(environment);
-            final TimePeriodStatsCache timePeriodStatsCache = new TimePeriodStatsCache(this.jedis);
+            final TimePeriodStatsCache timePeriodStatsCache = new TimePeriodStatsCache(this.jedis, appName);
             timePeriodStatsCache.prefill(appName, heroku.getNumberOfWebDynos(appName));
             this.executorService.scheduleAtFixedRate(new ScalingTask(appName,
                     heroku,
